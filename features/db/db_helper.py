@@ -64,6 +64,7 @@ class DataBase:
         conn = ''
         cur = ''
         if db_info_name in ["db_jdcustomerstest", db_jdcustomerstest]:
+            print('this db is ',db_info_name)
             conn = self.__jdcustomerstest_conn
             cur = self.__jdcustomerstest_cur
         elif db_info_name in ["db_ordertest", db_ordertest]:
