@@ -6,12 +6,12 @@ Author：shenping
 Time：2020-03-09 14:50
 """
 
-db_ordertest = {
+db_jdcustomerstest = {
     "host": '172.16.0.1',
     "port": 3408,
     "user": 'staff_shenping',
     "passwd": 'kBwxKMgw89Hi2z8a',
-    "db": 'odertest',
+    "db": 'jdcustomerstest',
     "charset": 'utf8'
 }
 

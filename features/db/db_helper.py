@@ -3,7 +3,7 @@
 @author: Shenping
 '''
 import pymysql
-from features.conf.config import db_ordertest
+from features.conf.config import db_jdcustomerstest
 from features.utils import utils
 
 
@@ -25,14 +25,14 @@ class DataBase:
     """
     def __init__(self):
         try:
-            self.__ordertest_conn = pymysql.connect(
-                host=db_ordertest["host"],
-                port=db_ordertest["port"],
-                user=db_ordertest["user"],
-                passwd=db_ordertest["passwd"],
-                db=db_ordertest["db"],
-                charset=db_ordertest["charset"])
-            self.__ordertest_cur = self.__ordertest_conn.cursor(pymysql.cursors.DictCursor)
+            self.__jdcustomerstest_conn = pymysql.connect(
+                host=db_jdcustomerstest["host"],
+                port=db_jdcustomerstest["port"],
+                user=db_jdcustomerstest["user"],
+                passwd=db_jdcustomerstest["passwd"],
+                db=db_jdcustomerstest["db"],
+                charset=db_jdcustomerstest["charset"])
+            self.__jdcustomerstest_cur = self.__jdcustomerstest_conn.cursor(pymysql.cursors.DictCursor)
 
         except Exception as e:
             print("创建SQL连接出错")
@@ -40,16 +40,16 @@ class DataBase:
 
     def __del__(self):
         try:
-            self.__ordertest_conn.close()
-            self.__ordertest_cur.close()
+            self.__jdcustomerstest_conn.close()
+            self.__jdcustomerstest_cur.close()
 
         except Exception as e:
             print("释放SQL连接出错！")
             print(e)
 
     def run_sql(self, sql, query_num_flag=False):
-        conn = self.__ordertest_conn
-        cur = self.__ordertest_cur
+        conn = self.__jdcustomerstest_conn
+        cur = self.__jdcustomerstest_cur
         sql_num = None
         result = None
         try:
