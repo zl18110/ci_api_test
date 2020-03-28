@@ -42,4 +42,4 @@ Feature: #添加订单接口测试用例
       """
         {"orders_uid":"2638365","goods_id":"313","addressId":"2330","orders_sn":"<orders_sn>"}
       """
-    * 验证接口返回的总条数为1
+    * 验证数据库条数为"1"
