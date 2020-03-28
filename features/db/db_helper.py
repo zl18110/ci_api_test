@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 '''
-@author: shenping
+@author: Shenping
 '''
 import pymysql
-import psycopg2
-import psycopg2.extras
-from features.conf.config import db_jdcustomerstest,db_ordertest
+from features.conf.config import db_ordertest
+from features.utils import utils
 
 
 def singleton(class_):
@@ -24,52 +23,33 @@ class DataBase:
     """
     数据库操作类，单例模式
     """
-
     def __init__(self):
         try:
-            self.__db_jdcustomerstest_conn = pymysql.connect(
-                host=db_jdcustomerstest["host"],
-                port=db_jdcustomerstest["port"],
-                user=db_jdcustomerstest["user"],
-                passwd=db_jdcustomerstest["passwd"],
-                db=db_jdcustomerstest["db"],
-                charset=db_jdcustomerstest["charset"])
-            self.__db_jdcustomerstest_cur = self.__db_jdcustomerstest_conn.cursor(pymysql.cursors.DictCursor)
-
-            self.__db_ordertest_conn = pymysql.connect(
+            self.__ordertest_conn = pymysql.connect(
                 host=db_ordertest["host"],
                 port=db_ordertest["port"],
                 user=db_ordertest["user"],
                 passwd=db_ordertest["passwd"],
                 db=db_ordertest["db"],
                 charset=db_ordertest["charset"])
-            self.__db_ordertest_cur = self.__db_ordertest_conn.cursor(
-                pymysql.cursors.DictCursor)
+            self.__ordertest_cur = self.__ordertest_conn.cursor(pymysql.cursors.DictCursor)
+
         except Exception as e:
             print("创建SQL连接出错")
             print(e)
 
     def __del__(self):
         try:
-            self.__db_jdcustomerstest_conn.close()
-            self.__db_jdcustomerstest_cur.close()
+            self.__ordertest_conn.close()
+            self.__ordertest_cur.close()
 
-            self.__db_ordertest_conn.close()
-            self.__db_ordertest_cur.close()
         except Exception as e:
             print("释放SQL连接出错！")
             print(e)
 
-    def run_sql(self, sql, query_num_flag=False, db_info_name=db_jdcustomerstest):
-        conn = ''
-        cur = ''
-        if db_info_name in ["db_jdcustomerstest", db_jdcustomerstest]:
-            print('this db is ',db_info_name)
-            conn = self.__jdcustomerstest_conn
-            cur = self.__jdcustomerstest_cur
-        elif db_info_name in ["db_ordertest", db_ordertest]:
-            conn = self.__db_ordertest_conn
-            cur = self.__db_ordertest_cur
+    def run_sql(self, sql, query_num_flag=False):
+        conn = self.__ordertest_conn
+        cur = self.__ordertest_cur
         sql_num = None
         result = None
         try:
@@ -98,6 +78,7 @@ database = DataBase()
 
 
 def build_insert_sql(table_object):
+    # type: (object) -> object
     insert_template = "insert into %s (%s) values(%s)"
     table_name, obj_attr_dict = retrieve_info(table_object)
     key_str = "`" + "`, `".join(list(obj_attr_dict.keys())) + "`"
@@ -106,11 +87,13 @@ def build_insert_sql(table_object):
 
 
 def build_replace_sql(table_object):
+    # type: (object) -> object
     insert_template = "replace into %s (%s) values(%s)"
     table_name, obj_attr_dict = retrieve_info(table_object)
     key_str = "`" + "`, `".join(list(obj_attr_dict.keys())) + "`"
     value_str = "'" + "', '".join(list(obj_attr_dict.values())) + "'"
     return insert_template % (table_name, key_str, value_str)
+
 
 
 def build_delete_sql(table_object):
@@ -144,9 +127,12 @@ def delete_history_records(table, field, value):
     database.run_sql(sql)
 
 
+
+
 def delete_history_records_db(table, field, value, dbname):
     sql = "delete from " + table + " where " + field + " like '%" + value + "%'"
     database.run_sql(sql, db_info_name=str(dbname))
+
 
 
 class orm_helper:
@@ -169,12 +155,19 @@ class orm_helper:
                 return database.run_sql(build_insert_sql(self))
 
     def replace_test_record(self):
-        self.delete_test_record()
-        if hasattr(self, "db"):
-            return database.run_sql(
-                build_replace_sql(self), db_info_name=self.db)
+        if self.table == "3ss_offer_channel_daily_sum":
+            if hasattr(self, "db"):
+                return database.run_sql(
+                    build_replace_sql(self), db_info_name=self.db)
+            else:
+                return database.run_sql(build_replace_sql(self))
         else:
-            return database.run_sql(build_replace_sql(self))
+            self.delete_test_record()
+            if hasattr(self, "db"):
+                return database.run_sql(
+                    build_replace_sql(self), db_info_name=self.db)
+            else:
+                return database.run_sql(build_replace_sql(self))
 
     def delete_test_record(self):
         if hasattr(self, "db"):
