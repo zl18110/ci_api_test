@@ -11,7 +11,7 @@ def get_code():
     query_sql = u"select mock_code from jdcustomerstest.cus_mock where uid = 2638265  order by id desc limit 1;"
     sql_result, sql_amount = database.run_sql(query_sql)
     print('this db is ',database)
-    print('sql_result is :',sql_result)
+    print('sql_result is :',sql_result['mock_code'])
     return sql_result
 
 
