@@ -201,14 +201,12 @@ def then_impl(context):
     context.sql_result, context.sql_amount = database.run_sql(sql)
 
 
-
-
 def get_table_name_by_class_name(class_name):
     clsmembers = inspect.getmembers(sys.modules["features.db.db_mapping"], inspect.isclass)
     for cls in clsmembers:
         if class_name == cls[0]:  # 若class_name是类名，则返回数据库表名
             return cls[1]().__dict__["table"]
-    return None
+    return class_name
 
 
 @given(u'(?:.*删除测试数据"(?P<class_name>.*)".*)')
@@ -218,12 +216,3 @@ def del_test_data(context, class_name):
     class_name = table_name if table_name else class_name
     for key, value in params.items():
         delete_history_records(class_name, key, value)
-
-
-@given(u'(?:.*删除数据"(?P<class_name>.*)".*db环境.*"(?P<db>.*)".*)')
-def del_test_data(context, class_name, db):
-    params = eval(context.text) if context.text else None
-    table_name = get_table_name_by_class_name(class_name)
-    class_name = table_name if table_name else class_name
-    for key, value in params.items():
-        delete_history_records_db(class_name, key, value, db)

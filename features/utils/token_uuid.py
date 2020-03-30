@@ -18,7 +18,13 @@ def get_code():
 def get_access_token(context):
     url = eval('login_url') % (context.config.userdata.get("protocol", CI_ENV['CI_PROTOCOL']),context.config.userdata.get("host", CI_ENV['CI_HOST']))
     print(' api url is:',url)
-    code = get_code()
+    code = 1
+    try:
+        code = get_code()
+    except Exception as e:
+        print(e)
+    if code == 1:
+        code = 9882
     param = {
       "code":code,
       "deviceIDFA":"358240051111110",

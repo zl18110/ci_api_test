@@ -95,7 +95,6 @@ def build_replace_sql(table_object):
     return insert_template % (table_name, key_str, value_str)
 
 
-
 def build_delete_sql(table_object):
     table_name, obj_attr_dict = retrieve_info(table_object)
     if table_name is "mob_camp_material":
@@ -127,14 +126,6 @@ def delete_history_records(table, field, value):
     database.run_sql(sql)
 
 
-
-
-def delete_history_records_db(table, field, value, dbname):
-    sql = "delete from " + table + " where " + field + " like '%" + value + "%'"
-    database.run_sql(sql, db_info_name=str(dbname))
-
-
-
 class orm_helper:
     def __init__(self):
         self.table = 'dump'
@@ -143,14 +134,14 @@ class orm_helper:
         if self.table == "3ss_offer_channel_daily_sum":
             if hasattr(self, "db"):
                 return database.run_sql(
-                    build_insert_sql(self), db_info_name=self.db)
+                    build_insert_sql(self))
             else:
                 return database.run_sql(build_insert_sql(self))
         else:
             self.delete_test_record()
             if hasattr(self, "db"):
                 return database.run_sql(
-                    build_insert_sql(self), db_info_name=self.db)
+                    build_insert_sql(self))
             else:
                 return database.run_sql(build_insert_sql(self))
 
@@ -158,26 +149,26 @@ class orm_helper:
         if self.table == "3ss_offer_channel_daily_sum":
             if hasattr(self, "db"):
                 return database.run_sql(
-                    build_replace_sql(self), db_info_name=self.db)
+                    build_replace_sql(self))
             else:
                 return database.run_sql(build_replace_sql(self))
         else:
             self.delete_test_record()
             if hasattr(self, "db"):
                 return database.run_sql(
-                    build_replace_sql(self), db_info_name=self.db)
+                    build_replace_sql(self))
             else:
                 return database.run_sql(build_replace_sql(self))
 
     def delete_test_record(self):
         if hasattr(self, "db"):
             return database.run_sql(
-                build_delete_sql(self), db_info_name=self.db)
+                build_delete_sql(self))
         else:
             return database.run_sql(build_delete_sql(self))
 
 
-def build_sql_condition(sql_params, logicCondition):
+def build_sql_condition(sql_params,logicCondition):
     condition_list = []
     for key, value in list(sql_params.items()):
         if isinstance(value, list) and len(value) > 0:
