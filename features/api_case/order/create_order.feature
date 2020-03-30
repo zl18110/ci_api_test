@@ -28,7 +28,7 @@ Feature: 添加订单接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '"uid":2638265';"
+        "delete from ordertest.od_order_logs where log REGEXP '2638265';"
       """
   Scenario: [1] 集市添加订单
     * 请求"create_order_url"接口，添加订单

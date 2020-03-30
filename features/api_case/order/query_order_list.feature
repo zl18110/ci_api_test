@@ -28,7 +28,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '"uid":2638265';"
+        "delete from ordertest.od_order_logs where log REGEXP '2638265';"
       """
 
   Scenario:[1] 查询用户全部订单
