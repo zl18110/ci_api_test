@@ -1,7 +1,11 @@
 # Created by shenping at 2020/3/24
 Feature: #添加订单接口测试用例
   #  /a/api/v1/orders/orders
-
+  Background: 测试数据初始化
+    * 运行以下sql,删除测试数据
+    """
+      "delete from ordertest.od_orders where orders_uid =2638265;"
+    """
   Scenario: [1] 集市添加订单
     * 请求"create_order_url"接口，添加订单
     """
@@ -35,7 +39,7 @@ Feature: #添加订单接口测试用例
       """
     * mysql表"ordertest.od_orders_remark" 使用"and"查询最新记录字段"orders_sn"
       """
-        {"remark":"sptest"}
+        {"user_remark":"sptest"}
       """
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
