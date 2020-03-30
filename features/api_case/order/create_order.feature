@@ -48,6 +48,6 @@ Feature: #添加订单接口测试用例
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
       """
-        {"orders_uid":"2638365","goods_id":"313","orders_sn":(context.column_result)}
+        {"orders_uid":"2638265","goods_id":"313","orders_sn":(context.column_result)}
       """
     * 验证数据库条数为"1"
