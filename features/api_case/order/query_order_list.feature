@@ -283,19 +283,19 @@ Feature: 获取用户订单列表接口测试用例
         {"cacheType":"none","code":0,"data":{"accid":"07c33f640d77ac8dbbf115f5c71c67f7","avatar":"https://res.jaadee.net/rn/guest.png","birthday":"","coin":0,"identityTags":"","intro":"","isServer":0,"levelDisplay":1,"levelName":"隐士","loginType2":"0","name":"翠友84090373179","phone":"12888887112","phoneCode":"86","registerDate":"2020-03-13","registerTime":"2020-03-13 17:06:13","rlevel":0,"score":0,"sex":0,"signType":["blue"],"status":0,"type":0,"uid":2638267,"userType":0,"xmppPassword":"07c33f640d77ac8dbbf115f5c71c67f7","xmppUsername":"07c33f640d77ac8dbbf115f5c71c67f7"},"hashData":"","info":{"accid":"07c33f640d77ac8dbbf115f5c71c67f7","avatar":"https://res.jaadee.net/rn/guest.png","birthday":"","coin":0,"identityTags":"","intro":"","isServer":0,"levelDisplay":1,"levelName":"隐士","loginType2":"0","name":"翠友84090373179","phone":"12888887112","phoneCode":"86","registerDate":"2020-03-13","registerTime":"2020-03-13 17:06:13","rlevel":0,"score":0,"sex":0,"signType":["blue"],"status":0,"type":0,"uid":2638267,"userType":0,"xmppPassword":"07c33f640d77ac8dbbf115f5c71c67f7","xmppUsername":"07c33f640d77ac8dbbf115f5c71c67f7"},"message":"登录成功","msg":"登录成功","status":0}
       """
 
-    Scenario:[3] 查询用户待发货订单
-    * 请求"query_order_list_url"接口,查询订单
-      """
-      {'link_url':'?type=1&page=2&pageSize=10',
-        'http_method': 'get',
-         "url_params":{
-         }
-      }
-      """
-    * 验证接口返回值
-      """
-        []
-      """
+#    Scenario:[3] 查询用户待发货订单
+#    * 请求"query_order_list_url"接口,查询订单
+#      """
+#      {'link_url':'?type=1&page=2&pageSize=10',
+#        'http_method': 'get',
+#         "url_params":{
+#         }
+#      }
+#      """
+#    * 验证接口返回值
+#      """
+#        []
+#      """
 #
 #    Scenario:[4] 查询已用户拼团中订单
 #    * 请求"query_order_list_url"接口,查询订单
