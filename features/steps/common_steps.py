@@ -164,6 +164,7 @@ def select_column(context, logic, table, column_name):
     print("query sql is :", query_sql)
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
     context.column_result = context.sql_result[0][column_name]
+    print('column_result is ',context.column_result)
 
 
 @given(u'(?:.*根据.*参数查询数据库.*"(?P<table>.*)".*)')
