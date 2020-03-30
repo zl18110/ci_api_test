@@ -1,5 +1,5 @@
 # Created by shenping at 2020/3/24
-Feature: #添加订单接口测试用例
+Feature: 添加订单接口测试用例
   #  /a/api/v1/orders/orders
   Background: 测试数据初始化
     * 运行以下sql,删除测试数据

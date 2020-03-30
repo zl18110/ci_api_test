@@ -1,5 +1,5 @@
 # Created by shenping at 2020/3/24
-Feature: #/a/api/ordersys/index.php/v3/order/statusNum接口测试用例
+Feature: 获取各状态订单角标数接口测试用例
   # /a/api/ordersys/index.php/v3/order/statusNum
 
   Scenario:[1]查询个状态订单角标数

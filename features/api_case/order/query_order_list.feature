@@ -1,5 +1,5 @@
 # Created by shenping at 2020/3/17
-Feature: #获取用户订单列表接口测试
+Feature: 获取用户订单列表接口测试用例
   # /a/api/ordersys/index.php/v3/order/lists
   Background: 初始化测试数据
     * 删除测试数据"ordertest.od_orders"
