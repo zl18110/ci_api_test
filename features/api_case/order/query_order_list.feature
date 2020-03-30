@@ -60,7 +60,7 @@ Feature: 获取用户订单列表接口测试用例
 
     * 请求"query_order_list_url"接口,查询订单
       """
-      {'link_url':'?type=0&page=0&pageSize=10',
+      {'link_url':'?type=0&page=1&pageSize=10',
         'http_method': 'get',
          "url_params":{
          }
