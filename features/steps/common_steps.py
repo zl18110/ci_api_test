@@ -157,7 +157,7 @@ def select_column(context, logic, table, column_name):
         context.column_result = None
 
 
-@given(u'(?:.*mysql表"(?P<table>.*)".*使用"(?P<logic>.*)".*查询最新记录字段"(?P<column_name>.*)".*)')
+@given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*查询最新记录字段"(?P<column_name>.*)".*)')
 def select_column(context, logic, table, column_name):
     context.sql_params = eval(context.text)
     query_sql = u"select * from %s %s order by id desc limit 1" % (table, build_sql_condition(context.sql_params, logic))

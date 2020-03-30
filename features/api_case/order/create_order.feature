@@ -41,13 +41,13 @@ Feature: #添加订单接口测试用例
           "status": 0
         }
       """
-    * mysql表"ordertest.od_orders_remark" 使用"and"查询最新记录字段"orders_sn"
+    * 数据表"ordertest.od_orders_remark" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"user_remark":"sp_ci_test"}
       """
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
       """
-        {"orders_uid":"2638365","goods_id":"313","orders_sn":"<orders_sn>"}
+        {"orders_uid":"2638365","goods_id":"313","orders_sn":"<context.column_result>"}
       """
     * 验证数据库条数为"1"
