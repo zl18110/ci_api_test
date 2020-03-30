@@ -6,6 +6,10 @@ Feature: #添加订单接口测试用例
     """
       "delete from ordertest.od_orders where orders_uid =2638265;"
     """
+    * 运行以下sql,删除测试数据
+    """
+      "delete from ordertest.od_orders_remark where user_remark ='sp_ci_test';"
+    """
   Scenario: [1] 集市添加订单
     * 请求"create_order_url"接口，添加订单
     """
@@ -20,7 +24,7 @@ Feature: #添加订单接口测试用例
             "couponId": 0,
             "num": 1,
             "attr": "",
-            "remark": "sptest"
+            "remark": "sp_ci_test"
          }
       }
     """
@@ -39,11 +43,11 @@ Feature: #添加订单接口测试用例
       """
     * mysql表"ordertest.od_orders_remark" 使用"and"查询最新记录字段"orders_sn"
       """
-        {"user_remark":"sptest"}
+        {"user_remark":"sp_ci_test"}
       """
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
       """
-        {"orders_uid":"2638365","goods_id":"313","addressId":"2330","orders_sn":"<orders_sn>"}
+        {"orders_uid":"2638365","goods_id":"313","orders_sn":"<orders_sn>"}
       """
     * 验证数据库条数为"1"
