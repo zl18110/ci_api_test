@@ -10,8 +10,7 @@ from features.db.db_helper import database
 def get_code():
     query_sql = u"select mock_code from jdcustomerstest.cus_mock where uid = 2638265  order by id desc limit 1;"
     sql_result, sql_amount = database.run_sql(query_sql)
-    print('this db is ',database)
-    print('sql_result is :',sql_result[0]['mock_code'])
+    print('mock_code is :',sql_result[0]['mock_code'])
     return sql_result[0]['mock_code']
 
 
@@ -40,7 +39,6 @@ def get_access_token(context):
         'Connection':'keep-alive'
     }
     res = requests.post(url, data=json.dumps(param), headers=headers, allow_redirects=False)
-    print('this res is ',res.text)
     if res.status_code != 200:
         print("Got error: " + res.text)
         print("res.status_code: ", res.status_code)
@@ -49,8 +47,6 @@ def get_access_token(context):
     else:
         result = json.loads(res.text)
         res = {}
-        print("access_token is :", result['data']['accessToken'])
-        print("uuid is :", result['data']['uid'])
         res['accessToken'] = result['data']['accessToken']
         res['uuid'] = result['data']['uid']
         return res

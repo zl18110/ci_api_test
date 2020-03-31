@@ -31,7 +31,7 @@ def check_list(expected, real, msg=""):
                     break
     result = all(result)
     if not result:
-        msg = "Expect Data: %s, but  Real data is: %s" % (str(expected), str(real))
+        msg = "\n Expect Data: %s \n, but  Real data is: %s \n" % (str(expected), str(real))
     return result, msg
 
 
@@ -43,7 +43,7 @@ def check_dict(expected, real, msg=""):
         rdata = retrive_data(real[key])
         ret, msg = check_data(edata, rdata, msg = "Key: %s" % key)
         if not ret: # 只要有一个值没匹配到就返回失败
-            msg = "Key[%s]: expecte data is (%s), but real data is (%s)" % (key, str(edata),str(rdata))
+            msg = "\n Key[%s]: \n expecte data is (%s) \n but real data is (%s)\n" % (key, str(edata),str(rdata))
             return ret, msg
     return ret, msg
 
