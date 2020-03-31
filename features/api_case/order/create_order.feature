@@ -71,3 +71,34 @@ Feature: 添加订单接口测试用例
         {"orders_uid":"2638265","goods_id":"401","orders_sn":(context.column_result)}
       """
     * 验证数据库条数为"1"
+
+
+    # 测试现场恢复=================================================================
+    * 删除测试数据"ordertest.od_orders"
+      """
+        {"orders_uid":"2638265"}
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_goods where goods_sn ='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_remark where user_remark='ci_api_test';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_user where orders_uid='2638265';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_goods_lock where goods_sn='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_operator where goods_sn='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_order_logs where log REGEXP '2638265';"
+      """

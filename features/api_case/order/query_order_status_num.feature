@@ -8,7 +8,7 @@ Feature: 获取各状态订单角标数接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_orders_goods where orders_sn ='YK203301723564999279';"
+        "delete from ordertest.od_orders_goods where goods_sn ='YK00000401';"
       """
     * 运行以下sql,删除测试数据
       """
