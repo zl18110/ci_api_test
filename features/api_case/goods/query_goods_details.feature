@@ -7,6 +7,8 @@ Feature: 查询商品详情接口测试用例
     """
     {'link_url':'?',
         'http_method': 'get',
+        'host':'centertest.jaadee.net',
+        'protocol':'http',
          "url_params":{
          "goodsId":"401"
          }
