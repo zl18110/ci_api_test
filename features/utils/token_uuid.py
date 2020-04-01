@@ -8,7 +8,7 @@ from features.db.db_helper import database
 
 
 def get_code():
-    query_sql = u"select mock_code from jdcustomerstest.cus_mock where uid = 2638265  order by id desc limit 1;"
+    query_sql = u"select mock_code from jdcustomerstest.cus_mock where uid = 2638122  order by id desc limit 1;"
     sql_result, sql_amount = database.run_sql(query_sql)
     print('mock_code is :',sql_result[0]['mock_code'])
     return sql_result[0]['mock_code']
@@ -22,14 +22,12 @@ def get_access_token(context):
         code = get_code()
     except Exception as e:
         print(e)
-    if code == 1:
-        code = 9882
     param = {
       "code":code,
       "deviceIDFA":"358240051111110",
       "deviceId":"7CF07942BCC92F16AB055D93218BCE00",
       "loginIp":"172.16.0.99",
-      "mobile":12888887111,
+      "mobile":12888886303,
       "pars":{},
       "region":86,
       "type":"0"

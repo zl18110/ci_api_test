@@ -49,13 +49,12 @@ def send_request(context, api_url_bef):
     if 'Content-Type' not in headers or headers['Content-Type'] == "":
         headers['Content-Type'] = 'application/json'
 
-    # 登录接口，不需要提前获取token
-    if '/v2/login/user' not in api_url:
-        headers['userToken'] = context.token
+    headers['userToken'] = context.token
 
     print('headers is :',headers)
 
     url_params = context.params.get("url_params", {})
+    print('url_params is :',url_params)
     if http_method == 'post':
         my_request = Request(api_url, data=url_params, headers=headers, method=http_method)
     else:
@@ -95,6 +94,7 @@ def assert_data(context):
 
     print("\n context.expect_params is: ", context.expect_params)
     check_json_data(context.expect_params, context.body)
+    print('\n')
 
 
 @given(u'(?:.*失败.*[服务器|接口].*错误信息为"(?P<return_message>.*)")')
@@ -141,7 +141,7 @@ def fake_test_data(context, class_name):
 def then_impl_2(context, logic, table):
     context.sql_params = eval(context.text)
     query_sql = "select * from %s %s order by id" % (table, build_sql_condition(context.sql_params, logic))
-    print("query sql is :", query_sql)
+    print("query sql is :\n", query_sql)
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
 
 
@@ -181,9 +181,11 @@ def when_impl(context, given_num):
 @given(u'(?:.*[验证|检查]数据库.*返回值.*)')
 def assert_data(context):
     context.expect_params = eval(context.text)
-    print("context.expect_params: ", context.expect_params)
-    print("context.sql_result: ", context.sql_result)
+    print("context.expect_params: \n", context.expect_params)
+    print("context.sql_result: \n", context.sql_result)
+    print('\n\n\n\n\n')
     check_json_data(context.expect_params, context.sql_result)
+    print('\n')
     # assert_that(context.sql_result[0], has_entries(context.expect_params))
 
 

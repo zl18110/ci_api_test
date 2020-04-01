@@ -4,7 +4,7 @@ Feature: 获取各状态订单角标数接口测试用例
   Background: 初始化测试数据
     * 删除测试数据"ordertest.od_orders"
       """
-        {"orders_uid":"2638265"}
+        {"orders_uid":"2638122"}
       """
     * 运行以下sql,删除测试数据
       """
@@ -28,12 +28,14 @@ Feature: 获取各状态订单角标数接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '2638265';"
+        "delete from ordertest.od_order_logs where log REGEXP '2638122';"
       """
-    # 添加测试数据
+
+
+  Scenario:[1]查询个状态订单角标数
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -45,7 +47,7 @@ Feature: 获取各状态订单角标数接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_goods_lock
       """
@@ -56,7 +58,6 @@ Feature: 获取各状态订单角标数接口测试用例
         "INSERT INTO `ordertest`.`od_operator` (`orders_sn`, `goods_sn`, `server_id`, `deliver_goods_uid`, `check_goods_uid`, `financial_uid`, `del_state`, `id`) VALUES ('YK203301723564999279', 'YK00000401', '90', '0', '0', '0', '0', '4896');"
       """
 
-  Scenario:[1]查询个状态订单角标数
     * 请求"query_order_status_num_url"接口,查询订单
       """
       {'link_url':'',
@@ -98,3 +99,4 @@ Feature: 获取各状态订单角标数接口测试用例
           "status": 0
       }
     """
+  Scenario: [2] 测试现场恢复

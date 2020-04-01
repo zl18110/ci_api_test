@@ -13,7 +13,7 @@ class Ordertest(orm_helper):
         self.id = param.get("id", '13680')
         self.pid = param.get("pid", '0')
         self.orders_sn = param.get("orders_sn", "YK203241122476609999")
-        self.orders_uid = param.get("orders_uid", "2638265")
+        self.orders_uid = param.get("orders_uid", "2638122")
         self.orders_add_user = param.get("orders_add_user","90")
         self.orders_createtime = param.get("orders_createtime","2020-03-24 11:00:00")
         self.orders_uptime = param.get("orders_uptime","2020-03-24 11:00:00")

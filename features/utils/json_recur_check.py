@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from decimal import *
+
+import datetime
 from hamcrest import *  # assert_that, instance_of
 import ast
 import simplejson
@@ -31,7 +33,7 @@ def check_list(expected, real, msg=""):
                     break
     result = all(result)
     if not result:
-        msg = "\n Expect Data: %s \n, but  Real data is: %s \n" % (str(expected), str(real))
+        msg += "\n Expect Data: %s \n, but  Real data is: %s \n" % (str(expected), str(real))
     return result, msg
 
 
@@ -79,4 +81,90 @@ def check_json_data(expected_data, real_data, msg=""):
 
 
 if __name__ == "__main__":
-    print(check_data({}, {'sss':'dsads'}))
+     ls1=[{
+          'pid': 0,
+          'orders_uid': 2638265,
+          'orders_add_user': 90,
+          'orders_star': 0,
+          'app_show': 1,
+          'is_delete': 0,
+          'orders_type': 16,
+          'total_price': Decimal('100.00'),
+          'discount_price': Decimal('0.00'),
+          'member_discount': Decimal('0.00'),
+          'discount_goods_price': Decimal('0.00'),
+          'actual_price': Decimal('100.00'),
+          'coin': 0,
+          'status': 1,
+          'paid_money': Decimal('0.00'),
+          'extra': '{"rewards_on":1}',
+          'job_number': None,
+          'referrer_id': 0,
+          'is_vip': 0,
+          'del_state': 0,
+          'is_mock': 0,
+          'asyn': 'Y',
+          'good_sn': None,
+          'live_member_id': None,
+          'server_id': None,
+          'orders_refundtime': None,
+          'source_sign': None,
+          'item_sum': Decimal('100.00'),
+          'pay_money': '0',
+          'clear': '5',
+          'asyn_remark': None,
+          'is_dbzc': None,
+          'goods_id': 401,
+          'r_cancellation': None,
+          'platform': None,
+          'activityId': 0,
+          'group_id': 0,
+          'refund_flg': None
+      }]
+     ls2 =[{
+            'id': 14663,
+            'pid': 0,
+            'orders_sn': 'YK204011147364568894',
+            'orders_uid': 2638265,
+            'orders_add_user': 90,
+            'orders_createtime': datetime.datetime(2020, 4, 1, 11, 47, 36),
+            'orders_uptime': datetime.datetime(2020, 4, 1, 11, 47, 36),
+            'orders_paytime': datetime.datetime(2020, 4, 1, 11, 47, 36),
+            'orders_star': 0,
+            'app_show': 1,
+            'is_delete': 0,
+            'orders_type': 16,
+            'total_price': Decimal('100.00'),
+            'discount_price': Decimal('0.00'),
+            'member_discount': Decimal('0.00'),
+            'discount_goods_price': Decimal('0.00'),
+            'actual_price': Decimal('100.00'),
+            'coin': 0,
+            'status': 1,
+            'paid_money': Decimal('0.00'),
+            'extra': '{"rewards_on":1}',
+            'job_number': None,
+            'referrer_id': 0,
+            'is_vip': 0,
+            'del_state': 0,
+            'is_mock': 0,
+            'asyn': 'Y',
+            'unique_sequence': '14663',
+            'good_sn': None,
+            'live_member_id': None,
+            'server_id': None,
+            'orders_refundtime': None,
+            'source_sign': None,
+            'item_sum': Decimal('100.00'),
+            'pay_money': '0',
+            'clear': '5',
+            'asyn_remark': None,
+            'is_dbzc': None,
+            'goods_id': 401,
+            'r_cancellation': None,
+            'platform': None,
+            'activityId': 0,
+            'group_id': 0,
+            'refund_flg': None
+        }]
+     print(check_json_data(ls1,ls2))

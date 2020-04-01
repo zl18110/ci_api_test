@@ -4,7 +4,7 @@ Feature: 获取用户订单列表接口测试用例
   Background: 初始化测试数据
     * 删除测试数据"ordertest.od_orders"
       """
-        {"orders_uid":"2638265"}
+        {"orders_uid":"2638122"}
       """
     * 运行以下sql,删除测试数据
       """
@@ -28,7 +28,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '2638265';"
+        "delete from ordertest.od_order_logs where log REGEXP '2638122';"
       """
     * 运行以下sql,删除测试数据
       """
@@ -47,7 +47,7 @@ Feature: 获取用户订单列表接口测试用例
 
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -59,7 +59,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_goods_lock
       """
@@ -144,7 +144,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 1,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "0.00",
                     "refundFlag": 0,
                     "remainMoney": "100.00",
@@ -225,7 +225,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 1,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "0.00",
                     "refundFlag": 0,
                     "remainMoney": "100.00",
@@ -251,7 +251,7 @@ Feature: 获取用户订单列表接口测试用例
     Scenario:[2] 查询用户待付款订单
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '1', '0.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '0', '5', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -263,7 +263,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_goods_lock
       """
@@ -348,7 +348,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 1,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "0.00",
                     "refundFlag": 0,
                     "remainMoney": "100.00",
@@ -429,7 +429,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 1,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "0.00",
                     "refundFlag": 0,
                     "remainMoney": "100.00",
@@ -455,7 +455,7 @@ Feature: 获取用户订单列表接口测试用例
     Scenario:[3] 查询用户待发货订单
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -467,7 +467,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_operator
       """
@@ -479,11 +479,11 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_separate
       """
-        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638122');"
       """
     * 运行以下sql,添加测试数据 od_orders_separate_pay
       """
-        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638122');"
       """
 
     * 请求"query_order_list_url"接口,查询订单
@@ -563,7 +563,7 @@ Feature: 获取用户订单列表接口测试用例
                         "ordersSn": "YK203301723564999279",
                         "ordersStatus": 2,
                         "ordersType": 16,
-                        "ordersUid": 2638265,
+                        "ordersUid": 2638122,
                         "paidMoney": "100.00",
                         "refundFlag": 0,
                         "remainMoney": "0.00",
@@ -648,7 +648,7 @@ Feature: 获取用户订单列表接口测试用例
                         "ordersSn": "YK203301723564999279",
                         "ordersStatus": 2,
                         "ordersType": 16,
-                        "ordersUid": 2638265,
+                        "ordersUid": 2638122,
                         "paidMoney": "100.00",
                         "refundFlag": 0,
                         "remainMoney": "0.00",
@@ -675,7 +675,7 @@ Feature: 获取用户订单列表接口测试用例
     Scenario:[4] 查询用户待收货订单
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -687,7 +687,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_operator
       """
@@ -699,11 +699,11 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_separate
       """
-        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638122');"
       """
     * 运行以下sql,添加测试数据 od_orders_separate_pay
       """
-        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638122');"
       """
     * 请求"query_order_list_url"接口,查询订单
       """
@@ -779,7 +779,7 @@ Feature: 获取用户订单列表接口测试用例
                   "ordersSn": "YK203301723564999279",
                   "ordersStatus": 3,
                   "ordersType": 16,
-                  "ordersUid": 2638265,
+                  "ordersUid": 2638122,
                   "paidMoney": "100.00",
                   "refundFlag": 0,
                   "remainMoney": "0.00",
@@ -860,7 +860,7 @@ Feature: 获取用户订单列表接口测试用例
                   "ordersSn": "YK203301723564999279",
                   "ordersStatus": 3,
                   "ordersType": 16,
-                  "ordersUid": 2638265,
+                  "ordersUid": 2638122,
                   "paidMoney": "100.00",
                   "refundFlag": 0,
                   "remainMoney": "0.00",
@@ -923,7 +923,7 @@ Feature: 获取用户订单列表接口测试用例
     Scenario:[6] 查询用户 已完成 订单
     * 运行以下sql,添加测试数据od_orders
       """
-        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638265', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
+        "INSERT INTO `ordertest`.`od_orders` (`id`, `pid`, `orders_sn`, `orders_uid`, `orders_add_user`, `orders_createtime`, `orders_uptime`, `orders_paytime`, `orders_star`, `app_show`, `is_delete`, `orders_type`, `total_price`, `discount_price`, `member_discount`, `discount_goods_price`, `actual_price`, `coin`, `status`, `paid_money`, `extra`, `job_number`, `referrer_id`, `is_vip`, `del_state`, `is_mock`, `asyn`, `unique_sequence`, `good_sn`, `live_member_id`, `server_id`, `orders_refundtime`, `source_sign`, `item_sum`, `pay_money`, `clear`, `asyn_remark`, `is_dbzc`, `goods_id`, `r_cancellation`, `platform`, `activityId`, `group_id`, `refund_flg`) VALUES ('14404', '0', 'YK203301723564999279', '2638122', '90', '2020-03-30 17:23:57', '2020-03-30 17:23:56', '2020-03-30 17:23:56', '0', '1', '0', '16', '100.00', '0.00', '0.00', '0.00', '100.00', '0', '2', '100.00', '{\"rewards_on\":1}', NULL, '0', '0', '0', '0', 'Y', '14404', NULL, NULL, NULL, NULL, NULL, '100.00', '100.0', '3', NULL, NULL, '401', NULL, NULL, '0', '0', NULL);"
       """
     * 运行以下sql,添加测试数据od_orders_goods
       """
@@ -935,7 +935,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_user
       """
-        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638265', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
+        "NSERT INTO `ordertest`.`od_orders_user` (`id`, `orders_sn`, `user_id`, `phone`, `name`, `nickname`, `province`, `city`, `area`, `address`, `del_state`, `address_id`, `update_limit`, `encrypted`, `ou_encrypted`, `phoneX`, `subs_id`) VALUES ('10380', 'YK203301723564999279', '2638122', 'QkpPekH/5+TpT+fi9YINbiLq6hU1', '绿地', '翠友84088719776', '云南省', '昆明市', '盘龙区', 'QkhzbUecBUe7oelJpw==', '0', '2337', NULL, '0', '1', NULL, NULL);"
       """
     * 运行以下sql,添加测试数据od_operator
       """
@@ -947,11 +947,11 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,添加测试数据od_orders_separate
       """
-        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `platform_uid`, `platform_rate`, `shop_uid`, `shop_rate`, `referee_rate`, `other_uid`, `other_rate`, `referee_rate_a_uid`, `referee_rate_a`, `referee_rate_b_uid`, `referee_rate_b`, `referee_rate_mine_uid`, `referee_rate_mine`, `referee_rate_s_uid`, `referee_rate_s`, `created_time`, `point`, `del_state`, `referee_rate_self`, `referee_self_uid`) VALUES ('4445', '14404', 'YK203301723564999279', 'YK00000401', '-666', '0.05', '51', '0.80', '0.15', '80000', '0.00', '0', '0.00', '0', '0.00', NULL, '0.00', '2638119', '0.15', '2020-03-31 13:21:27', '0', '0', '0.05', '2638122');"
       """
     * 运行以下sql,添加测试数据 od_orders_separate_pay
       """
-        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638265');"
+        "INSERT INTO `ordertest`.`od_orders_separate_pay` (`id`, `orders_id`, `orders_sn`, `goods_sn`, `pay_id`, `money`, `per_money`, `platform_uid`, `platform_money`, `shop_uid`, `shop_money`, `other_uid`, `other_money`, `referee_money`, `referee_a_uid`, `referee_a_money`, `referee_b_uid`, `referee_b_money`, `referee_mine`, `referee_mine_money`, `referee_s_uid`, `referee_s_money`, `created_time`, `pay_time`, `freezing_time`, `insure_time`, `done_time`, `refund_time`, `type`, `status`, `del_state`, `referee_self_money`, `referee_self_uid`) VALUES ('17645', '14404', 'YK203301723564999279', 'YK00000401', '22722', '100.00', '100.00', '-666', '5.00', '51', '80.00', '80000', '12.00', '15.00', '0', '0.00', '0', '0.00', '0', '0.00', '2638119', '2.25', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '2020-03-31 13:21:27', '0', '1', '0', '0.75', '2638122');"
       """
     * 请求"query_order_list_url"接口,查询订单
       """
@@ -1027,7 +1027,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 4,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "100.00",
                     "refundFlag": 0,
                     "remainMoney": "0.00",
@@ -1108,7 +1108,7 @@ Feature: 获取用户订单列表接口测试用例
                     "ordersSn": "YK203301723564999279",
                     "ordersStatus": 4,
                     "ordersType": 16,
-                    "ordersUid": 2638265,
+                    "ordersUid": 2638122,
                     "paidMoney": "100.00",
                     "refundFlag": 0,
                     "remainMoney": "0.00",
