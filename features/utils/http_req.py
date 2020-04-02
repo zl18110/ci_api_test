@@ -35,7 +35,7 @@ class Request():
                 response = self.urlopen(timeout)
                 print("Status: ", response.status_code)
                 print("Text: ", str(response.text))
-                print("\n\n\n\n")
+                print("\n")
                 self.response['http_status'] = response.status_code
                 self.response['headers'] = response.headers
                 self.response['body'] = response.text

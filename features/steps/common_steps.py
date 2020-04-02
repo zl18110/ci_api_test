@@ -50,7 +50,7 @@ def send_request(context, api_url_bef):
         headers['Content-Type'] = 'application/json'
 
     headers['userToken'] = context.token
-
+    headers['User-Agent'] = 'jadeking/76021 CFNetwork/1121.2.2 Darwin/19.3.0'
     print('headers is :', headers)
 
     url_params = context.params.get("url_params", {})
@@ -245,7 +245,7 @@ def send_request(context, api_url_bef):
     print('\n\n\n\n')
     if http_method == 'get':
         context.response = requests.get(api_url, params=url_params, data=url_params, headers=headers,
-                                        cookies=context.cookie, allow_redirects=False)
+                                        cookies=context.cookie,verify=False,allow_redirects=False)
     else:
         context.response = requests.post(api_url, data=url_params, headers=headers, allow_redirects=False,
                                          cookies=context.cookie, verify=False)
