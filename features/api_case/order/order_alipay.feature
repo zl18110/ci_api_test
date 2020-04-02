@@ -290,3 +290,4 @@ Feature: 订单支付接口测试用例
             'referee_self_uid': 0
         }]
       """
+  Scenario:[1]测试现场恢复
