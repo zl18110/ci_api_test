@@ -20,6 +20,11 @@ CI_ENV = {
     "CI_PROTOCOL": "http"
 }
 
+CI_OD_SYS = {
+    "CI_HOST": "ordermanagetest.jaadee.net",
+    "CI_PROTOCOL": "http"
+}
+
 DOCKERFILE_DIR = '/cidata/dev'
 RETRY = False
 MAX_RETRY = 0  # scenario级别的重试机制，最大重试次数n。总共执行了1+n次

@@ -35,22 +35,21 @@ class Request():
                 response = self.urlopen(timeout)
                 print("Status: ", response.status_code)
                 print("Text: ", str(response.text))
-                print("\n\n")
-                print("======================")
+                print("\n\n\n\n")
                 self.response['http_status'] = response.status_code
                 self.response['headers'] = response.headers
                 self.response['body'] = response.text
                 self.response['history'] = response.history
                 break
             except Exception as e:
-                print("\n [Exception]Got Exception Try Again...\n%s\n[URL] %s" % (str(e), self.url + urllib.parse.urlencode(self.params)))
+                print("[Exception]Got Exception Try Again...\n%s\n[URL] %s" % (str(e), self.url + urllib.parse.urlencode(self.params)))
                 max_try -= 1
 
         if max_try <= 0:
             raise Exception("Send http request timeout! Retry failed!")
 
         for redirect in self.response['history']:
-            print("\n [Redirect History] %s\t[Http Status] %s" % (redirect.url, redirect.status_code))
+            print("[Redirect History] %s\t[Http Status] %s" % (redirect.url, redirect.status_code))
 
         return self.response
 

@@ -16,7 +16,7 @@ Feature: 添加订单接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_orders_user where orders_uid='2638122';"
+        "delete from ordertest.od_orders_user where user_id='2638122';"
       """
     * 运行以下sql,删除测试数据
       """
@@ -28,7 +28,7 @@ Feature: 添加订单接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '2638122';"
+        "delete from ordertest.od_order_logs  where log like '%YK00000401%';"
       """
   Scenario: [1] 添加一口价订单
     * 请求"create_order_url"接口，添加订单

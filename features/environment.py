@@ -9,8 +9,12 @@ from features.utils.token_uuid import *
 
 def before_all(context):
     importlib.reload(sys)
-    context.token = get_access_token(context)['accessToken']
-    context.uuid = get_access_token(context)['uuid']
+    c_res = get_access_token(context)
+    context.token = c_res['accessToken']
+    context.uuid = c_res['uuid']
+    od_res = get_login_cookie(context)
+    context.cookie = od_res['cookie']
+    context.clientToken = od_res['clientToken']
 
 
 def before_feature(context,feature):

@@ -8,15 +8,15 @@ Feature: 订单支付接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
+        "delete FROM ordertest.od_payment_log WHERE orders_sn in (SELECT orders_sn from  ordertest.od_orders_user where user_id=2638122);"
+      """
+    * 运行以下sql,删除测试数据
+      """
         "delete from ordertest.od_orders_goods where goods_sn ='YK00000401';"
       """
     * 运行以下sql,删除测试数据
       """
         "delete from ordertest.od_orders_remark where user_remark='ci_api_test';"
-      """
-    * 运行以下sql,删除测试数据
-      """
-        "delete from ordertest.od_orders_user where orders_uid='2638122';"
       """
     * 运行以下sql,删除测试数据
       """
@@ -28,7 +28,19 @@ Feature: 订单支付接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '2638122';"
+        "delete from ordertest.od_order_logs where log like '%YK00000401%';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete FROM ordertest.od_orders_separate WHERE orders_sn in (SELECT orders_sn from  ordertest.od_orders_user where user_id=2638122);"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete FROM ordertest.od_orders_separate_pay WHERE orders_sn in (SELECT orders_sn from  ordertest.od_orders_user where user_id=2638122);"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_user where user_id='2638122';"
       """
     * 请求"create_order_url"接口，添加订单
       """
@@ -53,7 +65,7 @@ Feature: 订单支付接口测试用例
       """
         {"orders_uid":"2638122","goods_id":"401"}
       """
-    * 请求"order_alipay_url"接口，添加订单
+    * 请求"order_alipay_url"接口，支付订单
       """
         {'link_url':'',
           'http_method': 'post',

@@ -28,7 +28,6 @@ Feature: 查询商品详情接口测试用例
               "shop_price": "100.00",
               "collect_num": 0,
               "is_video": 0,
-              "stock": 999998,
               "controller_start_time": "2020-03-30 00:00:00",
               "controller_end_time": "2021-03-30 00:00:00",
               "server_type": ["1"],
@@ -51,13 +50,9 @@ Feature: 查询商品详情接口测试用例
               "max_num": 999,
               "saleStatus": 0,
               "refundable_time": 0,
-              "sale_num": 2,
               "active_ext": null,
               "active_id": 0,
               "is_delete": 0,
-              "server_info": {
-                  "xmpp_username": "d468c79404d98666ec9d0c0d9246f0c8"
-              },
               "advertise": [],
               "xcx_advertise": [],
               "cate_name": "茶叶茶道",

@@ -16,7 +16,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_orders_user where orders_sn='YK203301723564999279';"
+        "delete from ordertest.od_orders_user where user_id ='2638122';"
       """
     * 运行以下sql,删除测试数据
       """
@@ -28,7 +28,7 @@ Feature: 获取用户订单列表接口测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log REGEXP '2638122';"
+        "delete from ordertest.od_order_logs where log like '%YK00000401%';"
       """
     * 运行以下sql,删除测试数据
       """
