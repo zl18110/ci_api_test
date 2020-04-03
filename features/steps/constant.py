@@ -16,6 +16,11 @@ orders_recevie_url = "%s://%s/v1/orders/receive"
 query_order_detail_url = "%s://%s/a/api/ordersys/index.php/v1/order/detail"
 query_order_pay_result_url = "%s://%s/a/api/ordersys/index.php/v3/order/payResult"
 
+
+# 翡翠王朝--C端 order 售后相关
+create_order_return_url = "%s://%s/a/api/order/return/create"
+
+
 # 翡翠王朝--C端 user 相关
 query_address_list_url = "%s://%s/a/api/usr/index.php/v2/address/getList"
 query_user_goods_coupon_url = "%s://%s/a/api/activity/v1/coupon/userCoupons"
