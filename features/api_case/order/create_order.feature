@@ -191,7 +191,7 @@ Feature: 添加订单接口测试用例
             'address_id': 2235,
             'update_limit': None,
             'encrypted': 0,
-            'ou_encrypted': 1,
+            'ou_encrypted': 0,
             'phoneX': None,
             'subs_id': None
         }]
