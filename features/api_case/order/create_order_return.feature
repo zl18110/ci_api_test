@@ -57,6 +57,7 @@ Feature: C端订单发起售后接口组合测试用例
            }
         }
       """
+    * 等待"2"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
@@ -119,6 +120,7 @@ Feature: C端订单发起售后接口组合测试用例
            }
         }
       """
+    * 等待"2"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
@@ -258,11 +260,11 @@ Feature: C端订单发起售后接口组合测试用例
            }
         }
       """
+    * 等待"2"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
       """
-    * 等待"2"秒
 
     * 请求"create_order_return_url"接口，申请售后
       """
@@ -317,6 +319,7 @@ Feature: C端订单发起售后接口组合测试用例
            }
         }
       """
+    * 等待"2"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
@@ -510,4 +513,4 @@ Feature: C端订单发起售后接口组合测试用例
       |1           |{"cacheType":"","code":1,"displayAlert":false,"displayTip":false,"hashData":"","message":"只有待收货，已签收的订单可以申请退货退款","msg":"只有待收货，已签收的订单可以申请退货退款","status":1}|
       |3           |{"cacheType":"","code":1,"displayAlert":false,"displayTip":false,"hashData":"","message":"订单已结算","msg":"订单已结算","status":1}                              |
 
-#  Scenario: [1] 测试现场恢复
+  Scenario: [1] 测试现场恢复

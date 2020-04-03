@@ -19,7 +19,8 @@ query_order_pay_result_url = "%s://%s/a/api/ordersys/index.php/v3/order/payResul
 
 # 翡翠王朝--C端 order 售后相关
 create_order_return_url = "%s://%s/a/api/order/return/create"
-
+query_order_return_list_url = "%s://%s/a/api/order/return/list"
+query_order_return_detail_url = "%s://%s/a/api/order/return/detail"
 
 # 翡翠王朝--C端 user 相关
 query_address_list_url = "%s://%s/a/api/usr/index.php/v2/address/getList"
