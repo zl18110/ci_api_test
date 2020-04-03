@@ -53,7 +53,7 @@ Feature: C端订单发起售后接口组合测试用例
               "couponId": 0,
               "num": 1,
               "attr": "",
-              "remark": "sp_ci_test"
+              "remark": "ci_api_test"
            }
         }
       """
@@ -116,7 +116,7 @@ Feature: C端订单发起售后接口组合测试用例
               "couponId": 0,
               "num": 1,
               "attr": "",
-              "remark": "sp_ci_test"
+              "remark": "ci_api_test"
            }
         }
       """
@@ -256,7 +256,7 @@ Feature: C端订单发起售后接口组合测试用例
               "couponId": 0,
               "num": 1,
               "attr": "",
-              "remark": "sp_ci_test"
+              "remark": "ci_api_test"
            }
         }
       """
@@ -315,7 +315,7 @@ Feature: C端订单发起售后接口组合测试用例
               "couponId": 0,
               "num": 1,
               "attr": "",
-              "remark": "sp_ci_test"
+              "remark": "ci_api_test"
            }
         }
       """

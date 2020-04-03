@@ -61,7 +61,7 @@ Feature: 后台添加物流发货接口组合测试用例
               "couponId": 0,
               "num": 1,
               "attr": "",
-              "remark": "sp_ci_test"
+              "remark": "ci_api_test"
            }
         }
       """

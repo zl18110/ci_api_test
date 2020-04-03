@@ -1,5 +1,5 @@
 # Created by shenping at 2020/3/24
-Feature: 添加订单接口测试用例
+Feature: 取消订单接口测试用例
   #  /a/api/v1/orders/orders
   Background: 测试数据初始化
     * 删除测试数据"ordertest.od_orders"
@@ -30,7 +30,7 @@ Feature: 添加订单接口测试用例
       """
         "delete from ordertest.od_order_logs  where log like '%YK00000401%';"
       """
-  Scenario: [1] 添加一口价订单
+  Scenario: [0] 取消待付款订单
     * 请求"create_order_url"接口，添加订单
     """
       {'link_url':'',
@@ -61,11 +61,54 @@ Feature: 添加订单接口测试用例
           "status": 0
         }
       """
-    * 等待"2"秒
+    * 等待"3"秒
 
-    * 数据表"ordertest.od_orders_remark" 使用逻辑"and"查询最新记录字段"orders_sn"
+    * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
+      """
+        {"orders_uid":"2638122","goods_id":"401"}
+      """
+
+    * 请求"revoke_order_url"接口，取消订单
+    """
+      {'link_url':'',
+        'http_method': 'post',
+         "url_params":{
+              "ordersSn": ((context.column_result)),
+              "rcancellation": 1
+          }
+      }
+    """
+    * 验证接口返回值
+      """
+        {
+            "cacheType": "",
+            "code": 0,
+            "displayAlert": false,
+            "displayTip": false,
+            "hashData": "",
+            "message": "操作成功！！",
+            "msg": "操作成功！！",
+            "status": 0
+        }
+      """
+
+    * 使用逻辑"and"查询数据库"ordertest.od_orders_remark"
       """
         {"user_remark":"ci_api_test"}
+      """
+    * 验证数据库返回值
+      """
+        [{
+            'sale_remark': '【杨哥22楼商户，电话：13099951707,自发货】',
+            'sale_remark_pic': '',
+            'finance_remark': '',
+            'finance_remark_pic': '',
+            'goods_remark': '',
+            'goods_remark_pic': '',
+            'user_remark': 'ci_api_test',
+            'del_state': 0,
+            'refund_remark': ''
+        }]
       """
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
@@ -88,7 +131,7 @@ Feature: 添加订单接口测试用例
           'discount_goods_price': Decimal('0.00'),
           'actual_price': Decimal('100.00'),
           'coin': 0,
-          'status': 1,
+          'status': 3,
           'paid_money': Decimal('0.00'),
           'extra': '{"rewards_on":1}',
           'job_number': None,
@@ -115,6 +158,7 @@ Feature: 添加订单接口测试用例
           'refund_flg': None
       }]
     """
+
     * 使用逻辑"and"查询数据库"ordertest.od_orders_goods"
       """
         {"orders_sn":(context.column_result)}
@@ -141,7 +185,7 @@ Feature: 添加订单接口测试用例
           'live_stream': '',
           'live_info': '',
           'plat_id': 1,
-          'status': 1,
+          'status': 7,
           'cost_status': 0,
           'actual_price': Decimal('100.00'),
           'orders_discount_apportion': Decimal('0.00'),
@@ -174,6 +218,7 @@ Feature: 添加订单接口测试用例
           'auto_settle': 1
       }]
       """
+
     * 使用逻辑"and"查询数据库"ordertest.od_orders_user"
       """
         {"orders_sn":(context.column_result)}
@@ -191,23 +236,21 @@ Feature: 添加订单接口测试用例
             'address_id': 2235,
             'update_limit': None,
             'encrypted': 0,
-            'ou_encrypted': 1,
+            'ou_encrypted': 0,
             'phoneX': None,
             'subs_id': None
         }]
       """
+
     * 使用逻辑"and"查询数据库"ordertest.od_goods_lock"
       """
         {"orders_sn":(context.column_result)}
       """
     * 验证数据库返回值
       """
-        [{
-            'goods_sn': '',
-            'del_state': 0,
-            'sock': None
-        }]
+        []
       """
+
     * 使用逻辑"and"查询数据库"ordertest.od_operator"
       """
         {"orders_sn":(context.column_result)}
@@ -220,9 +263,8 @@ Feature: 添加订单接口测试用例
             'deliver_goods_uid': 0,
             'check_goods_uid': 0,
             'financial_uid': 0,
-            'del_state': 0,
+            'del_state': 0
         }]
       """
-   Scenario:[2]测试现场恢复
 
-
+    Scenario:[2]测试现场恢复

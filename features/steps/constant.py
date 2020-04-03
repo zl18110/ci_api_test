@@ -15,7 +15,8 @@ order_pay_result_url = "%s://%s/a/api/ordersys/index.php/v3/order/payResult"
 orders_recevie_url = "%s://%s/v1/orders/receive"
 query_order_detail_url = "%s://%s/a/api/ordersys/index.php/v1/order/detail"
 query_order_pay_result_url = "%s://%s/a/api/ordersys/index.php/v3/order/payResult"
-
+query_order_cancel_reason_url = "%s://%s/a/api/ordersys/cancel/reason/list"
+revoke_order_url = "%s://%s/a/api/ordersys/index.php/v1/order/cancel"
 
 # 翡翠王朝--C端 order 售后相关
 create_order_return_url = "%s://%s/a/api/order/return/create"
