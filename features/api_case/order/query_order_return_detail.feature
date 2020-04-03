@@ -334,3 +334,40 @@ Feature: 售后订单详情查询接口测试用例
           "status": 0
       }
     """
+  Scenario:  [2]测试现场恢复
+    * 删除测试数据"ordertest.od_orders"
+      """
+        {"orders_uid":"2638122"}
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_goods where goods_sn ='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_remark where user_remark='ci_api_test';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_user where user_id='2638122';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_goods_lock where goods_sn='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_operator where goods_sn='YK00000401';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_goods_logistics where logistics_sn ='SF000009';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_order_logs where log like '%YK00000401%';"
+      """
+    * 运行以下sql,删除测试数据
+      """
+        "delete from ordertest.od_orders_goods_return where goods_sn = 'YK00000401';"
+      """
