@@ -21,6 +21,8 @@ query_order_pay_result_url = "%s://%s/a/api/ordersys/index.php/v3/order/payResul
 create_order_return_url = "%s://%s/a/api/order/return/create"
 query_order_return_list_url = "%s://%s/a/api/order/return/list"
 query_order_return_detail_url = "%s://%s/a/api/order/return/detail"
+update_order_return_url = "%s://%s/a/api/order/return/update"
+revoke_order_return_url = "%s://%s/a/api/order/return/updateToRevoke"
 
 # 翡翠王朝--C端 user 相关
 query_address_list_url = "%s://%s/a/api/usr/index.php/v2/address/getList"

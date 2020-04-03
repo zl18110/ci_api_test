@@ -1,5 +1,5 @@
 # Created by shenping at 2020/4/3
-Feature: 售后订单详情查询接口测试用例
+Feature: 修改售后订单接口测试用例
 
   Scenario:  [0]测试数据初始化
     * 删除测试数据"ordertest.od_orders"
@@ -166,17 +166,23 @@ Feature: 售后订单详情查询接口测试用例
         }
       """
 
-  Scenario: [1] 查询售后订单详情
+  Scenario: [1] 修改售后订单
     * 数据表"ordertest.od_orders_goods_return" 使用逻辑"and"查询最新记录字段"refund_sn"
       """
         {"uid":"2638122","goods_sn":"YK00000401"}
       """
-    * 请求"query_order_return_detail_url"接口，查询售后订单详情
+    * 请求"update_order_return_url"接口，修改售后订单
     """
       {'link_url':'',
         'http_method': 'post',
          'url_params':{
-              "refundSn": (context.column_result)
+              "applicationReason": 3,
+              "postSaleType": 1,
+              "remark": "测试",
+              "profs": ["rn/userUpload/mine/afterSale/image/2638122/2020-04-03/1585896672-2vtatt.jpg"],
+              "refundSn": (context.column_result),
+              "refundContacts": "翠友8276506303",
+              "refundContactsInformation": "12888886303"
          }
       }
     """
@@ -185,152 +191,11 @@ Feature: 售后订单详情查询接口测试用例
       {
           "cacheType": "",
           "code": 0,
-          "data": {
-              "buid": 0,
-              "buyerDeliveryTime": "",
-              "financeRemark": "线上业务",
-              "goodsRemark": "",
-              "goodsSn": "YK00000401",
-              "isMock": 0,
-              "isReject": 0,
-              "mid": 3,
-              "money": 100.0,
-              "num": 1,
-              "orders": {
-                  "goodSn": "",
-                  "isDbzc": 0,
-                  "isVip": 0,
-                  "jobNumber": "",
-                  "ordersAddUser": 90,
-                  "ordersRefundTime": "",
-                  "ordersType": 16,
-                  "ordersUid": 2638122,
-                  "paidMoney": 100.0,
-                  "pid": 0,
-                  "serverId": 0
-              },
-              "ordersGoods": {
-                  "actualPrice": 100.0,
-                  "buid": 3,
-                  "coin": 0.0,
-                  "discount": 0.0,
-                  "goodsCategoryTag": "",
-                  "goodsImgs": "",
-                  "goodsLogo": "https://res.jaadee.net/merchantApi/goods/2020-03-30/1585559778304-9c202c90dd20885b2d004847396c6f91.jpeg",
-                  "goodsName": "CI-TEST-GOODS（自动化测试专用）",
-                  "goodsNum": 1,
-                  "goodsRefundableTime": 0,
-                  "goodsSn": "YK00000401",
-                  "goodsSource": 0,
-                  "isPartRefund": 0,
-                  "isRefund": 1,
-                  "mid": 3,
-                  "ordersAddUser": 90,
-                  "status": 3
-              },
-              "postSaleType": "退货退款",
-              "postSaleTypeValue": 1,
-              "profs": [],
-              "reason": "7天无理由退货",
-              "refundContacts": "翠友8276506303",
-              "refundContactsInformation": "12888886303",
-              "refundName": "翠友8276506303",
-              "refundRemark": "",
-              "refundUid": 0,
-              "refundVersion": 2,
-              "refundWay": 3,
-              "rejectMoneyReason": "",
-              "rejectMoneyTime": "",
-              "rejectReason": "",
-              "rejectTime": "",
-              "remark": "",
-              "revokeReason": "",
-              "revokeTime": "",
-              "sellerReceivingGoodsTime": "",
-              "server": {
-                  "avatar": "",
-                  "name": ""
-              },
-              "status": 0,
-              "type": 1,
-              "uid": 2638122
-          },
           "displayAlert": false,
           "displayTip": false,
           "hashData": "",
-          "info": {
-              "buid": 0,
-              "buyerDeliveryTime": "",
-              "financeRemark": "线上业务",
-              "goodsRemark": "",
-              "goodsSn": "YK00000401",
-              "isMock": 0,
-              "isReject": 0,
-              "mid": 3,
-              "money": 100.0,
-              "num": 1,
-              "orders": {
-                  "goodSn": "",
-                  "isDbzc": 0,
-                  "isVip": 0,
-                  "jobNumber": "",
-                  "ordersAddUser": 90,
-                  "ordersRefundTime": "",
-                  "ordersType": 16,
-                  "ordersUid": 2638122,
-                  "paidMoney": 100.0,
-                  "pid": 0,
-                  "referrerId": 2638121,
-                  "serverId": 0
-              },
-              "ordersGoods": {
-                  "actualPrice": 100.0,
-                  "buid": 3,
-                  "coin": 0.0,
-                  "discount": 0.0,
-                  "goodsCategoryTag": "",
-                  "goodsImgs": "",
-                  "goodsLogo": "https://res.jaadee.net/merchantApi/goods/2020-03-30/1585559778304-9c202c90dd20885b2d004847396c6f91.jpeg",
-                  "goodsName": "CI-TEST-GOODS（自动化测试专用）",
-                  "goodsNum": 1,
-                  "goodsRefundableTime": 0,
-                  "goodsSn": "YK00000401",
-                  "goodsSource": 0,
-                  "isPartRefund": 0,
-                  "isRefund": 1,
-                  "mid": 3,
-                  "ordersAddUser": 90,
-                  "status": 3
-              },
-              "postSaleType": "退货退款",
-              "postSaleTypeValue": 1,
-              "profs": [],
-              "reason": "7天无理由退货",
-              "refundContacts": "翠友8276506303",
-              "refundContactsInformation": "12888886303",
-              "refundName": "翠友8276506303",
-              "refundRemark": "",
-              "refundUid": 0,
-              "refundVersion": 2,
-              "refundWay": 3,
-              "rejectMoneyReason": "",
-              "rejectMoneyTime": "",
-              "rejectReason": "",
-              "rejectTime": "",
-              "remark": "",
-              "revokeReason": "",
-              "revokeTime": "",
-              "sellerReceivingGoodsTime": "",
-              "server": {
-                  "avatar": "",
-                  "name": ""
-              },
-              "status": 0,
-              "type": 1,
-              "uid": 2638122
-          },
-          "message": "ok",
-          "msg": "ok",
+          "message": "修改成功",
+          "msg": "修改成功",
           "status": 0
       }
     """
