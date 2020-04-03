@@ -88,7 +88,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -110,7 +109,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,
@@ -169,7 +167,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -191,7 +188,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,
@@ -292,7 +288,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -314,7 +309,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,
@@ -373,7 +367,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -395,7 +388,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,
@@ -505,7 +497,6 @@ Feature: 获取用户订单列表接口测试用例
                     {
                         "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "actualPrice": "100.00",
-                        "buid": 3,
                         "goodsData": [
                             {
                                 "actualPrice": "100.00",
@@ -528,7 +519,6 @@ Feature: 获取用户订单列表接口测试用例
                                 "goodsOriginalPrice": 100.0,
                                 "goodsRefundableTime": 0,
                                 "goodsSn": "YK00000401",
-                                "goodsSource": 0,
                                 "goodsSourceId": 7,
                                 "id": 10457,
                                 "isDelete": 0,
@@ -590,7 +580,6 @@ Feature: 获取用户订单列表接口测试用例
                     {
                         "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "actualPrice": "100.00",
-                        "buid": 3,
                         "goodsData": [
                             {
                                 "actualPrice": "100.00",
@@ -613,7 +602,6 @@ Feature: 获取用户订单列表接口测试用例
                                 "goodsOriginalPrice": 100.0,
                                 "goodsRefundableTime": 0,
                                 "goodsSn": "YK00000401",
-                                "goodsSource": 0,
                                 "goodsSourceId": 7,
                                 "id": 10457,
                                 "isDelete": 0,
@@ -723,7 +711,6 @@ Feature: 获取用户订单列表接口测试用例
               "data": [{
                   "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "actualPrice": "100.00",
-                  "buid": 3,
                   "goodsData": [{
                       "actualPrice": "100.00",
                       "addTime": "2020-03-30 17:23:57",
@@ -745,7 +732,6 @@ Feature: 获取用户订单列表接口测试用例
                       "goodsOriginalPrice": 100.0,
                       "goodsRefundableTime": 0,
                       "goodsSn": "YK00000401",
-                      "goodsSource": 0,
                       "goodsSourceId": 7,
                       "id": 10457,
                       "isDelete": 0,
@@ -804,7 +790,6 @@ Feature: 获取用户订单列表接口测试用例
               "data": [{
                   "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "actualPrice": "100.00",
-                  "buid": 3,
                   "goodsData": [{
                       "actualPrice": "100.00",
                       "addTime": "2020-03-30 17:23:57",
@@ -826,7 +811,6 @@ Feature: 获取用户订单列表接口测试用例
                       "goodsOriginalPrice": 100.0,
                       "goodsRefundableTime": 0,
                       "goodsSn": "YK00000401",
-                      "goodsSource": 0,
                       "goodsSourceId": 7,
                       "id": 10457,
                       "isDelete": 0,
@@ -971,7 +955,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -993,7 +976,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,
@@ -1052,7 +1034,6 @@ Feature: 获取用户订单列表接口测试用例
                 "data": [{
                     "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
-                    "buid": 3,
                     "goodsData": [{
                         "actualPrice": "100.00",
                         "addTime": "2020-03-30 17:23:57",
@@ -1074,7 +1055,6 @@ Feature: 获取用户订单列表接口测试用例
                         "goodsOriginalPrice": 100.0,
                         "goodsRefundableTime": 0,
                         "goodsSn": "YK00000401",
-                        "goodsSource": 0,
                         "goodsSourceId": 7,
                         "id": 10457,
                         "isDelete": 0,

@@ -165,7 +165,6 @@ Feature: 添加订单接口测试用例
           'category_id': 0,
           'style_id': 0,
           'mid': 3,
-          'buid': 3,
           'goods_attr': '[]',
           'is_new_user': 0,
           'is_first': 59,

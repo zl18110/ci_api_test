@@ -184,7 +184,6 @@ Feature: 售后订单查询接口测试用例
           "cacheType": "",
           "code": 0,
           "data": [{
-              "buid": 0,
               "buyerDeliveryTime": "",
               "financeRemark": "线上业务",
               "goodsRemark": "",
@@ -210,7 +209,6 @@ Feature: 售后订单查询接口测试用例
               },
               "ordersGoods": {
                   "actualPrice": 100.0,
-                  "buid": 3,
                   "coin": 0.0,
                   "discount": 0.0,
                   "goodsCategoryTag": "",
@@ -220,7 +218,6 @@ Feature: 售后订单查询接口测试用例
                   "goodsNum": 1,
                   "goodsRefundableTime": 0,
                   "goodsSn": "YK00000401",
-                  "goodsSource": 0,
                   "isPartRefund": 0,
                   "isRefund": 1,
                   "mid": 3,
@@ -259,7 +256,6 @@ Feature: 售后订单查询接口测试用例
           "displayTip": false,
           "hashData": "",
           "info": [{
-              "buid": 0,
               "buyerDeliveryTime": "",
               "financeRemark": "线上业务",
               "goodsRemark": "",
@@ -285,7 +281,6 @@ Feature: 售后订单查询接口测试用例
               },
               "ordersGoods": {
                   "actualPrice": 100.0,
-                  "buid": 3,
                   "coin": 0.0,
                   "discount": 0.0,
                   "goodsCategoryTag": "",
@@ -295,7 +290,6 @@ Feature: 售后订单查询接口测试用例
                   "goodsNum": 1,
                   "goodsRefundableTime": 0,
                   "goodsSn": "YK00000401",
-                  "goodsSource": 0,
                   "isPartRefund": 0,
                   "isRefund": 1,
                   "mid": 3,
