@@ -42,6 +42,8 @@ Feature: 订单支付接口测试用例
       """
         "delete from ordertest.od_orders_user where user_id='2638122';"
       """
+
+  Scenario: [0] 使用钱包支付待付款订单（会员+直接推荐人+间接推荐人+商户推荐人）
     * 请求"create_order_url"接口，添加订单
       """
         {'link_url':'',
@@ -60,7 +62,6 @@ Feature: 订单支付接口测试用例
         }
       """
 
-  Scenario: [0] 使用钱包支付待付款订单（会员+直接推荐人+间接推荐人+商户推荐人）
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}

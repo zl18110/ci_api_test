@@ -46,6 +46,7 @@ def get_access_token(context):
     else:
         result = json.loads(res.text)
         re = {'accessToken': result['data']['accessToken'], 'uuid': result['data']['uid']}
+        print('accessToken and uid is:',re)
         return re
 
 
