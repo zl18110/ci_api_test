@@ -47,7 +47,7 @@ class Ordertest(orm_helper):
         self.pay_money = param.get("pay_money","0")
         self.clear = param.get("clear","5")
         self.asyn_remark = param.get("asyn_remark","")
-        self.is_dbzc = param.get("is_dbzc","")
+        self.is_dbzc = param.get("is_dbzc","0")
         self.goods_id = param.get("goods_id","313")
         self.r_cancellation = param.get("r_cancellation","")
         self.platform = param.get("platform","")

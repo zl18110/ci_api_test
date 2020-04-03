@@ -136,7 +136,7 @@ Feature: 订单支付接口测试用例
             'pay_money': '100',
             'clear': '3',
             'asyn_remark': None,
-            'is_dbzc': None,
+            'is_dbzc': 0,
             'goods_id': 401,
             'r_cancellation': None,
             'platform': None,
