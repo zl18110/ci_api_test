@@ -9,6 +9,19 @@ query_merchant_category_list_url = "/bus/merchant/CategoryList"
 query_hot_search_word_url = "/api/Goodsfixedprice/getHotSearchWord"
 query_search_list_url = "/api/Goodsfixedprice/getSearchList"
 
+# 翡翠王朝--C端 翠友天地相关
+query_recommend_index_url = "/operate/v1/recommend/index"
+query_community_article_fromIdo_url = "/v1/Community/ArticleFromIdol"
+query_community_idol_url = "/index.php/v1/Community/Idol"
+query_community_contentByCate_url = "/index.php/v1/Community/ContentByCate"
+query_community_profile_url = "/v1/Community/Profile"
+query_community_article_list_url = "/v1/Community/ArticleList"
+
+# 翡翠王朝--C端 在线鉴定相关
+query_jianbao_live_list_url = "/api/jianbao/live/list"
+query_jianbao_url = "/api/jianbao/"
+
+
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
 query_order_status_num_url = "/a/api/ordersys/index.php/v3/order/statusNum"
