@@ -47,7 +47,7 @@ Feature: 查询商品详情接口测试用例
               "content": "CI-TEST-DESC",
               "earn_money": "7.50",
               "display": 1,
-              "max_num": 999,
+              "max_num": 999999,
               "saleStatus": 0,
               "refundable_time": 0,
               "active_ext": null,

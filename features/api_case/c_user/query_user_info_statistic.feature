@@ -20,8 +20,7 @@ Feature: 获取用户红包卡券接口测试用例
           "data": {
               "countRed": 8,
               "countFollow": 0,
-              "countCollect": 0,
-              "countRecord": 0
+              "countCollect": 0
           },
           "displayAlert": false,
           "displayTip": false,
@@ -29,8 +28,7 @@ Feature: 获取用户红包卡券接口测试用例
           "info": {
               "countRed": 8,
               "countFollow": 0,
-              "countCollect": 0,
-              "countRecord": 0
+              "countCollect": 0
           },
           "message": "获取数据成功",
           "msg": "获取数据成功",

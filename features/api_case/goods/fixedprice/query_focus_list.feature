@@ -27,8 +27,7 @@ Feature: 获取用户关注店铺列表接口测试用例
                     "real_name": "杨哥22楼",
                     "name": "杨哥22楼店铺",
                     "cover": "https:\/\/res.jaadee.net\/merchantApi\/other\/2020-03-28\/1585366368408-204b700ce97b4a241a0b867e83f40530.jpg",
-                    "avatar": "https:\/\/res.jaadee.net\/merchantApi\/other\/2020-03-28\/1585366373840-2e0b5c48e77cd5844bbd9a0659c72dee.jpg",
-                    "focus_num": 789
+                    "avatar": "https:\/\/res.jaadee.net\/merchantApi\/other\/2020-03-28\/1585366373840-2e0b5c48e77cd5844bbd9a0659c72dee.jpg"
                 }]
             },
             "cache": ""

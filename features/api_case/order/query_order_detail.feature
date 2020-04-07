@@ -96,7 +96,6 @@ Feature: 获取订单详情接口测试用例
               "is_gift": 0,
               "jobNumber": "",
               "member": [{
-                  "avatar": "merchantApi/other/2020-03-28/1585366373840-2e0b5c48e77cd5844bbd9a0659c72dee.jpg",
                   "goodsData": [{
                       "actualPrice": "100.00",
                       "addTime": "2020-03-30 17:23:57",
@@ -179,7 +178,6 @@ Feature: 获取订单详情接口测试用例
               "remainSecond": 0,
               "server": {
                   "accid": "d468c79404d98666ec9d0c0d9246f0c8",
-                  "avatar": "",
                   "name": ""
               },
               "serverId": "90",
@@ -218,7 +216,6 @@ Feature: 获取订单详情接口测试用例
               "is_gift": 0,
               "jobNumber": "",
               "member": [{
-                  "avatar": "merchantApi/other/2020-03-28/1585366373840-2e0b5c48e77cd5844bbd9a0659c72dee.jpg",
                   "goodsData": [{
                       "actualPrice": "100.00",
                       "addTime": "2020-03-30 17:23:57",
@@ -301,7 +298,6 @@ Feature: 获取订单详情接口测试用例
               "remainSecond": 0,
               "server": {
                   "accid": "d468c79404d98666ec9d0c0d9246f0c8",
-                  "avatar": "",
                   "name": ""
               },
               "serverId": "90",
