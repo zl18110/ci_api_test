@@ -512,4 +512,4 @@ Feature: C端订单发起售后接口组合测试用例
       |1           |{"cacheType":"","code":1,"displayAlert":false,"displayTip":false,"hashData":"","message":"只有待收货，已签收的订单可以申请退货退款","msg":"只有待收货，已签收的订单可以申请退货退款","status":1}|
       |3           |{"cacheType":"","code":1,"displayAlert":false,"displayTip":false,"hashData":"","message":"订单已结算","msg":"订单已结算","status":1}                              |
 
-  Scenario: [1] 测试现场恢复
+  Scenario: [5] 测试现场恢复
