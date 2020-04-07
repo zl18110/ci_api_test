@@ -28,6 +28,8 @@ query_auction_special_url = "/api/auction/special/0"
 query_auction_url = "/api/auction/"
 query_common_article_list_url = "/api/common/article/list/"
 query_search_bykeyword_url = "/api/auction/searchbykeyword"
+query_auction_my_url = "/api/auction/my"
+
 
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
