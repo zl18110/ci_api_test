@@ -15,9 +15,10 @@ def get_code():
 
 
 def get_access_token(context):
-    url = eval('login_url') % (context.config.userdata.get("protocol", CI_ENV['CI_PROTOCOL']),
-                               context.config.userdata.get("host", CI_ENV['CI_HOST']))
-    print(' api url is:', url)
+    url = str("{protocol}://{host}") + eval('login_url')
+    url = url.format(protocol=CI_ENV['CI_PROTOCOL'], host=CI_ENV['CI_HOST'])
+
+    print('api url is:', url)
     code = 1
     try:
         code = get_code()
@@ -46,20 +47,21 @@ def get_access_token(context):
     else:
         result = json.loads(res.text)
         re = {'accessToken': result['data']['accessToken'], 'uuid': result['data']['uid']}
-        print('accessToken and uid is:',re)
+        print('accessToken and uid is:', re)
         return re
 
 
 def get_login_cookie(context):
-    url = eval('od_login_url') % (context.config.userdata.get("protocol", CI_OD_SYS['CI_PROTOCOL']),
-                                  context.config.userdata.get("host", CI_OD_SYS['CI_HOST']))
-    print(' od_login_url is:', url)
+    url = str("{protocol}://{host}") + eval('od_login_url')
+    url = url.format(protocol=context.config.userdata.get("protocol", CI_OD_SYS['CI_PROTOCOL']),
+                     host=context.config.userdata.get("host", CI_OD_SYS['CI_HOST']))
+
+    print('od_login_url is:', url)
     headers = {
         'Content-Type': 'application/json',
         'Connection': 'keep-alive'
     }
     res = requests.get(url, headers=headers, allow_redirects=False)
-    print('res is ',res)
     if res.status_code != 200:
         print("Got error: " + res.text)
         print("res.status_code: ", res.status_code)
@@ -67,7 +69,7 @@ def get_login_cookie(context):
         sys.exit(-1)
     else:
         resjson = json.loads(res.text)
-        re = {'cookie': res.cookies,'clientToken':resjson['clientToken']}
-        print('this  cookie is:',re['cookie'])
+        re = {'cookie': res.cookies, 'clientToken': resjson['clientToken']}
+        print('this  cookie is:', re['cookie'])
         print('this  clientToken is:', re['clientToken'])
         return re

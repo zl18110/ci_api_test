@@ -24,7 +24,7 @@ Feature: 查询商品详情接口测试用例
               "goods_sn": "YK00000401",
               "goods_name": "CI-TEST-GOODS（自动化测试专用）",
               "cover": "https:\/\/res.jaadee.net\/merchantApi\/goods\/2020-03-30\/1585559778304-9c202c90dd20885b2d004847396c6f91.jpeg",
-              "market_price": "240.00",
+              "market_price": "300.00",
               "shop_price": "100.00",
               "collect_num": 0,
               "is_video": 0,

@@ -38,9 +38,9 @@ def send_request(context, api_url_bef):
         host = context.config.userdata.get("host", CI_ENV['CI_HOST'])
     if not protocol:
         protocol = context.config.userdata.get("protocol", CI_ENV['CI_PROTOCOL'])
-    api_url = eval(api_url_bef) % (protocol, host) + context.params.get("link_url", "")
+    api_url = str("{protocol}://{host}") + eval(api_url_bef)
+    api_url = api_url.format(protocol=protocol, host=host) + context.params.get("link_url", "")
     print("api_url is :", api_url)
-
     http_method = context.params.get("http_method", "")
     headers = {}
     if 'headers' in context.params:
@@ -228,7 +228,8 @@ def send_request(context, api_url_bef):
         host = context.config.userdata.get("host", CI_OD_SYS['CI_HOST'])
     if not protocol:
         protocol = context.config.userdata.get("protocol", CI_OD_SYS['CI_PROTOCOL'])
-    api_url = eval(api_url_bef) % (protocol, host) + context.params.get("link_url", "")
+    api_url = str("{protocol}://{host}") + eval(api_url_bef)
+    api_url = api_url.format(protocol=protocol, host=host) + context.params.get("link_url", "")
     http_method = context.params.get("http_method", "")
     headers = {}
     if 'headers' in context.params:
