@@ -10,7 +10,7 @@ from behave import given  # @UnresolvedImport
 from behave import use_step_matcher
 from simplejson import JSONDecodeError
 
-from features.conf.config import DOCKERFILE_DIR, CI_ENV, CI_OD_SYS
+from features.conf.config import DOCKERFILE_DIR, CI_ENV, CI_OD_SYS,CI_AUCTION
 from features.db.db_mapping import *
 from features.utils.http_req import *
 from features.utils.json_recur_check import *
@@ -34,10 +34,15 @@ def send_request(context, api_url_bef):
     context.params = eval(context.text) if context.text else None
     host = context.params.get("host", "")
     protocol = context.params.get("protocol", "")
+    evn = context.params.get("evn", "")
     if not host:
-        host = context.config.userdata.get("host", CI_ENV['CI_HOST'])
-    if not protocol:
-        protocol = context.config.userdata.get("protocol", CI_ENV['CI_PROTOCOL'])
+        if evn == 'CI_AUCTION':
+            host = CI_AUCTION['CI_HOST']
+            protocol = CI_AUCTION['CI_PROTOCOL']
+        else:
+            host = CI_ENV['CI_HOST']
+            protocol = CI_ENV['CI_PROTOCOL']
+
     api_url = str("{protocol}://{host}") + eval(api_url_bef)
     api_url = api_url.format(protocol=protocol, host=host) + context.params.get("link_url", "")
     print("api_url is :", api_url)

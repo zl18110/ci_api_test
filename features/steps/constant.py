@@ -22,6 +22,13 @@ query_jianbao_live_list_url = "/api/jianbao/live/list"
 query_jianbao_url = "/api/jianbao/"
 
 
+# 翡翠王朝--C端 拍卖相关
+query_auction_special_list_url = "/api/auction/special"
+query_auction_special_url = "/api/auction/special/0"
+query_auction_url = "/api/auction/"
+query_common_article_list_url = "/api/common/article/list/"
+query_search_bykeyword_url = "/api/auction/searchbykeyword"
+
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
 query_order_status_num_url = "/a/api/ordersys/index.php/v3/order/statusNum"
