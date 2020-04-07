@@ -132,7 +132,6 @@ Feature: 获取订单详情接口测试用例
                       "liverName": "",
                       "margin": 0.0,
                       "memberApportion": "0.00",
-                      "mid": 3,
                       "ordersAddUser": 90,
                       "ordersDiscountApportion": "0.00",
                       "ordersSn": "YK203301723564999279",
@@ -156,7 +155,6 @@ Feature: 获取订单详情接口测试用例
                   "totalPrice": "100.00"
               }],
               "memberDiscount": 0,
-              "mid": 3,
               "name": "",
               "ordersAddUser": 90,
               "ordersCreatetime": "2020-03-30 17:23:57",
@@ -252,7 +250,6 @@ Feature: 获取订单详情接口测试用例
                       "liverName": "",
                       "margin": 0.0,
                       "memberApportion": "0.00",
-                      "mid": 3,
                       "ordersAddUser": 90,
                       "ordersDiscountApportion": "0.00",
                       "ordersSn": "YK203301723564999279",
@@ -276,7 +273,6 @@ Feature: 获取订单详情接口测试用例
                   "totalPrice": "100.00"
               }],
               "memberDiscount": 0,
-              "mid": 3,
               "name": "",
               "ordersAddUser": 90,
               "ordersCreatetime": "2020-03-30 17:23:57",
