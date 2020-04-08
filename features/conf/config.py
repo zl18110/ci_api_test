@@ -30,6 +30,18 @@ CI_AUCTION ={
     "CI_PROTOCOL": "https"
 }
 
+
+CI_NEWAPI ={
+    "CI_HOST": "newapitest.jaadee.net",
+    "CI_PROTOCOL": "https"
+}
+
+
+CI_RNAPI ={
+    "CI_HOST": "rnapitest.jaadee.net",
+    "CI_PROTOCOL": "https"
+}
+
 DOCKERFILE_DIR = '/cidata/dev'
 RETRY = False
 MAX_RETRY = 0  # scenario级别的重试机制，最大重试次数n。总共执行了1+n次

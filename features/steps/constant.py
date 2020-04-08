@@ -30,6 +30,11 @@ query_common_article_list_url = "/api/common/article/list/"
 query_search_bykeyword_url = "/api/auction/searchbykeyword"
 query_auction_my_url = "/api/auction/my"
 
+# 翡翠王朝--C端 品牌大厅相关
+query_index_goods_ceneter_url = "/index.php/v2/Goods/indexGetGoodsCenter.html"
+query_index_platinfo_url = "/v1/index/platInfo"
+
+
 
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
