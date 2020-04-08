@@ -18,7 +18,6 @@ Feature: 获取拍卖分类接口测试用例
               "count": 6,
               "result": [{
                   "picture": "https://res.jaadee.com/auction/logo/20190809/6kin8dkexud1zqeu7x1jgq.jpg",
-                  "extra_info": {},
                   "title": "新人专享",
                   "special_id": 32,
                   "special_type": 2005,
@@ -35,7 +34,6 @@ Feature: 获取拍卖分类接口测试用例
                   "sub_title": "限制捡漏"
               }, {
                   "picture": "https://res.jaadee.com/auction/logo/20190605/6duxdixl9uycnwi8pa32sf.png",
-                  "extra_info": {},
                   "title": "0元起拍",
                   "special_id": 15,
                   "special_type": 2002,
@@ -44,7 +42,6 @@ Feature: 获取拍卖分类接口测试用例
                   "sub_title": "精选好物捡漏"
               }, {
                   "picture": "https://res.jaadee.com/auction/logo/20190605/zsglao6pbiebzwajs8zus.png",
-                  "extra_info": {},
                   "title": "高货专场",
                   "special_id": 17,
                   "special_type": 2003,
@@ -53,9 +50,6 @@ Feature: 获取拍卖分类接口测试用例
                   "sub_title": "高品质翡翠"
               }, {
                   "picture": "https://res.jaadee.com/live/images/2020/01/20200117100122-61909.png",
-                  "extra_info": {
-                      "count": 1
-                  },
                   "title": "最新上架",
                   "special_id": 18,
                   "special_type": 2008,
@@ -64,7 +58,6 @@ Feature: 获取拍卖分类接口测试用例
                   "sub_title": "不要钱抽奖，就问你来不来"
               }, {
                   "picture": "https://res.jaadee.com/live/images/2020/01/20200117100155-50925.png",
-                  "extra_info": {},
                   "title": "每日抢拍",
                   "special_id": 38,
                   "special_type": 2009,
