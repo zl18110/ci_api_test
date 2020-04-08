@@ -145,10 +145,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "100.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 1
                 }],
@@ -221,10 +217,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "100.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 1
                 }],
@@ -339,10 +331,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "100.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 1
                 }],
@@ -415,10 +403,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "100.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 1
                 }],
@@ -544,10 +528,6 @@ Feature: 获取用户订单列表接口测试用例
                         "refundFlag": 0,
                         "remainMoney": "0.00",
                         "remainSecond": 0,
-                        "server": {
-                            "avatar": "",
-                            "name": ""
-                        },
                         "showAfterSale": 1,
                         "status": 2
                     }
@@ -624,10 +604,6 @@ Feature: 获取用户订单列表接口测试用例
                         "refundFlag": 0,
                         "remainMoney": "0.00",
                         "remainSecond": 0,
-                        "server": {
-                            "avatar": "",
-                            "name": ""
-                        },
                         "showAfterSale": 1,
                         "status": 2
                     }
@@ -750,10 +726,6 @@ Feature: 获取用户订单列表接口测试用例
                   "refundFlag": 0,
                   "remainMoney": "0.00",
                   "remainSecond": 0,
-                  "server": {
-                      "avatar": "",
-                      "name": ""
-                  },
                   "showAfterSale": 1,
                   "status": 2
               }],
@@ -826,10 +798,6 @@ Feature: 获取用户订单列表接口测试用例
                   "refundFlag": 0,
                   "remainMoney": "0.00",
                   "remainSecond": 0,
-                  "server": {
-                      "avatar": "",
-                      "name": ""
-                  },
                   "showAfterSale": 1,
                   "status": 2
               }],
@@ -988,10 +956,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "0.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 2
                 }],
@@ -1064,10 +1028,6 @@ Feature: 获取用户订单列表接口测试用例
                     "refundFlag": 0,
                     "remainMoney": "0.00",
                     "remainSecond": 0,
-                    "server": {
-                        "avatar": "",
-                        "name": ""
-                    },
                     "showAfterSale": 0,
                     "status": 2
                 }],

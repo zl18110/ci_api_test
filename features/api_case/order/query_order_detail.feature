@@ -173,9 +173,6 @@ Feature: 获取订单详情接口测试用例
               "referrerId": 0,
               "remainMoney": 100.0,
               "remainSecond": 0,
-              "server": {
-                  "name": ""
-              },
               "serverId": "90",
               "showAfterSale": 0,
               "status": 1,
@@ -289,9 +286,6 @@ Feature: 获取订单详情接口测试用例
               "referrerId": 0,
               "remainMoney": 100.0,
               "remainSecond": 0,
-              "server": {
-                  "name": ""
-              },
               "serverId": "90",
               "showAfterSale": 0,
               "status": 1,
