@@ -234,7 +234,7 @@ Feature: 取消订单接口测试用例
             'address_id': 2235,
             'update_limit': None,
             'encrypted': 0,
-            'ou_encrypted': 0,
+            'ou_encrypted': 1,
             'phoneX': None,
             'subs_id': None
         }]
