@@ -40,6 +40,13 @@ query_goods_category_url = "/index.php/v2/GoodsCategory/fetchGoodsCategory"
 query_associate_words_url = "/index.php/v2/Search/fetchAssociateWords"
 query_search_dosearch_url = "/index.php/v2/Search/doSearch"
 
+# 翡翠王朝--C端 直播相关
+query_first_advertisement_url = "/a/api/usr/index.php/v2/Advertisement/firstAdsByScene"
+query_new_people_conpons_url = "/a/api/usr/index.php/v2/newPeople/getNewPeopleConpons"
+query_live_index_topnew_url = "/a/api/live/index/listTopNew"
+query_live_index_listnew_url = "/a/api/live/index/listNew"
+
+
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
 query_order_status_num_url = "/a/api/ordersys/index.php/v3/order/statusNum"
