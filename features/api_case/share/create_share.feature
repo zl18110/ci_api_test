@@ -18,8 +18,6 @@ Feature: 生成分享海报接口测试用例
           "displayAlert": false,
           "displayTip": false,
           "hashData": "",
-          "message": "分享<remarks>成功",
-          "msg": "分享<remarks>成功",
           "status": 0
       }
     """

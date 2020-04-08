@@ -45,6 +45,8 @@ query_first_advertisement_url = "/a/api/usr/index.php/v2/Advertisement/firstAdsB
 query_new_people_conpons_url = "/a/api/usr/index.php/v2/newPeople/getNewPeopleConpons"
 query_live_index_topnew_url = "/a/api/live/index/listTopNew"
 query_live_index_listnew_url = "/a/api/live/index/listNew"
+query_live_product_stuff_list_url = "/a/api/live/product/stuff/list"
+query_live_focus_list_url = "/a/api/live/v2/Live/focusLiveList"
 
 
 # 翡翠王朝--C端 order相关
