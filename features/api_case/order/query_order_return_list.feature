@@ -321,10 +321,10 @@ Feature: 售后订单查询接口测试用例
           "status": 0
         }
     """
-    Examples: 输入参数:"status":<status>-1=全部，2=处理中
-    |status|
-    |1     |
-    |2     |
+    Examples: --<remarks>
+    |status|remarks|
+    |1     |全部     |
+    |2     |处理中    |
 
   Scenario: [2] 查询已完成售后订单
 
