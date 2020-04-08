@@ -33,8 +33,12 @@ query_auction_my_url = "/api/auction/my"
 # 翡翠王朝--C端 品牌大厅相关
 query_index_goods_ceneter_url = "/index.php/v2/Goods/indexGetGoodsCenter.html"
 query_index_platinfo_url = "/v1/index/platInfo"
-
-
+create_share_url = "/a/api/video/share"
+query_advertisement_share_url = "/v2/Advertisement/liveShare"
+query_goods_filter_url = "/index.php/v2/GoodsFilter/fetchGoodsFilter"
+query_goods_category_url = "/index.php/v2/GoodsCategory/fetchGoodsCategory"
+query_associate_words_url = "/index.php/v2/Search/fetchAssociateWords"
+query_search_dosearch_url = "/index.php/v2/Search/doSearch"
 
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
