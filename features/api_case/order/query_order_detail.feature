@@ -71,7 +71,6 @@ Feature: 获取订单详情接口测试用例
           "cacheType": "",
           "code": 0,
           "data": {
-              "accid": "d468c79404d98666ec9d0c0d9246f0c8",
               "actualPrice": "100.00",
               "address": "",
               "addressId": 0,
@@ -175,7 +174,6 @@ Feature: 获取订单详情接口测试用例
               "remainMoney": 100.0,
               "remainSecond": 0,
               "server": {
-                  "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "name": ""
               },
               "serverId": "90",
@@ -189,7 +187,6 @@ Feature: 获取订单详情接口测试用例
           "displayTip": false,
           "hashData": "",
           "info": {
-              "accid": "d468c79404d98666ec9d0c0d9246f0c8",
               "actualPrice": "100.00",
               "address": "",
               "addressId": 0,
@@ -293,7 +290,6 @@ Feature: 获取订单详情接口测试用例
               "remainMoney": 100.0,
               "remainSecond": 0,
               "server": {
-                  "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "name": ""
               },
               "serverId": "90",

@@ -86,7 +86,6 @@ Feature: 获取用户订单列表接口测试用例
             "data": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -147,7 +146,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "100.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
@@ -164,7 +162,6 @@ Feature: 获取用户订单列表接口测试用例
             "info": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -225,7 +222,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "100.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
@@ -284,7 +280,6 @@ Feature: 获取用户订单列表接口测试用例
             "data": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -345,7 +340,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "100.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
@@ -362,7 +356,6 @@ Feature: 获取用户订单列表接口测试用例
             "info": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -423,7 +416,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "100.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
@@ -491,7 +483,6 @@ Feature: 获取用户订单列表接口测试用例
                 "currentPage": 1,
                 "data": [
                     {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "actualPrice": "100.00",
                         "goodsData": [
                             {
@@ -554,7 +545,6 @@ Feature: 获取用户订单列表接口测试用例
                         "remainMoney": "0.00",
                         "remainSecond": 0,
                         "server": {
-                            "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                             "avatar": "",
                             "name": ""
                         },
@@ -573,7 +563,6 @@ Feature: 获取用户订单列表接口测试用例
                 "currentPage": 1,
                 "data": [
                     {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "actualPrice": "100.00",
                         "goodsData": [
                             {
@@ -636,7 +625,6 @@ Feature: 获取用户订单列表接口测试用例
                         "remainMoney": "0.00",
                         "remainSecond": 0,
                         "server": {
-                            "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                             "avatar": "",
                             "name": ""
                         },
@@ -703,7 +691,6 @@ Feature: 获取用户订单列表接口测试用例
           "data": {
               "currentPage": 1,
               "data": [{
-                  "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "actualPrice": "100.00",
                   "goodsData": [{
                       "actualPrice": "100.00",
@@ -764,7 +751,6 @@ Feature: 获取用户订单列表接口测试用例
                   "remainMoney": "0.00",
                   "remainSecond": 0,
                   "server": {
-                      "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                       "avatar": "",
                       "name": ""
                   },
@@ -781,7 +767,6 @@ Feature: 获取用户订单列表接口测试用例
           "info": {
               "currentPage": 1,
               "data": [{
-                  "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                   "actualPrice": "100.00",
                   "goodsData": [{
                       "actualPrice": "100.00",
@@ -842,7 +827,6 @@ Feature: 获取用户订单列表接口测试用例
                   "remainMoney": "0.00",
                   "remainSecond": 0,
                   "server": {
-                      "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                       "avatar": "",
                       "name": ""
                   },
@@ -945,7 +929,6 @@ Feature: 获取用户订单列表接口测试用例
             "data": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -1006,7 +989,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "0.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
@@ -1023,7 +1005,6 @@ Feature: 获取用户订单列表接口测试用例
             "info": {
                 "currentPage": 1,
                 "data": [{
-                    "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                     "actualPrice": "100.00",
                     "goodsData": [{
                         "actualPrice": "100.00",
@@ -1084,7 +1065,6 @@ Feature: 获取用户订单列表接口测试用例
                     "remainMoney": "0.00",
                     "remainSecond": 0,
                     "server": {
-                        "accid": "d468c79404d98666ec9d0c0d9246f0c8",
                         "avatar": "",
                         "name": ""
                     },
