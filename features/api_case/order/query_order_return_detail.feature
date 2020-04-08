@@ -244,10 +244,6 @@ Feature: 售后订单详情查询接口测试用例
               "revokeReason": "",
               "revokeTime": "",
               "sellerReceivingGoodsTime": "",
-              "server": {
-                  "avatar": "",
-                  "name": ""
-              },
               "status": 0,
               "type": 1,
               "uid": 2638122
@@ -315,10 +311,6 @@ Feature: 售后订单详情查询接口测试用例
               "revokeReason": "",
               "revokeTime": "",
               "sellerReceivingGoodsTime": "",
-              "server": {
-                  "avatar": "",
-                  "name": ""
-              },
               "status": 0,
               "type": 1,
               "uid": 2638122
