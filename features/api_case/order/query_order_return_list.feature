@@ -245,8 +245,9 @@ Feature: 售后订单查询接口测试用例
               "sellerAgreedTime": "",
               "sellerReceivingGoodsTime": "",
               "server": {
-                  "avatar": "",
-                  "name": ""
+                    "accid": "jaadee006",
+                    "avatar": "https://appres.jaadee.net/kfpic/avatar/jaadee006.jpg",
+                    "name": "双艳"
               },
               "status": 0,
               "type": 1,
@@ -317,8 +318,9 @@ Feature: 售后订单查询接口测试用例
               "sellerAgreedTime": "",
               "sellerReceivingGoodsTime": "",
               "server": {
-                  "avatar": "",
-                  "name": ""
+                  "accid": "jaadee006",
+                  "avatar": "https://appres.jaadee.net/kfpic/avatar/jaadee006.jpg",
+                  "name": "双艳"
               },
               "status": 0,
               "type": 1,

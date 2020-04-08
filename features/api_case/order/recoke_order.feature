@@ -149,7 +149,6 @@ Feature: 取消订单接口测试用例
           'pay_money': '0',
           'clear': '5',
           'asyn_remark': None,
-          'is_dbzc': 0,
           'goods_id': 401,
           'r_cancellation': None,
           'platform': None,
