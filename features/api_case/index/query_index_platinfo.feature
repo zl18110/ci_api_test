@@ -23,57 +23,49 @@ Feature: 接口测试用例
                       "id": 1,
                       "name": "翡翠王朝",
                       "template_type": 1,
-                      "logo": "rndir\/ios\/header\/kflb-logo1.png",
-                      "goodsTotal": 201570
+                      "logo": "rndir\/ios\/header\/kflb-logo1.png"
                   },
                   "2": {
                       "id": 2,
                       "name": "珠宝乐园",
                       "template_type": 1,
-                      "logo": "rndir\/ios\/header\/kflb-logo2.png",
-                      "goodsTotal": 201570
+                      "logo": "rndir\/ios\/header\/kflb-logo2.png"
                   },
                   "3": {
                       "id": 3,
                       "name": "南红之谜",
                       "template_type": 2,
-                      "logo": "rndir\/ios\/header\/kflb-logo3.png",
-                      "goodsTotal": 201570
+                      "logo": "rndir\/ios\/header\/kflb-logo3.png"
                   },
                   "4": {
                       "id": 4,
                       "name": "玉雕界",
                       "template_type": 2,
-                      "logo": "rndir\/ios\/header\/kflb-logo4.png",
-                      "goodsTotal": 201570
+                      "logo": "rndir\/ios\/header\/kflb-logo4.png"
                   },
                   "5": {
                       "id": 5,
                       "name": "东方格度",
                       "template_type": 3,
-                      "logo": "rndir\/ios\/header\/kflb-logo5.png",
-                      "goodsTotal": 201570
+                      "logo": "rndir\/ios\/header\/kflb-logo5.png"
                   },
                   "6": {
                       "id": 6,
                       "name": "学玉院",
                       "template_type": 1,
-                      "logo": "",
-                      "goodsTotal": 201570
+                      "logo": ""
                   },
                   "7": {
                       "id": 7,
                       "name": "翠友天地",
                       "template_type": 1,
-                      "logo": "",
-                      "goodsTotal": 201570
+                      "logo": ""
                   },
                   "8": {
                       "id": 8,
                       "name": "热播",
                       "template_type": 1,
-                      "logo": "",
-                      "goodsTotal": 201570
+                      "logo": ""
                   }
               },
               "cateInfo": [{
