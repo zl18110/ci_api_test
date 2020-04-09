@@ -151,7 +151,7 @@ Feature: 取消订单接口测试用例
           'asyn_remark': None,
           'goods_id': 401,
           'r_cancellation': None,
-          'platform': None,
+          'platform': 0,
           'activityId': 0,
           'group_id': 0,
           'refund_flg': None

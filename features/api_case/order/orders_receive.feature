@@ -203,7 +203,7 @@ Feature: C端确认收货接口组合测试用例
           'goods_attr': '[]',
           'is_new_user': 0,
           'is_first': 59,
-          'platform': None,
+          'platform': 0,
           'goods_source': None,
           'auto_settle': 1
       }]

@@ -138,7 +138,7 @@ Feature: 订单支付接口测试用例
             'asyn_remark': None,
             'goods_id': 401,
             'r_cancellation': None,
-            'platform': None,
+            'platform': 0,
             'activityId': 0,
             'group_id': 0,
             'refund_flg': None
@@ -197,7 +197,7 @@ Feature: 订单支付接口测试用例
           'goods_attr': '[]',
           'is_new_user': 0,
           'is_first': 59,
-          'platform': None,
+          'platform': 0,
           'goods_source': None,
           'auto_settle': 1
       }]
