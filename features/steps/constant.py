@@ -49,6 +49,11 @@ query_live_product_stuff_list_url = "/a/api/live/product/stuff/list"
 query_live_focus_list_url = "/a/api/live/v2/Live/focusLiveList"
 
 
+# 翡翠王朝--C端 新品相关
+query_good_new_cate_url = "/v1/good/newCate"
+query_good_new_url = "/v1/good/new"
+
+
 # 翡翠王朝--C端 order相关
 query_order_list_url = "/a/api/ordersys/index.php/v3/order/lists"
 query_order_status_num_url = "/a/api/ordersys/index.php/v3/order/statusNum"
