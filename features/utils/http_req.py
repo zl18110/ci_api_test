@@ -60,6 +60,6 @@ class Request():
             return requests.get(self.url, params=self.params, headers=self.headers, verify=self.verify,
                                 allow_redirects=self.allow_redirects, timeout=timeout)
         else:
-            return requests.request(url=self.url, method=self.method, data=json.dumps(self.data), params=self.params,
+            return requests.request(url=self.url, method=self.method, data=self.data, params=self.params,
                                     headers=self.headers, verify=self.verify, allow_redirects=self.allow_redirects,
                                     timeout=timeout)

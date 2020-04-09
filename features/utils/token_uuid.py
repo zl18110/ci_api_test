@@ -3,7 +3,7 @@ import requests
 import sys
 import json
 from features.steps.constant import *
-from features.conf.config import CI_ENV, CI_OD_SYS
+from features.conf.config import CI_ENV, CI_OD_SYS,CI_SUP
 from features.db.db_helper import database
 
 
@@ -51,6 +51,7 @@ def get_access_token(context):
         return re
 
 
+# 订单系统登录获取cookie
 def get_login_cookie(context):
     url = str("{protocol}://{host}") + eval('od_login_url')
     url = url.format(protocol=context.config.userdata.get("protocol", CI_OD_SYS['CI_PROTOCOL']),
@@ -73,3 +74,36 @@ def get_login_cookie(context):
         print('this  cookie is:', re['cookie'])
         print('this  clientToken is:', re['clientToken'])
         return re
+
+
+# 订单系统登录获取cookie
+def get_shop_token():
+    url = str("{protocol}://{host}") + eval('shop_login_url')
+    url = url.format(protocol=CI_SUP['CI_PROTOCOL'],
+                     host=CI_SUP['CI_HOST'])
+
+    print('shop_login_url is:', url)
+    param = {
+        "areaCode": "86",
+        "code": "1707",
+        "phone": "13099951707"
+    }
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+        'Connection': 'keep-alive'
+    }
+    res = requests.post(url, data=param, headers=headers, allow_redirects=False)
+    if res.status_code != 200:
+        print("Got error: " + res.text)
+        print("res.status_code: ", res.status_code)
+        print("res.headers: ", res.headers)
+        sys.exit(-1)
+    else:
+        result = json.loads(res.text)
+        re = {'accessToken': result['data']['account']['accessToken'], 'uuid': result['data']['account']['uid']}
+        print('accessToken and uid is:', re)
+        return re
+
+
+if __name__ == '__main__':
+    get_shop_token()

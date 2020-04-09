@@ -15,6 +15,9 @@ def before_all(context):
     od_res = get_login_cookie(context)
     context.cookie = od_res['cookie']
     context.clientToken = od_res['clientToken']
+    s_res = get_shop_token()
+    context.shop_token = s_res['accessToken']
+    context.shop_uid = s_res['uuid']
 
 
 def before_feature(context,feature):

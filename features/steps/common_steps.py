@@ -9,6 +9,7 @@ import subprocess
 from behave import given  # @UnresolvedImport
 from behave import use_step_matcher
 from simplejson import JSONDecodeError
+from urllib.parse import urlencode
 
 from features.conf.config import *
 from features.db.db_mapping import *
@@ -45,6 +46,9 @@ def send_request(context, api_url_bef):
         elif evn == 'CI_RNAPI':
             host = CI_RNAPI['CI_HOST']
             protocol = CI_RNAPI['CI_PROTOCOL']
+        elif evn == 'CI_SUP':
+            host = CI_SUP['CI_HOST']
+            protocol = CI_SUP['CI_PROTOCOL']
         else:
             host = CI_ENV['CI_HOST']
 
@@ -55,6 +59,7 @@ def send_request(context, api_url_bef):
     api_url = api_url.format(protocol=protocol, host=host) + context.params.get("link_url", "")
     print("api_url is :", api_url)
     http_method = context.params.get("http_method", "")
+    url_params = context.params.get("url_params", {})
     headers = {}
     if 'headers' in context.params:
         headers = context.params.get('headers', {})
@@ -62,14 +67,22 @@ def send_request(context, api_url_bef):
     if 'Content-Type' not in headers or headers['Content-Type'] == "":
         headers['Content-Type'] = 'application/json'
 
-    headers['userToken'] = context.token
+    if evn == 'CI_SUP':
+        headers['userToken'] = context.shop_token
+        headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
+
+    else:
+        headers['userToken'] = context.token
+
     headers['User-Agent'] = 'jadeking/76021 CFNetwork/1121.2.2 Darwin/19.3.0'
     print('headers is :', headers)
-
-    url_params = context.params.get("url_params", {})
     print('url_params is :', url_params)
     if http_method == 'post':
-        my_request = Request(api_url, data=url_params, headers=headers, method=http_method)
+        if headers['Content-Type'] == 'application/x-www-form-urlencoded; charset=utf-8':
+            url_params = urlencode(url_params) if url_params else url_params
+        else:
+            url_params = json.dumps(url_params) if url_params else url_params
+        my_request = Request(api_url, params=url_params, data=url_params, headers=headers, method=http_method)
     else:
         my_request = Request(api_url, params=url_params, data=url_params, headers=headers,
                              method=http_method if not http_method == '' else 'get')

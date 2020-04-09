@@ -48,6 +48,16 @@ query_live_index_listnew_url = "/a/api/live/index/listNew"
 query_live_product_stuff_list_url = "/a/api/live/product/stuff/list"
 query_live_focus_list_url = "/a/api/live/v2/Live/focusLiveList"
 
+# B端 商户相关
+shop_login_url = "/v1/login/phoneLogin"
+shop_query_live_identities_url = "/v1/live/goodLiveIdentities"
+query_live_start_url = "/v1/live/start"
+create_live_url = "/v1/live/save"
+query_live_anchor_url = "/v1/liveAnchor/list"
+query_live_room_share_url = "/v1/chatRoom/shareHistory"
+query_live_goods_list_url = "/v1/liveGood/list"
+update_live_anchor_status_url = "/v1/liveAnchor/changeStatus"
+
 # 翡翠王朝--C端 新品相关
 query_good_new_cate_url = "/v1/good/newCate"
 query_good_new_url = "/v1/good/new"
