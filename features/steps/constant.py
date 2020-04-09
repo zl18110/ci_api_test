@@ -48,7 +48,6 @@ query_live_index_listnew_url = "/a/api/live/index/listNew"
 query_live_product_stuff_list_url = "/a/api/live/product/stuff/list"
 query_live_focus_list_url = "/a/api/live/v2/Live/focusLiveList"
 
-
 # 翡翠王朝--C端 新品相关
 query_good_new_cate_url = "/v1/good/newCate"
 query_good_new_url = "/v1/good/new"

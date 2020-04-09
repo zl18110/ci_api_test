@@ -1,9 +1,9 @@
 # Created by shenping at 2020/4/8
-Feature: 查询直播频道商品信息接口测试用例
+Feature: 查询直播臻品好货列表接口测试用例
 
 
-  Scenario: [0]获取直播商品列表信息
-    * 请求"query_live_product_stuff_list_url"接口，获取商品
+  Scenario: [0]查询臻品好货列表
+    * 请求"query_live_product_stuff_list_url"接口，查询臻品好货列表
     """
       {'link_url':'',
         'http_method': 'post',

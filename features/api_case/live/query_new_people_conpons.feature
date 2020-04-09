@@ -1,7 +1,6 @@
 # Created by shenping at 2020/4/8
 Feature: 获取新人大礼包接口测试用例
 
-
   Scenario: [0] 获取新人大礼包
     * 请求"query_new_people_conpons_url"接口，获取新人大礼包
     """
