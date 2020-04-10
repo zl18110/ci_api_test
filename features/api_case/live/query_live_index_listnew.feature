@@ -18,16 +18,6 @@ Feature: 根据频道获取直播数据接口测试用例
             "cacheType": "",
             "code": 0,
             "data": {
-                "notices": [{
-                    "activeImages": "",
-                    "channelInfo": {
-                        "channelId": 0,
-                        "channelName": "热播中",
-                        "liveName": "hotLive",
-                        "shareDesc": "13123213123",
-                        "shareTitle": "123123213"
-                    }
-                }],
                 "brands": [{
                     "data": {
                         "advertisements": [{

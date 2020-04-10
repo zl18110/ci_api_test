@@ -79,10 +79,10 @@ def send_request(context, api_url_bef):
     print('url_params is :', url_params)
     if http_method == 'post':
         if headers['Content-Type'] == 'application/x-www-form-urlencoded; charset=utf-8':
-            url_params = urlencode(url_params) if url_params else url_params
+            url_params = urlencode(url_params)
         else:
-            url_params = json.dumps(url_params) if url_params else url_params
-        my_request = Request(api_url, params=url_params, data=url_params, headers=headers, method=http_method)
+            url_params = json.dumps(url_params)
+        my_request = Request(api_url, params=url_params, data=url_params,json=url_params, headers=headers, method=http_method)
     else:
         my_request = Request(api_url, params=url_params, data=url_params, headers=headers,
                              method=http_method if not http_method == '' else 'get')

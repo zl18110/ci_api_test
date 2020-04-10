@@ -10,11 +10,12 @@ import requests
 
 class Request():
 
-    def __init__(self, url, params={}, headers={}, data={}, method="get", verify=False, allow_redirects=False):
+    def __init__(self, url, params={}, headers={}, data={}, json={},method="get", verify=False, allow_redirects=False):
         self.url = url
         self.params = params
         self.headers = headers
         self.data = data
+        self.json = json
         self.method = method
         self.verify = verify
         self.allow_redirects = allow_redirects
@@ -60,6 +61,6 @@ class Request():
             return requests.get(self.url, params=self.params, headers=self.headers, verify=self.verify,
                                 allow_redirects=self.allow_redirects, timeout=timeout)
         else:
-            return requests.request(url=self.url, method=self.method, data=self.data, params=self.params,
+            return requests.request(url=self.url, method=self.method, data=self.data,json =self.json, params=self.params,
                                     headers=self.headers, verify=self.verify, allow_redirects=self.allow_redirects,
                                     timeout=timeout)

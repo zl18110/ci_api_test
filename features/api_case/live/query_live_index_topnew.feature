@@ -54,17 +54,14 @@ Feature: 获取直播top list 接口测试用例
                     "url": ""
                 }],
                 "banners": [{
-                    "banner": "/newupload/rnAdmin/upload/manage/banner/c569df9d5ca9f3e1666cc4a43eea8f56/702x360.jpg",
                     "cover": "",
                     "id": 1,
-                    "images": "/newupload/rnAdmin/upload/manage/banner/c569df9d5ca9f3e1666cc4a43eea8f56/702X394.jpg",
                     "navigate": "",
                     "params": "",
                     "sort": 0,
                     "status": 1,
                     "title": "问卷",
-                    "type": 0,
-                    "url": "https://www.wjx.cn/jq/66493995.aspx"
+                    "type": 0
                 }]
             },
             "displayAlert": false,
@@ -108,17 +105,14 @@ Feature: 获取直播top list 接口测试用例
                     "url": ""
                 }],
                 "banners": [{
-                    "banner": "/newupload/rnAdmin/upload/manage/banner/c569df9d5ca9f3e1666cc4a43eea8f56/702x360.jpg",
                     "cover": "",
                     "id": 1,
-                    "images": "/newupload/rnAdmin/upload/manage/banner/c569df9d5ca9f3e1666cc4a43eea8f56/702X394.jpg",
                     "navigate": "",
                     "params": "",
                     "sort": 0,
                     "status": 1,
                     "title": "问卷",
-                    "type": 0,
-                    "url": "https://www.wjx.cn/jq/66493995.aspx"
+                    "type": 0
                 }]
             },
             "message": "直播数据拉取成功",
