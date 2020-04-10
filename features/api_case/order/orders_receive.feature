@@ -204,7 +204,7 @@ Feature: C端确认收货接口组合测试用例
           'is_new_user': 0,
           'is_first': 59,
           'platform': 0,
-          'goods_source': None,
+          'goods_source': 0,
           'auto_settle': 1
       }]
     """

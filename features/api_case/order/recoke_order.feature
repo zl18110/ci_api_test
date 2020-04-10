@@ -211,8 +211,8 @@ Feature: 取消订单接口测试用例
           'goods_attr': '[]',
           'is_new_user': 0,
           'is_first': 59,
-          'platform': None,
-          'goods_source': None,
+          'platform': 0,
+          'goods_source': 0,
           'auto_settle': 1
       }]
       """

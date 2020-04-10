@@ -198,7 +198,7 @@ Feature: 订单支付接口测试用例
           'is_new_user': 0,
           'is_first': 59,
           'platform': 0,
-          'goods_source': None,
+          'goods_source': 0,
           'auto_settle': 1
       }]
       """
