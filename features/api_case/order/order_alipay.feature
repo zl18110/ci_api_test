@@ -61,7 +61,7 @@ Feature: 订单支付接口测试用例
            }
         }
       """
-
+    * 等待"2"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
@@ -78,6 +78,7 @@ Feature: 订单支付接口测试用例
            }
         }
       """
+    * 等待"2"秒
     * 验证接口返回值
       """
         {
@@ -97,7 +98,6 @@ Feature: 订单支付接口测试用例
             "status": 0
         }
       """
-    * 等待"2"秒
     * 使用逻辑"and"查询数据库"ordertest.od_orders"
       """
         {"orders_uid":"2638122","goods_id":"401","orders_sn":(context.column_result)}
