@@ -253,7 +253,7 @@ def del_test_data(context, class_name):
     table_name = get_table_name_by_class_name(class_name)
     class_name = table_name if table_name else class_name
     for key, value in params.items():
-        delete_history_records(class_name, key, value)
+        delete_history_records(class_name, key, str(value))
 
 
 @given(u'(?:.*[请求|访问].*"(?P<api_url_bef>.*)"后台接口.*)')

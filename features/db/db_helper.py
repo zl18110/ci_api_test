@@ -97,18 +97,9 @@ def build_replace_sql(table_object):
 
 def build_delete_sql(table_object):
     table_name, obj_attr_dict = retrieve_info(table_object)
-    if table_name is "mob_camp_material":
-        delete_template = "delete from %s where mat_id = '%s'"
-        # print("delete sql111: " + delete_template % (table_name, obj_attr_dict['mat_id']))
-        return delete_template % (table_name, obj_attr_dict['mat_id'])
-    elif (table_name is "3ss_offer_channel_daily_sum"):
-        delete_template = "delete from %s where network = '%s'"
-        # print("delete sql111: " + delete_template % (table_name, obj_attr_dict['network']))
-        return delete_template % (table_name, obj_attr_dict['network'])
-    else:
-        delete_template = "delete from %s where id = '%s'"
-        # print("delete sql: " + delete_template % (table_name, obj_attr_dict['id']))
-        return delete_template % (table_name, obj_attr_dict['id'])
+    delete_template = "delete from %s where id = '%s'"
+    # print("delete sql: " + delete_template % (table_name, obj_attr_dict['id']))
+    return delete_template % (table_name, obj_attr_dict['id'])
 
 
 def retrieve_info(table_object):
@@ -131,34 +122,20 @@ class orm_helper:
         self.table = 'dump'
 
     def insert_test_record(self):
-        if self.table == "3ss_offer_channel_daily_sum":
-            if hasattr(self, "db"):
-                return database.run_sql(
-                    build_insert_sql(self))
-            else:
-                return database.run_sql(build_insert_sql(self))
+        self.delete_test_record()
+        if hasattr(self, "db"):
+            return database.run_sql(
+                build_insert_sql(self))
         else:
-            self.delete_test_record()
-            if hasattr(self, "db"):
-                return database.run_sql(
-                    build_insert_sql(self))
-            else:
-                return database.run_sql(build_insert_sql(self))
+            return database.run_sql(build_insert_sql(self))
 
     def replace_test_record(self):
-        if self.table == "3ss_offer_channel_daily_sum":
-            if hasattr(self, "db"):
-                return database.run_sql(
-                    build_replace_sql(self))
-            else:
-                return database.run_sql(build_replace_sql(self))
+        self.delete_test_record()
+        if hasattr(self, "db"):
+            return database.run_sql(
+                build_replace_sql(self))
         else:
-            self.delete_test_record()
-            if hasattr(self, "db"):
-                return database.run_sql(
-                    build_replace_sql(self))
-            else:
-                return database.run_sql(build_replace_sql(self))
+            return database.run_sql(build_replace_sql(self))
 
     def delete_test_record(self):
         if hasattr(self, "db"):

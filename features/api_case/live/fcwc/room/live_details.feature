@@ -213,7 +213,6 @@ Feature: 加入直播间获取直播详情页接口测试用例
                       "honor": "隐士",
                       "level": 0,
                       "nextLevel": 25,
-                      "score": 1,
                       "signType": 0,
                       "url": "https://sharetest.jaadee.net/h5/level/detail.html",
                       "welcome": "欢迎 隐士 翠友***6303 进入直播间"
@@ -322,7 +321,6 @@ Feature: 加入直播间获取直播详情页接口测试用例
                       "honor": "隐士",
                       "level": 0,
                       "nextLevel": 25,
-                      "score": 1,
                       "signType": 0,
                       "url": "https://sharetest.jaadee.net/h5/level/detail.html",
                       "welcome": "欢迎 隐士 翠友***6303 进入直播间"
