@@ -54,6 +54,9 @@ query_live_chatRoom_msg_history_url = "/a/api/live/chatRoom/msg/history"
 query_live_user_goods_list_url = "/a/api/live/v1/live/userGoodsList"
 query_advertisement_share_words_url = "/index.php/v2//Advertisement/sharedWords"
 live_chatroom_msg_send_url = "/a/api/live/chatRoom/msg/send"
+query_comment_number_url = "/index.php/v1/Comment/Number"
+query_merchant_coupon_list_url = "/v1/MerchantCoupon/couponList"
+
 
 # B端 商户相关
 shop_login_url = "/v1/login/phoneLogin"

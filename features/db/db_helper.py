@@ -2,7 +2,7 @@
 '''
 @author: Shenping
 '''
-import pymysql
+import pymysql, time
 from features.conf.config import db_jdcustomerstest
 from features.utils import utils
 
@@ -23,6 +23,7 @@ class DataBase:
     """
     数据库操作类，单例模式
     """
+
     def __init__(self):
         try:
             self.__jdcustomerstest_conn = pymysql.connect(
@@ -117,6 +118,18 @@ def delete_history_records(table, field, value):
     database.run_sql(sql)
 
 
+def delete_records_boundary(table, params, bd):
+    del_column = params['column']
+    sun_table = params['sun_table']
+    sun_column_name = params['sun_column_name']
+    sun_column_value = str(params['sun_column_value'])
+    print('sss', del_column, sun_table, sun_column_name, sun_column_value)
+    if bd == 'in':
+        sql = "delete from " + table + " where " + del_column + " " + bd + " (select " + del_column + " from " + sun_table + " where " + sun_column_name + " = " + sun_column_value + " );"
+    print('this sql is :', sql)
+    database.run_sql(sql)
+
+
 class orm_helper:
     def __init__(self):
         self.table = 'dump'
@@ -145,7 +158,7 @@ class orm_helper:
             return database.run_sql(build_delete_sql(self))
 
 
-def build_sql_condition(sql_params,logicCondition):
+def build_sql_condition(sql_params, logicCondition):
     condition_list = []
     for key, value in list(sql_params.items()):
         if isinstance(value, list) and len(value) > 0:

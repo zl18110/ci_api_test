@@ -49,6 +49,9 @@ def send_request(context, api_url_bef):
         elif evn == 'CI_SUP':
             host = CI_SUP['CI_HOST']
             protocol = CI_SUP['CI_PROTOCOL']
+        elif evn == 'CI_OP':
+            host = CI_OP['CI_HOST']
+            protocol = CI_OP['CI_PROTOCOL']
         else:
             host = CI_ENV['CI_HOST']
 
@@ -169,18 +172,6 @@ def then_impl_2(context, logic, table):
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
 
 
-@given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*查询字段"(?P<column_name>.*)".*)')
-def select_column(context, logic, table, column_name):
-    context.sql_params = eval(context.text)
-    query_sql = "select * from %s %s order by id" % (table, build_sql_condition(context.sql_params, logic))
-    print("query sql is :", query_sql)
-    context.sql_result, context.sql_amount = database.run_sql(query_sql)
-    if len(context.sql_result) > 0:
-        context.column_result = context.sql_result[0][column_name]
-    else:
-        context.column_result = None
-
-
 @given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*查询最新记录字段"(?P<column_name>.*)".*)')
 def select_column(context, logic, table, column_name):
     context.sql_params = eval(context.text)
@@ -234,8 +225,11 @@ def get_api_amount(context,column_name):
 @given(u'(?:.*运行以下sql.*)')
 def then_impl(context):
     print('context.text is ：', context.text)
+    print('\n\n\n\n\n')
     sql = eval(context.text)
     print("sql is ;", sql)
+    print('\n\n\n\n\n')
+    time.sleep(float(100))
     context.sql_result, context.sql_amount = database.run_sql(sql)
 
 
@@ -254,6 +248,15 @@ def del_test_data(context, class_name):
     class_name = table_name if table_name else class_name
     for key, value in params.items():
         delete_history_records(class_name, key, str(value))
+
+
+# 按子查询删除测试数据：如bd 传入： in ,not in 等等
+@given(u'(?:.*使用逻辑"(?P<bd>.*)"子查询结果delete测试数据"(?P<class_name>.*)".*)')
+def del_data_boundary(context,bd,class_name):
+    params = eval(context.text) if context.text else None
+    table_name = get_table_name_by_class_name(class_name)
+    class_name = table_name if table_name else class_name
+    delete_records_boundary(class_name, params,bd)
 
 
 @given(u'(?:.*[请求|访问].*"(?P<api_url_bef>.*)"后台接口.*)')

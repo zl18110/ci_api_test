@@ -32,7 +32,7 @@ Feature: C端订单发起售后接口组合测试用例
       """
     * 运行以下sql,删除测试数据
       """
-        "delete from ordertest.od_order_logs where log like '%YK00000401%';"
+        "delete from ordertest.od_order_logs where log like '%2638122%';"
       """
     * 运行以下sql,删除测试数据
       """

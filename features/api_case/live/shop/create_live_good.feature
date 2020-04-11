@@ -1,6 +1,12 @@
 # Created by shenping at 2020/4/11
 Feature: 直播间主播添加商品接口测试用例
 
+  Background: 测试数据初始化
+    * 删除测试数据"newapitest.common_live_goods"
+      """
+        {"for_uid":(context.fcwcuser['data']['uid'])}
+      """
+
   Scenario: [0]添加商品
     * 请求"shop_query_live_identities_url"接口，获取主播身份认证信息成功
     """
@@ -183,27 +189,6 @@ Feature: 直播间主播添加商品接口测试用例
                   "recordPath": "",
                   "relay": 0,
                   "roomid": (context.column_result['roomid']),
-                  "serverInfo": {
-                      "appShow": 0,
-                      "avatar": "https://appres.jaadee.net/kfpic/avatar/jaadee006.jpg",
-                      "createdTime": 0,
-                      "del_state": 0,
-                      "id": 332,
-                      "intro": "",
-                      "online": 0,
-                      "order": 0,
-                      "platId": 0,
-                      "pot_OrtType": "desc",
-                      "pot_Page": 0,
-                      "pot_PageSize": 20,
-                      "qrcode": "",
-                      "status": 0,
-                      "userId": 0,
-                      "username": "双艳",
-                      "webShow": 0,
-                      "xmppPassword": "",
-                      "xmppUsername": "jaadee006"
-                  },
                   "startTime": (context.column_result['start_time']),
                   "status": 3,
                   "synchro": 0,
@@ -292,27 +277,6 @@ Feature: 直播间主播添加商品接口测试用例
                   "recordPath": "",
                   "relay": 0,
                   "roomid": (context.column_result['roomid']),
-                  "serverInfo": {
-                      "appShow": 0,
-                      "avatar": "https://appres.jaadee.net/kfpic/avatar/jaadee006.jpg",
-                      "createdTime": 0,
-                      "del_state": 0,
-                      "id": 332,
-                      "intro": "",
-                      "online": 0,
-                      "order": 0,
-                      "platId": 0,
-                      "pot_OrtType": "desc",
-                      "pot_Page": 0,
-                      "pot_PageSize": 20,
-                      "qrcode": "",
-                      "status": 0,
-                      "userId": 0,
-                      "username": "双艳",
-                      "webShow": 0,
-                      "xmppPassword": "",
-                      "xmppUsername": "jaadee006"
-                  },
                   "startTime": (context.column_result['start_time']),
                   "status": 3,
                   "synchro": 0,
@@ -398,3 +362,4 @@ Feature: 直播间主播添加商品接口测试用例
           "cache": ""
       }
     """
+  Scenario: [1]测试现场恢复

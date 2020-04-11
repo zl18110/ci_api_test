@@ -48,6 +48,11 @@ CI_SUP ={
     "CI_PROTOCOL": "http"
 }
 
+CI_OP = {
+    "CI_HOST": "operatetest.jaadee.net",
+    "CI_PROTOCOL": "https"
+}
+
 
 DOCKERFILE_DIR = '/cidata/dev'
 RETRY = False
