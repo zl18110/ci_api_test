@@ -46,9 +46,8 @@ def get_access_token(context):
         sys.exit(-1)
     else:
         result = json.loads(res.text)
-        re = {'accessToken': result['data']['accessToken'], 'uuid': result['data']['uid']}
-        print('accessToken and uid is:', re)
-        return re
+        print('fcwc_user is :',result)
+        return result
 
 
 # 订单系统登录获取cookie
@@ -76,7 +75,7 @@ def get_login_cookie(context):
         return re
 
 
-# 订单系统登录获取cookie
+# 商户B端登录
 def get_shop_token():
     url = str("{protocol}://{host}") + eval('shop_login_url')
     url = url.format(protocol=CI_SUP['CI_PROTOCOL'],

@@ -69,8 +69,8 @@ def send_request(context, api_url_bef):
 
     if evn == 'CI_SUP':
         headers['userToken'] = context.shop_token
-        headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
-
+        if 'Content-Type' not in headers or headers['Content-Type'] == "":
+            headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
     else:
         headers['userToken'] = context.token
 
@@ -82,7 +82,7 @@ def send_request(context, api_url_bef):
             url_params = urlencode(url_params)
         else:
             url_params = json.dumps(url_params)
-        my_request = Request(api_url, params=url_params, data=url_params,json=url_params, headers=headers, method=http_method)
+        my_request = Request(api_url, data=url_params,json=url_params, headers=headers, method=http_method)
     else:
         my_request = Request(api_url, params=url_params, data=url_params, headers=headers,
                              method=http_method if not http_method == '' else 'get')
@@ -161,7 +161,7 @@ def fake_test_data(context, class_name):
         print("mock data can't be inserted " + str(e))
 
 
-@given(u'(?:.*使用逻辑"(?P<logic>.*)"查询数据库.*"(?P<table>.*)".*)')
+@given(u'(?:.*使用逻辑"(?P<logic>.*)".*查询数据库.*"(?P<table>.*)".*)')
 def then_impl_2(context, logic, table):
     context.sql_params = eval(context.text)
     query_sql = "select * from %s %s order by id" % (table, build_sql_condition(context.sql_params, logic))
@@ -192,6 +192,17 @@ def select_column(context, logic, table, column_name):
     print('column_result is ', context.column_result)
 
 
+@given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*按字段"(?P<column_name>.*)"排序.*查询最新记录.*)')
+def select_column(context, logic, table,column_name):
+    context.sql_params = eval(context.text)
+    query_sql = u"select * from %s  %s order by %s desc limit 1" % (
+        table, build_sql_condition(context.sql_params, logic),column_name)
+    print("query sql is :", query_sql)
+    context.sql_result, context.sql_amount = database.run_sql(query_sql)
+    context.column_result = context.sql_result[0]
+    print('column_result is ', context.column_result)
+
+
 @given(u'(?:.*根据.*参数查询数据库.*"(?P<table>.*)".*)')
 def then_impl(context, table):
     then_impl_2(context, "and", table)
@@ -213,11 +224,11 @@ def assert_data(context):
     # assert_that(context.sql_result[0], has_entries(context.expect_params))
 
 
-@given(u'验证接口返回的总条数与sql_amount一致')
-def get_api_amount(context):
-    context.api_amount = str(context.response['headers'].get("X-Pagination-Total-Count")).split(",")
+@given(u'验证接口返回的条数中"(?P<column_name>.*)"与数据库条数一致')
+def get_api_amount(context,column_name):
+    context.api_amount = len(context.body[column_name])
     print("context.api_amount :", context.api_amount)
-    assert_that(int(context.api_amount[0]), equal_to(context.sql_amount))
+    assert_that(int(context.api_amount), equal_to(context.sql_amount))
 
 
 @given(u'(?:.*运行以下sql.*)')

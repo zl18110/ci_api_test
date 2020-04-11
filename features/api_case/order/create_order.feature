@@ -61,7 +61,7 @@ Feature: 添加订单接口测试用例
           "status": 0
         }
       """
-    * 等待"2"秒
+    * 等待"3"秒
 
     * 数据表"ordertest.od_orders_remark" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
