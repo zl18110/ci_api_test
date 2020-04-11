@@ -348,7 +348,7 @@ Feature: 直播间主播添加商品接口测试用例
               }),
             'liveId':(context.column_result['id']),
             'logo':'https://res.jaadee.net/appdir/ios/live/images/2020-04-10/20200410181825436-301639.jpeg',
-            'price':1111,
+            'price':111.00,
             'roomId':(context.column_result['roomid'])
         }
       }

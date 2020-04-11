@@ -153,7 +153,7 @@ Feature: 用户获取直播间商品列表接口测试用例
               }),
             'liveId':(context.column_result['id']),
             'logo':'https://res.jaadee.net/appdir/ios/live/images/2020-04-10/20200410181825436-301639.jpeg',
-            'price':1111,
+            'price':111.00,
             'roomId':(context.column_result['roomid'])
         }
       }
@@ -195,7 +195,7 @@ Feature: 用户获取直播间商品列表接口测试用例
               "forUid": (context.fcwcuser['data']['uid']),
               "goodsId": 0,
               "goodsName": (context.column_result['title']),
-              "goodsPrice": 1111.0,
+              "goodsPrice": 111.00,
               "goodsSn": (context.column_result['goods_sn']),
               "goodsThumb": "https://res.jaadee.net/appdir/ios/live/images/2020-04-10/20200410181825436-301639.jpeg",
               "id": (context.column_result['id']),
@@ -205,9 +205,9 @@ Feature: 用户获取直播间商品列表接口测试用例
               "platId": (context.column_result['plat_id']),
               "remark": (context.column_result['remark']),
               "roomId": (context.column_result['roomid']),
-              "shopPrice": 1111.0,
+              "shopPrice": 111.00,
               "talkTime": (context.column_result['talk_time']),
-              "totalPrice": 1111.0
+              "totalPrice": 111.00
           }],
           "hashData": "",
           "info": [{
@@ -215,7 +215,7 @@ Feature: 用户获取直播间商品列表接口测试用例
               "forUid": (context.fcwcuser['data']['uid']),
               "goodsId": 0,
               "goodsName": (context.column_result['title']),
-              "goodsPrice": 1111.0,
+              "goodsPrice": 111.00,
               "goodsSn": (context.column_result['goods_sn']),
               "goodsThumb": "https://res.jaadee.net/appdir/ios/live/images/2020-04-10/20200410181825436-301639.jpeg",
               "id": (context.column_result['id']),
@@ -225,9 +225,9 @@ Feature: 用户获取直播间商品列表接口测试用例
               "platId": (context.column_result['plat_id']),
               "remark": (context.column_result['remark']),
               "roomId": (context.column_result['roomid']),
-              "shopPrice": 1111.0,
+              "shopPrice": 111.00,
               "talkTime": (context.column_result['talk_time']),
-              "totalPrice": 1111.0
+              "totalPrice": 111.00
           }],
           "message": "获取用户商品列表成功",
           "msg": "获取用户商品列表成功",
