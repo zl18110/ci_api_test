@@ -1,6 +1,11 @@
 # Created by shenping at 2020/4/11
 Feature: 直播间消息发送接口测试用例
 
+  Background: 测试数据初始化
+    * 删除测试数据"newapitest.fcwc_chatroom_history_msg"
+    """
+      {"create_user_id":"2638122"}
+    """
   Scenario: [0]直播间消息发送
     * 请求"shop_query_live_identities_url"接口，获取主播身份认证信息成功
     """
@@ -367,4 +372,29 @@ Feature: 直播间消息发送接口测试用例
           "msg": "发送成功",
           "status": 0
       }
+    """
+    * 使用逻辑"and",查询数据库"newapitest.fcwc_chatroom_history_msg"
+    """
+      {"create_user_id":"2638122"}
+    """
+    * 验证数据库返回值
+    """
+      [{
+          'del_state': 0,
+          'avatar': '/appdir/ios/user/images/2019-10-09/userDefault.png',
+          'content': '666',
+          'content_normal': None,
+          'create_user_id': 2638122,
+          'display': 0,
+          'from_account': '882aba83909efb480f1e5c819e9fcfdc',
+          'from_client_type': 'OTHER',
+          'from_device_id': None,
+          'live_member_id': 203,
+          'msg_group': 1,
+          'msg_type': None,
+          'uid': 2638122,
+          'update_user_id': None,
+          'msg_source': 0,
+          'msg_send_source': 0
+      }]
     """
