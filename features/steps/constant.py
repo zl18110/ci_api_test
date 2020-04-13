@@ -16,6 +16,8 @@ query_community_idol_url = "/index.php/v1/Community/Idol"
 query_community_contentByCate_url = "/index.php/v1/Community/ContentByCate"
 query_community_profile_url = "/v1/Community/Profile"
 query_community_article_list_url = "/v1/Community/ArticleList"
+query_community_contentInfoByID_url = "/index.php/v1/Community/ContentInfoById"
+
 
 # 翡翠王朝--C端 在线鉴定相关
 query_jianbao_live_list_url = "/api/jianbao/live/list"
