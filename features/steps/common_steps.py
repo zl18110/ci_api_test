@@ -209,10 +209,7 @@ def assert_data(context):
     context.expect_params = eval(context.text)
     print("context.expect_params: \n", context.expect_params)
     print("context.sql_result: \n", context.sql_result)
-    print('\n\n\n\n\n')
     check_json_data(context.expect_params, context.sql_result)
-    print('\n')
-    # assert_that(context.sql_result[0], has_entries(context.expect_params))
 
 
 @given(u'验证接口返回的条数中"(?P<column_name>.*)"与数据库条数一致')
@@ -225,10 +222,8 @@ def get_api_amount(context,column_name):
 @given(u'(?:.*运行以下sql.*)')
 def then_impl(context):
     print('context.text is ：', context.text)
-    print('\n\n\n\n\n')
     sql = eval(context.text)
     print("sql is ;", sql)
-    print('\n\n\n\n\n')
     context.sql_result, context.sql_amount = database.run_sql(sql)
 
 

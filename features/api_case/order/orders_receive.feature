@@ -150,6 +150,7 @@ Feature: C端确认收货接口组合测试用例
           "data": []
       }
     """
+    * 等待"2"秒
     * 使用逻辑"and"查询数据库"ordertest.od_orders_goods"
       """
         {"orders_sn":(context.column_result)}
