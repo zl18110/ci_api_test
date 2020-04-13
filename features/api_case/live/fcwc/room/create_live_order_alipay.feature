@@ -467,7 +467,6 @@ Feature: 直播间订单支付接口测试用例
             'update_limit': None,
             'encrypted': 0,
             'ou_encrypted': 1,
-            'phoneX': None,
             'subs_id': None
         }]
       """
