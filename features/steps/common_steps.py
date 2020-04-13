@@ -229,7 +229,6 @@ def then_impl(context):
     sql = eval(context.text)
     print("sql is ;", sql)
     print('\n\n\n\n\n')
-    time.sleep(float(100))
     context.sql_result, context.sql_amount = database.run_sql(sql)
 
 
