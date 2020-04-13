@@ -10,7 +10,7 @@ Feature: 查询评论详情接口测试用例
     """
       "INSERT INTO `operatemanagetest`.`op_content_info`(`id`, `user_id`, `type`, `cate_id`, `title`, `tags`, `intro`, `intro_base64`, `content`, `thumb`, `videoUri`, `imagesUri`, `orderSn`, `collect_num`, `click_num`, `share_num`, `is_star`, `is_top`, `is_delete`, `created_at`, `updated_at`, `time`, `formal`, `recommend_group`, `is_home`, `sort`, `thumb_width`, `thumb_height`, `thumb_number`, `comment_number`, `private_top`, `raw`, `video_width`, `video_height`, `del_state`, `click_num_mock`, `collect_num_mock`, `share_num_mock`, `is_big`, `display`, `topic`, `ip`, `district`, `location`, `show_district`) VALUES (4019, 2638122, 2, 37, 'CI_TEST专用', '', 'CI_TEST专用', 'Q0lfVEVTVOS4k+eUqA==', NULL, 'https://res.jaadee.net/rn/userUpload/community/publish/image/2638122/2020-04-07/1586240373-pukgqh.jpg', 'https://res.jaadee.net/rn/userUpload/community/publish/video/2638122/2020-04-07/1586240372-232gmi.mp4', NULL, '', 0, 0, 0, 0, 0, 0, 1586240372, 1586240372, 1586240372, 0, 0, 0, 1000, 0, 0, 0, 0, 1, NULL, 272, 480, 0, 0, 0, 0, 0, 1, 9, '', '', '', 0);"
     """
-  Scenario: [0]
+  Scenario: [0]查询评论详情
     * 请求"query_community_contentInfoByID_url"接口，
     """
       {'link_url':'?id=4019',
