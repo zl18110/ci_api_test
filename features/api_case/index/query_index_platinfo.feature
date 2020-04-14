@@ -1,7 +1,7 @@
 # Created by shenping at 2020/4/8
-Feature: hu接口测试用例
+Feature: 获取index_platinfo信息接口测试用例
 
-  Scenario Outline: [0]
+  Scenario Outline: [0]查询 index_platinfo信息
     * 请求"query_index_platinfo_url"接口，
     """
       {'link_url':'?platId=<platId>',

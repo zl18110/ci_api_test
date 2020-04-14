@@ -1,9 +1,9 @@
 # Created by shenping at 2020/4/8
-Feature: 接口测试用例
+Feature: 获取广告接口测试用例
 
   Background: 测试数据初始化
   
-  Scenario: [0]
+  Scenario: [0]获取广告
     * 请求"query_first_advertisement_url"接口，
     """
       {'link_url':'',

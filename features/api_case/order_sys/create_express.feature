@@ -65,6 +65,7 @@ Feature: 后台添加物流发货接口组合测试用例
            }
         }
       """
+    * 等待"1"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
       """
         {"orders_uid":"2638122","goods_id":"401"}
@@ -81,6 +82,7 @@ Feature: 后台添加物流发货接口组合测试用例
            }
         }
       """
+    * 等待"2"秒
     * 数据表"ordertest.od_orders_goods" 使用逻辑"and"查询最新记录字段"id"
       """
         {"orders_sn":(context.column_result),"goods_sn":"YK00000401","status":2}
