@@ -60,6 +60,10 @@ query_comment_number_url = "/index.php/v1/Comment/Number"
 query_merchant_coupon_list_url = "/v1/MerchantCoupon/couponList"
 query_merchant_coupon_php_list_url = "/index.php/v1/MerchantCoupon/couponList"
 query_live_active_url = "/index.php/v1/Active/LiveActive"
+create_live_focus_url = "/a/api/live/v2/Live/setFocus"
+create_multiple_coupons_url = "/a/api/activity/v1/coupon/multipleCoupons"
+query_level_user_score_url = "/api/Level/userScore"
+query_level_total_score_url = "/api/Level/toatlScore"
 
 # B端 商户相关
 shop_login_url = "/v1/login/phoneLogin"

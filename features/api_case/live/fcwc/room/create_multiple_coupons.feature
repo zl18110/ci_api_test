@@ -1,5 +1,6 @@
-# Created by shenping at 2020/4/11
-Feature: 获取直播优惠信息接口测试用例
+# Created by shenping at 2020/4/15
+Feature: 直播间领取优惠券接口测试用例
+
   Background: 测试数据初始化
     * 删除测试数据"operatemanagetest.op_coupon_log"
     """
@@ -38,45 +39,31 @@ Feature: 获取直播优惠信息接口测试用例
     """
       "INSERT INTO `operatemanagetest`.`op_coupon_model`(`id`, `is_plat`, `merchant_id`, `merchant_type`, `live_member_id`, `name`, `type`, `rule_money`, `rate`, `discount`, `start_time`, `end_time`, `add_time`, `is_delete`, `intro`, `active_id`, `sign`, `end_time_auto`, `discount_auto`, `max_discount`, `del_state`, `status`, `remark`) VALUES (516, 2, 3, 1, 203, 'CI自动化测试专用满减优惠券', 2, 30, 0.00, 10, NULL, NULL, '2020-04-15 17:05:02', 0, '自动化测试专用优惠券', 84, '3', 30, 0, 0, 0, 1, '');"
     """
-
-  Scenario: [0]获取直播优惠信息
-    * 请求"query_merchant_coupon_list_url"接口，获取信息
+  Scenario: [0]领取直播间优惠券
+    * 请求"create_multiple_coupons_url"接口，领取优惠券
     """
-      {'link_url':'?liveMemberId=203&pageSize=200',
-        'http_method': 'get',
-        'evn':'CI_OP',
+      {'link_url':'',
+        'http_method': 'post',
          'url_params':{
-            "uid":(context.fcwcuser['data']['uid'])
-         }
+              "sign": "3-516",
+              "type": "1"
+          }
       }
     """
     * 接口返回码"200"
     * 验证接口返回值
     """
       {
+          "cacheType": "",
           "code": 0,
-          "message": "获取成功",
-          "data": {
-              "total": 1,
-              "perPage": "200",
-              "currentPage": 1,
-              "lastPage": 1,
-              "data": [{
-                  "id": 516,
-                  "type": 2,
-                  "status": 1,
-                  "name": "CI自动化测试专用满减优惠券",
-                  "intro": "自动化测试专用优惠券",
-                  "rate": "0.00",
-                  "discount": 10,
-                  "ruleMoney": 30,
-                  "startTime": "2020.04.15",
-                  "endTime": "2026.04.15",
-                  "sign": "3-516",
-                  "restNum": 1000,
-                  "received": 0
-              }]
-          }
+          "data": [],
+          "displayAlert": false,
+          "displayTip": false,
+          "hashData": "",
+          "info": [],
+          "message": "发放成功",
+          "msg": "发放成功",
+          "status": 0
       }
     """
 

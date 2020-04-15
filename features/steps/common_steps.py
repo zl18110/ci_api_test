@@ -70,7 +70,7 @@ def send_request(context, api_url_bef):
     if 'Content-Type' not in headers or headers['Content-Type'] == "":
         headers['Content-Type'] = 'application/json'
 
-    if evn == 'CI_SUP':
+    if evn == 'CI_SUP' or evn == 'CI_SHARE':
         headers['userToken'] = context.shop_token
         if 'Content-Type' not in headers or headers['Content-Type'] == "":
             headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
