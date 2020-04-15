@@ -29,8 +29,8 @@ def before_feature(context,feature):
                 max_attempts=config.MAX_RETRY)  # 用例级别重试机制，MAX_RETRY重试次数
 
 
-# 解绑测试环境绑定的虚拟手机号
-def after_all(context):
+# 每个场景结束后解绑虚拟手机号，防止用例遗漏
+def after_scenario(context,setp):
     sql_result = get_phoneX()
     for res in sql_result:
         order_unbind_axn(res['orders_sn'])
