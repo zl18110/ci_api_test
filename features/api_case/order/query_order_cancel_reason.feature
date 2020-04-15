@@ -1,8 +1,6 @@
 # Created by shenping at 2020/4/3
 Feature: 获取取消订单原因列表接口测试用例
 
-  Background: 测试数据初始化
-  
   Scenario: [0]查询取消订单原因列表
     * 请求"query_order_cancel_reason_url"接口，查询取消原因
     """

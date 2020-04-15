@@ -74,6 +74,10 @@ Feature: 售后订单查询接口测试用例
       """
     * 等待"2"秒
 
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 使用逻辑"and"查询数据库"ordertest.od_orders_separate_pay"
       """
         {"orders_sn":(context.column_result)}

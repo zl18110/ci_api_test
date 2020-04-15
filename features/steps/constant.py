@@ -58,6 +58,7 @@ query_advertisement_share_words_url = "/index.php/v2//Advertisement/sharedWords"
 live_chatroom_msg_send_url = "/a/api/live/chatRoom/msg/send"
 query_comment_number_url = "/index.php/v1/Comment/Number"
 query_merchant_coupon_list_url = "/v1/MerchantCoupon/couponList"
+query_merchant_coupon_php_list_url = "/index.php/v1/MerchantCoupon/couponList"
 query_live_active_url = "/index.php/v1/Active/LiveActive"
 
 # B端 商户相关
@@ -70,7 +71,6 @@ query_live_room_share_url = "/v1/chatRoom/shareHistory"
 query_live_goods_list_url = "/v1/liveGood/list"
 update_live_anchor_status_url = "/v1/liveAnchor/changeStatus"
 create_live_good_url = "/v1/liveGood/add"
-
 
 # 翡翠王朝--C端 新品相关
 query_good_new_cate_url = "/v1/good/newCate"
@@ -111,3 +111,7 @@ query_payment_type_list_url = "/p/app/paymentType/list"
 od_login_url = "/api/login/sign.html?phone=18313736272&password=536071&clientToken="
 goods_send_list_url = "/api/Goods/sendList"
 add_express_url = "/api/Delivery/addExpress"
+
+
+# 订单解绑手机号虚拟号
+order_unbind_Axn_url = "/biz/ordersys/axn/orderUnBindAxn"

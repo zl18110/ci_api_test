@@ -104,5 +104,35 @@ def get_shop_token():
         return re
 
 
+def get_phoneX():
+    query_sql = u"select orders_sn,phoneX,subs_id FROM ordertest.od_orders_user WHERE  phoneX <>'' or subs_id <>'' ;"
+    sql_result, sql_amount = database.run_sql(query_sql)
+    print('未解绑手机号虚拟号订单：',sql_result)
+    return sql_result
+
+
+def order_unbind_axn(orderSn):
+    url = str("{protocol}://{host}") + eval('order_unbind_Axn_url')
+    url = url.format(protocol=CI_ENV['CI_PROTOCOL'], host=CI_ENV['CI_HOST'])
+
+    print('order_unbind_Axn_url is:', url)
+    param = {
+        "orderSn": orderSn
+    }
+
+    headers = {
+        'Content-Type': 'application/json',
+        'Connection': 'keep-alive'
+    }
+    res = requests.post(url, data=json.dumps(param), headers=headers, allow_redirects=False)
+    if res.status_code != 200:
+        print("Got error: " + res.text)
+        print("res.status_code: ", res.status_code)
+        print("res.headers: ", res.headers)
+        sys.exit(-1)
+    else:
+        print('已解绑手机虚拟号订单:', orderSn)
+
+
 if __name__ == '__main__':
     get_shop_token()

@@ -128,6 +128,11 @@ Feature: 获取订单支付结果接口测试用例
         }
       """
     * 等待"2"秒
+
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"id"
       """
         {"orders_uid":"2638122","goods_id":"401"}

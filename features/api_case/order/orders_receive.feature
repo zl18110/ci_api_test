@@ -76,6 +76,11 @@ Feature: C端确认收货接口组合测试用例
       """
         {"orders_sn":(context.column_result)}
       """
+
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 验证数据库返回值
       """
         [{
@@ -108,6 +113,7 @@ Feature: C端确认收货接口组合测试用例
       """
         {"orders_sn":(context.column_result),"goods_sn":"YK00000401","status":2}
       """
+
     * 请求"add_express_url"后台接口，添加物流发货
     """
       {"link_url":"",

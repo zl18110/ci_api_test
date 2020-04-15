@@ -2,6 +2,7 @@
 Feature: 直播间订单支付接口测试用例
 
   Background: 测试数据初始化
+
     * 使用逻辑"in"子查询结果delete测试数据"ordertest.od_orders_goods"
       """
         {
@@ -711,6 +712,10 @@ Feature: 直播间订单支付接口测试用例
       """
         {"orders_sn":(context.column_result)}
       """
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 验证数据库返回值
       """
         [{
@@ -739,5 +744,4 @@ Feature: 直播间订单支付接口测试用例
             'referee_self_uid': 0
         }]
       """
-
   Scenario: [1] 现场恢复

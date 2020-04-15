@@ -76,6 +76,10 @@ Feature: C端订单发起售后接口组合测试用例
       """
     * 等待"2"秒
 
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 请求"create_order_return_url"接口，申请退货退款售后
       """
         {'link_url':'',
@@ -140,6 +144,11 @@ Feature: C端订单发起售后接口组合测试用例
     * 等待"2"秒
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders_separate_pay"
+      """
+        {"orders_sn":(context.column_result)}
+      """
+
+    * 解绑订单手机号虚拟号
       """
         {"orders_sn":(context.column_result)}
       """
@@ -265,7 +274,10 @@ Feature: C端订单发起售后接口组合测试用例
       """
         {"orders_uid":"2638122","goods_id":"401"}
       """
-
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
     * 请求"create_order_return_url"接口，申请售后
       """
         {'link_url':'',
@@ -338,6 +350,11 @@ Feature: C端订单发起售后接口组合测试用例
       """
     * 等待"2"秒
 
+    * 解绑订单手机号虚拟号
+      """
+        {"orders_sn":(context.column_result)}
+      """
+
     * 使用逻辑"and"查询数据库"ordertest.od_orders_separate_pay"
       """
         {"orders_sn":(context.column_result)}
@@ -370,10 +387,12 @@ Feature: C端订单发起售后接口组合测试用例
             'referee_self_uid': 0
         }]
       """
+
     * 数据表"ordertest.od_orders_goods" 使用逻辑"and"查询最新记录字段"id"
       """
         {"orders_sn":(context.column_result),"goods_sn":"YK00000401","status":2}
       """
+
     * 请求"add_express_url"后台接口，添加物流发货
     """
       {"link_url":"",

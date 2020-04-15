@@ -15,7 +15,7 @@ from features.conf.config import *
 from features.db.db_mapping import *
 from features.utils.http_req import *
 from features.utils.json_recur_check import *
-from features.utils.token_uuid import *
+from features.utils.environment_param import *
 from features.steps.constant import *
 
 # =========================================================================
@@ -293,3 +293,10 @@ def send_request(context, api_url_bef):
     except Exception as e:
         print("[WARN]Response body is not json:", e)
         context.body = body
+
+
+@given(u'解绑订单手机号虚拟号')
+def order_unbind_phone(context):
+    context.params = eval(context.text) if context.text else None
+    orders_sn = context.params.get("orders_sn")
+    order_unbind_axn(orders_sn)

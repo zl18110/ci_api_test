@@ -4,7 +4,7 @@ import importlib,sys
 
 from behave.contrib.scenario_autoretry import patch_scenario_with_autoretry
 from features.conf import config
-from features.utils.token_uuid import *
+from features.utils.environment_param import *
 
 
 def before_all(context):
@@ -27,3 +27,10 @@ def before_feature(context,feature):
             patch_scenario_with_autoretry(
                 scenario,
                 max_attempts=config.MAX_RETRY)  # 用例级别重试机制，MAX_RETRY重试次数
+
+
+# 解绑测试环境绑定的虚拟手机号
+def after_all(context):
+    sql_result = get_phoneX()
+    for res in sql_result:
+        order_unbind_axn(res['orders_sn'])
