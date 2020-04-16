@@ -72,7 +72,7 @@ Feature: 撤销售后申请订单接口测试用例
            }
         }
       """
-    * 等待"2"秒
+    * 等待"3"秒
 
     * 使用逻辑"and"查询数据库"ordertest.od_orders_separate_pay"
       """
