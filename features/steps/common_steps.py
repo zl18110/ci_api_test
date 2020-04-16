@@ -103,17 +103,16 @@ def get_api_amount(context, expect_api_num):
 # 预期结果在接口返回里全部匹配到
 @given(u'(?:.*[验证|检查]接口.*返回值.*)')
 def assert_data(context):
+    text = context.text.replace("\n", "").replace("\r", "").replace("\\","")
     try:
-        context.expect_params = simplejson.loads(context.text, encoding='utf-8')
-
+        context.expect_params = simplejson.loads(text, encoding='utf-8')
     except JSONDecodeError as e:
 
         print("\n WARN: expect_params is not json", e)
-        context.expect_params = eval(context.text)
+        context.expect_params = eval(text)
 
     print("\n context.expect_params is: ", context.expect_params)
     print("\n context.body is: ", context.body)
-    print('\n')
     check_json_data(context.expect_params, context.body)
 
 
@@ -289,52 +288,3 @@ def order_unbind_phone(context):
     context.params = eval(context.text) if context.text else None
     orders_sn = context.params.get("orders_sn")
     order_unbind_axn(orders_sn)
-
-
-if __name__ == '__main__':
-
-    CI_ENV = {
-        "CI_HOST": "dev.jaadee.net",
-        "CI_PROTOCOL": "http"
-    }
-
-    CI_CENTER = {
-        "CI_HOST": "centertest.jaadee.net",
-        "CI_PROTOCOL": "http"
-    }
-
-    CI_OD_SYS = {
-        "CI_HOST": "ordermanagetest.jaadee.net",
-        "CI_PROTOCOL": "http"
-    }
-
-    CI_AUCTION = {
-        "CI_HOST": "test-auction.jaadee.com",
-        "CI_PROTOCOL": "https"
-    }
-
-    CI_NEWAPI = {
-        "CI_HOST": "newapitest.jaadee.net",
-        "CI_PROTOCOL": "https"
-    }
-
-    CI_RNAPI = {
-        "CI_HOST": "rnapitest.jaadee.net",
-        "CI_PROTOCOL": "https"
-    }
-
-    CI_SUP = {
-        "CI_HOST": "suptest.jaadee.net",
-        "CI_PROTOCOL": "http"
-    }
-
-    CI_OP = {
-        "CI_HOST": "operatetest.jaadee.net",
-        "CI_PROTOCOL": "https"
-    }
-
-    CI_SHARE = {
-        "CI_HOST": "sharetest.jaadee.net",
-        "CI_PROTOCOL": "https"
-    }
-

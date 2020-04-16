@@ -95,6 +95,10 @@ Feature: 查询商品详情接口测试用例
          }
       }
     """
+    * 运行以下sql,查询数据库
+    """
+      "SELECT a.*,b.id,b.attr_names ,b.image AS b_image,b.price AS b_price,b.sale_num AS b_sale_num,b.stock AS b_stock FROM datacentertest.new_goods a LEFT JOIN datacentertest.new_goods_stock b ON a.goods_id=b.goods_id WHERE a.goods_sn='YK00000550' AND b.is_delete=0;"
+    """
     * 验证接口返回值
     """
       {
@@ -107,13 +111,13 @@ Feature: 查询商品详情接口测试用例
               "cover": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598392-06a17bda2eca567a3a1748adba64f4b0.jpeg",
               "market_price": "69.30",
               "shop_price": "33.00",
-              "click_num": 1,
-              "collect_num": 0,
-              "is_video": 0,
-              "stock": 800000,
-              "controller_start_time": "2020-04-16 00:00:00",
-              "controller_end_time": "2035-04-16 00:00:00",
-              "server_type": ["1"],
+              "click_num": (context.sql_result[0]['click_num'])-1,
+              "collect_num": (context.sql_result[0]['collect_num']),
+              "is_video": (context.sql_result[0]['is_video']),
+              "stock": (context.sql_result[0]['stock']),
+              "controller_start_time": str((context.sql_result[0]['controller_start_time'])),
+              "controller_end_time": str(context.sql_result[0]['controller_end_time']),
+              "server_type": [(context.sql_result[0]['server_type'])],
               "goods_tag": "自动化测试专用商品规格",
               "owner_uid": 51,
               "owner_bid": 3,
@@ -124,20 +128,19 @@ Feature: 查询商品详情接口测试用例
                   "child_id": 61,
                   "id": 59
               },
-              "spread": "0.150",
+              "spread": float((context.sql_result[0]['spread'])),
               "images": ["https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598392-06a17bda2eca567a3a1748adba64f4b0.jpeg", "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598432-5196b7dd3a132f66469ea59f9d2b25a1.jpeg"],
               "video": [],
               "content": "自动化测试规格商品",
               "earn_money": "2.47",
-              "display": 1,
-              "max_num": 0,
-              "saleStatus": 0,
-              "refundable_time": 7,
-              "sale_num": 0,
-              "active_ext": null,
-              "active_id": 0,
-              "is_delete": 0,
-              "status": 1,
+              "display": (context.sql_result[0]['display']),
+              "max_num": (context.sql_result[0]['max_num']),
+              "saleStatus": (context.sql_result[0]['sale_status']),
+              "sale_num": (context.sql_result[0]['sale_num']),
+              "active_ext": (context.sql_result[0]['active_ext']),
+              "active_id": (context.sql_result[0]['active_id']),
+              "is_delete": (context.sql_result[0]['is_delete']),
+              "status": (context.sql_result[0]['status']),
               "content_img": [{
                   "type": "image",
                   "height": 4032,
@@ -154,18 +157,6 @@ Feature: 查询商品详情接口测试用例
                   "type": "image",
                   "height": 4032
               }],
-              "server_info": {
-                  "id": 479,
-                  "xmpp_username": "wzz4563",
-                  "username": "小伊",
-                  "avatar": "https:\/\/appmanage.jaadee.com\/newupload\/rnAdmin\/upload\/archive\/405904b0cc21ab0d0bfab2a9e9bc5ff7\/200x200.jpg",
-                  "qrcode": "",
-                  "intro": "",
-                  "user_id": 2637750,
-                  "plat_id": 1,
-                  "online": 1,
-                  "wx": ""
-              },
               "advertise": [],
               "xcx_advertise": [],
               "cate_name": "茶叶茶道",
@@ -176,8 +167,7 @@ Feature: 查询商品详情接口测试用例
                   "avatar": "https:\/\/res.jaadee.net\/merchantApi\/other\/2020-03-28\/1585366373840-2e0b5c48e77cd5844bbd9a0659c72dee.jpg",
                   "desc": "稀世珍品琥珀蜜蜡直播间，主营虫珀、墨西哥蓝珀、多米尼加蓝珀、原皮手把及琥珀原石高端定制。琥珀蜜蜡均由专家团队严格筛选，并为翠友们配备专业的代购服务，让您可以在众多珍品中遇到称心如意的它。",
                   "mid": 3,
-                  "bid": 3,
-                  "focus_count": 1017
+                  "bid": 3
               },
               "content_attribute": [{
                   "main": "分类",
@@ -189,53 +179,53 @@ Feature: 查询商品详情接口测试用例
                   "child": "龙井茶"
               }],
               "specifications": [{
-                  "id": 832,
-                  "name": "散装,1kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598467-aed66f915e21c001da2a3e92fd168d49.jpeg"
+                  "id": (context.sql_result[0]['id']),
+                  "name": (context.sql_result[0]['attr_names']),
+                  "price": (context.sql_result[0]['b_price']),
+                  "stock": (context.sql_result[0]['b_stock']),
+                  "image": (context.sql_result[0]['b_image'])
               }, {
-                  "id": 833,
-                  "name": "茶饼,1kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598503-ae8196d8448f75cad96d45c2054d1de6.jpeg"
+                  "id": (context.sql_result[1]['id']),
+                  "name": (context.sql_result[1]['attr_names']),
+                  "price": (context.sql_result[1]['b_price']),
+                  "stock": (context.sql_result[1]['b_stock']),
+                  "image": (context.sql_result[1]['b_image'])
+              },  {
+                  "id": (context.sql_result[2]['id']),
+                  "name": (context.sql_result[2]['attr_names']),
+                  "price": (context.sql_result[2]['b_price']),
+                  "stock": (context.sql_result[2]['b_stock']),
+                  "image": (context.sql_result[2]['b_image'])
+              },{
+                  "id": (context.sql_result[3]['id']),
+                  "name": (context.sql_result[3]['attr_names']),
+                  "price": (context.sql_result[3]['b_price']),
+                  "stock": (context.sql_result[3]['b_stock']),
+                  "image": (context.sql_result[3]['b_image'])
               }, {
-                  "id": 834,
-                  "name": "散装,2kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598526-cfb0f5f9a8402b06c77a39f3067f03ac.jpeg"
+                  "id": (context.sql_result[4]['id']),
+                  "name": (context.sql_result[4]['attr_names']),
+                  "price": (context.sql_result[4]['b_price']),
+                  "stock": (context.sql_result[4]['b_stock']),
+                  "image": (context.sql_result[4]['b_image'])
               }, {
-                  "id": 835,
-                  "name": "茶饼,2kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598549-ae5b938a13aeeed1c9d47edee2be1bf8.jpeg"
+                  "id": (context.sql_result[5]['id']),
+                  "name": (context.sql_result[5]['attr_names']),
+                  "price": (context.sql_result[5]['b_price']),
+                  "stock": (context.sql_result[5]['b_stock']),
+                  "image": (context.sql_result[5]['b_image'])
               }, {
-                  "id": 836,
-                  "name": "散装,3kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598578-99ab56a6ae69b6bc03728842baf41b33.jpeg"
+                  "id": (context.sql_result[6]['id']),
+                  "name": (context.sql_result[6]['attr_names']),
+                  "price": (context.sql_result[6]['b_price']),
+                  "stock": (context.sql_result[6]['b_stock']),
+                  "image": (context.sql_result[6]['b_image'])
               }, {
-                  "id": 837,
-                  "name": "茶饼,3kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598600-847e94938c9c09a05d46264680a9d124.jpeg"
-              }, {
-                  "id": 838,
-                  "name": "散装,4kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598623-19fd61e547bcf394c47946c181b339a3.jpeg"
-              }, {
-                  "id": 839,
-                  "name": "茶饼,4kg",
-                  "price": "33.00",
-                  "stock": 100000,
-                  "image": "https:\/\/res.jaadee.net\/merchantApi\/ykj\/2020-04-16\/1587007598646-7a75d06e544e64065b5f2b2b579b5fe7.jpeg"
+                  "id": (context.sql_result[7]['id']),
+                  "name": (context.sql_result[7]['attr_names']),
+                  "price": (context.sql_result[7]['b_price']),
+                  "stock": (context.sql_result[7]['b_stock']),
+                  "image": (context.sql_result[7]['b_image'])
               }],
               "share_info": {
                   "name": "CI-TEST专用自动化测试规格商品",
@@ -247,7 +237,7 @@ Feature: 查询商品详情接口测试用例
                       "path": "\/pages\/cuiyou\/goods\/detail?id=550"
                   }
               },
-              "goods_refundable_time": 7,
+              "goods_refundable_time": (context.sql_result[0]['refundable_time']),
               "activeData": {}
           }
       }
