@@ -156,7 +156,7 @@ def fake_test_data(context, class_name):
 @given(u'(?:.*使用逻辑"(?P<logic>.*)".*查询数据库.*"(?P<table>.*)".*)')
 def then_impl_2(context, logic, table):
     context.sql_params = eval(context.text)
-    query_sql = "select * from %s %s order by id" % (table, build_sql_condition(context.sql_params, logic))
+    query_sql = "select * from %s %s " % (table, build_sql_condition(context.sql_params, logic))
     print("query sql is :\n", query_sql)
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
 
@@ -213,7 +213,7 @@ def then_impl(context):
     print('context.text is ：', context.text)
     sql = eval(context.text)
     print("sql is ;", sql)
-    context.sql_result, context.sql_amount = database.run_sql(sql)
+    context.base_sql_result, context.sql_amount = database.run_sql(sql)
 
 
 def get_table_name_by_class_name(class_name):
