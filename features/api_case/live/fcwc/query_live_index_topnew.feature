@@ -55,12 +55,10 @@ Feature: 获取直播top list 接口测试用例
                 }],
                 "banners": [{
                     "cover": "",
-                    "id": 1,
                     "navigate": "",
                     "params": "",
-                    "sort": 0,
                     "status": 1,
-                    "title": "问卷",
+                    "title": "首页新品",
                     "type": 0
                 }]
             },
@@ -106,12 +104,10 @@ Feature: 获取直播top list 接口测试用例
                 }],
                 "banners": [{
                     "cover": "",
-                    "id": 1,
                     "navigate": "",
                     "params": "",
-                    "sort": 0,
                     "status": 1,
-                    "title": "问卷",
+                    "title": "首页新品",
                     "type": 0
                 }]
             },
