@@ -99,8 +99,4 @@ Feature: 获取各状态订单角标数接口测试用例
           "status": 0
       }
     """
-    * 解绑订单手机号虚拟号
-      """
-        {"orders_sn":(context.column_result)}
-      """
   Scenario: [2] 测试现场恢复
