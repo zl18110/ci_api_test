@@ -105,7 +105,7 @@ Feature: 订单支付接口测试用例
            }
         }
       """
-    * 等待"2"秒
+    * 等待"3"秒
     * 解绑订单手机号虚拟号
       """
         {"orders_sn":(context.column_result)}
@@ -773,7 +773,7 @@ Feature: 订单支付接口测试用例
         }]
       """
 
-    * 使用逻辑"and"查询数据库"datacentertest.od_orders_separate"
+    * 使用逻辑"and"查询数据库"ordertest.od_orders_separate"
       """
         {"orders_sn":(context.column_result)}
       """
@@ -816,7 +816,7 @@ Feature: 订单支付接口测试用例
             'platform_uid': -666,
             'platform_money': Decimal('3.30'),
             'shop_uid': 51,
-            'shop_money': Decimal('26.00'),
+            'shop_money': Decimal('26.40'),
             'other_uid': 80000,
             'other_money': Decimal('0.18'),
             'referee_money': Decimal('3.30'),
@@ -844,4 +844,4 @@ Feature: 订单支付接口测试用例
         "update datacentertest.new_goods_stock set stock =100000,sale_num=0 where goods_id =550 and is_delete=0 and available=1;"
       """
 
-  Scenario:[2]测试现场恢复
+#  Scenario:[2]测试现场恢复

@@ -123,7 +123,6 @@ def delete_records_boundary(table, params, bd):
     sun_table = params['sun_table']
     sun_column_name = params['sun_column_name']
     sun_column_value = str(params['sun_column_value'])
-    print('sss', del_column, sun_table, sun_column_name, sun_column_value)
     if bd == 'in':
         sql = "delete from " + table + " where " + del_column + " " + bd + " (select " + del_column + " from " + sun_table + " where " + sun_column_name + " = " + sun_column_value + " );"
     print('this sql is :', sql)
