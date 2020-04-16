@@ -500,9 +500,7 @@ Feature: 订单支付接口测试用例
             'address_id': 2235,
             'update_limit': None,
             'encrypted': 0,
-            'ou_encrypted': 1,
-            'phoneX': None,
-            'subs_id': None
+            'ou_encrypted': 1
         }]
       """
     * 使用逻辑"and"查询数据库"ordertest.od_goods_lock"
@@ -719,9 +717,7 @@ Feature: 订单支付接口测试用例
             'address_id': 2235,
             'update_limit': None,
             'encrypted': 0,
-            'ou_encrypted': 1,
-            'phoneX': None,
-            'subs_id': None
+            'ou_encrypted': 1
         }]
       """
     * 使用逻辑"and"查询数据库"ordertest.od_goods_lock"
