@@ -34,29 +34,18 @@ def sleep_time(context, sleep_time=1.0):
 def send_request(context, api_url_bef):
     context.params = eval(context.text) if context.text else None
     host = context.params.get("host", "")
-    protocol = context.params.get("protocol", "")
+    protocol = context.params.get("protocol", "http")
     evn = context.params.get("evn", "")
+    evn_list = ['CI_AUCTION','CI_NEWAPI','CI_RNAPI','CI_SUP','CI_OP','CI_CENTER','CI_ENV']
     if not host:
-        if evn == 'CI_AUCTION':
-            host = CI_AUCTION['CI_HOST']
-            protocol = CI_AUCTION['CI_PROTOCOL']
-        elif evn == 'CI_NEWAPI':
-            host = CI_NEWAPI['CI_HOST']
-            protocol = CI_NEWAPI['CI_PROTOCOL']
-        elif evn == 'CI_RNAPI':
-            host = CI_RNAPI['CI_HOST']
-            protocol = CI_RNAPI['CI_PROTOCOL']
-        elif evn == 'CI_SUP':
-            host = CI_SUP['CI_HOST']
-            protocol = CI_SUP['CI_PROTOCOL']
-        elif evn == 'CI_OP':
-            host = CI_OP['CI_HOST']
-            protocol = CI_OP['CI_PROTOCOL']
+        if evn:
+            for this_evn in evn_list:
+                if evn == this_evn:
+                    host = eval(this_evn)['CI_HOST']
+                    protocol = eval(this_evn)['CI_PROTOCOL']
         else:
             host = CI_ENV['CI_HOST']
-
-    if not protocol:
-        protocol = CI_ENV['CI_PROTOCOL']
+            protocol = CI_ENV['CI_PROTOCOL']
 
     api_url = str("{protocol}://{host}") + eval(api_url_bef)
     api_url = api_url.format(protocol=protocol, host=host) + context.params.get("link_url", "")
@@ -300,3 +289,52 @@ def order_unbind_phone(context):
     context.params = eval(context.text) if context.text else None
     orders_sn = context.params.get("orders_sn")
     order_unbind_axn(orders_sn)
+
+
+if __name__ == '__main__':
+
+    CI_ENV = {
+        "CI_HOST": "dev.jaadee.net",
+        "CI_PROTOCOL": "http"
+    }
+
+    CI_CENTER = {
+        "CI_HOST": "centertest.jaadee.net",
+        "CI_PROTOCOL": "http"
+    }
+
+    CI_OD_SYS = {
+        "CI_HOST": "ordermanagetest.jaadee.net",
+        "CI_PROTOCOL": "http"
+    }
+
+    CI_AUCTION = {
+        "CI_HOST": "test-auction.jaadee.com",
+        "CI_PROTOCOL": "https"
+    }
+
+    CI_NEWAPI = {
+        "CI_HOST": "newapitest.jaadee.net",
+        "CI_PROTOCOL": "https"
+    }
+
+    CI_RNAPI = {
+        "CI_HOST": "rnapitest.jaadee.net",
+        "CI_PROTOCOL": "https"
+    }
+
+    CI_SUP = {
+        "CI_HOST": "suptest.jaadee.net",
+        "CI_PROTOCOL": "http"
+    }
+
+    CI_OP = {
+        "CI_HOST": "operatetest.jaadee.net",
+        "CI_PROTOCOL": "https"
+    }
+
+    CI_SHARE = {
+        "CI_HOST": "sharetest.jaadee.net",
+        "CI_PROTOCOL": "https"
+    }
+

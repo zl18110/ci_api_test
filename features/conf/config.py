@@ -20,6 +20,13 @@ CI_ENV = {
     "CI_PROTOCOL": "http"
 }
 
+
+CI_CENTER = {
+    "CI_HOST": "centertest.jaadee.net",
+    "CI_PROTOCOL": "http"
+}
+
+
 CI_OD_SYS = {
     "CI_HOST": "ordermanagetest.jaadee.net",
     "CI_PROTOCOL": "http"
