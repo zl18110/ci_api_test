@@ -19,16 +19,14 @@ Feature: 获取用户数据统计接口测试用例
           "code": 0,
           "data": {
               "countRed": 8,
-              "countFollow": 0,
-              "countCollect": 1
+              "countFollow": 0
           },
           "displayAlert": false,
           "displayTip": false,
           "hashData": "",
           "info": {
               "countRed": 8,
-              "countFollow": 0,
-              "countCollect": 1
+              "countFollow": 0
           },
           "message": "获取数据成功",
           "msg": "获取数据成功",
