@@ -115,7 +115,7 @@ query_payment_type_list_url = "/p/app/paymentType/list"
 od_login_url = "/api/login/sign.html?phone=18313736272&password=536071&clientToken="
 goods_send_list_url = "/api/Goods/sendList"
 add_express_url = "/api/Delivery/addExpress"
-
-
+order_insure_done_url = "/api/orders/insuredone.html"
+order_insure_payment_url = "/api/Finance/insurePayment"
 # 订单解绑手机号虚拟号
 order_unbind_Axn_url = "/biz/ordersys/axn/orderUnBindAxn"

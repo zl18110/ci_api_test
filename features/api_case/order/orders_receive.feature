@@ -1,5 +1,5 @@
 # Created by shenping at 2020/4/2
-Feature: C端确认收货接口组合测试用例
+Feature: C端确认收货-->结算完成接口组合测试用例
 
   Background: 测试数据初始化
     * 删除测试数据"ordertest.od_orders"
@@ -109,9 +109,9 @@ Feature: C端确认收货接口组合测试用例
             'referee_self_uid': 0
         }]
       """
-    * 数据表"ordertest.od_orders_goods" 使用逻辑"and"查询最新记录字段"id"
+    * 数据表"ordertest.od_orders_goods" 使用逻辑"and"按字段"id"排序,查询最新记录
       """
-        {"orders_sn":(context.column_result),"goods_sn":"YK00000401","status":2}
+        {"goods_sn":"YK00000401","status":"2"}
       """
 
     * 请求"add_express_url"后台接口，添加物流发货
@@ -125,18 +125,14 @@ Feature: C端确认收货接口组合测试用例
           'logistics_sn': ' SF000009',
           'logistics_price': ' 0',
           'protect_price': ' 0',
-          'delivery_time': ' 2020-04-01 10:38:19',
+          'delivery_time': 'time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())',
           'remark': 'ci_api_test',
-          'id': (context.column_result),
+          'id': (context.column_result['id']),
           'type': ' ',
           'clientToken': ''}
       }
     """
-    * 数据表"ordertest.od_orders" 使用逻辑"and"查询最新记录字段"orders_sn"
-      """
-        {"orders_uid":"2638122","goods_id":"401"}
-      """
-
+    * 等待"1"秒
     * 请求"orders_recevie_url"接口，确认收货
     """
       {'link_url':'',
@@ -144,7 +140,7 @@ Feature: C端确认收货接口组合测试用例
         'host':'rnapitest.jaadee.net',
         'protocol':'https',
          'url_params':{
-            "ordersSn": (context.column_result),
+            "ordersSn": (context.column_result['orders_sn']),
             "goodsSn": "YK00000401"
          }
       }
@@ -157,10 +153,61 @@ Feature: C端确认收货接口组合测试用例
           "data": []
       }
     """
-    * 等待"6"秒
+    * 等待"1"秒
+
+    * 请求"order_insure_done_url"后台接口，完成已签收订单
+    """
+      {"link_url":"",
+       "http_method": "post",
+       "headers":{
+            "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"
+       },
+       "url_params":{
+          'id': (context.column_result['id']),
+          'clientToken': ''}
+      }
+    """
+    * 验证接口返回值
+    """
+      {
+          "code": 0,
+          "msg": "操作成功推送成功",
+          "data": [],
+          "clientToken": context.clientToken
+      }
+    """
+    * 数据表"ordertest.od_orders" 使用逻辑"and"按字段"id"排序,查询最新记录
+      """
+        {"orders_uid":"2638122","goods_id":"401"}
+      """
+    * 请求"order_insure_payment_url"后台接口，完成结算订单
+    """
+      {"link_url":"",
+       "http_method": "post",
+       "headers":{
+            "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"
+       },
+       "url_params":{
+          'complete':1,
+          'type':'1',
+          'id': (context.column_result['id']),
+          'goods_sn':'YK00000498',
+          'time':time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+          'clientToken': ''}
+      }
+    """
+    * 验证接口返回值
+    """
+      {
+          "code": 0,
+          "msg": "数据获取成功",
+          "data": [],
+          "clientToken": context.clientToken
+      }
+    """
     * 使用逻辑"and"查询数据库"ordertest.od_orders_goods"
       """
-        {"orders_sn":(context.column_result)}
+        {"orders_sn":(context.column_result['orders_sn'])}
       """
     * 验证数据库返回值
     """
@@ -216,5 +263,4 @@ Feature: C端确认收货接口组合测试用例
           'auto_settle': 1
       }]
     """
-
   Scenario: [1] 测试现场恢复
