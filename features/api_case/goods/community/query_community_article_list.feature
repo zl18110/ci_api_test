@@ -6,8 +6,7 @@ Feature: 获取用户图文作品列表接口测试用例
     """
       {'link_url':'?uid=2638122&page=1&pageSize=20',
         'http_method': 'get',
-        'host':'operatetest.jaadee.net',
-        'protocol':'http',
+        'evn':'CI_OP',
          'url_params':{
          }
       }
