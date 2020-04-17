@@ -36,7 +36,7 @@ def send_request(context, api_url_bef):
     host = context.params.get("host", "")
     protocol = context.params.get("protocol", "http")
     evn = context.params.get("evn", "")
-    evn_list = ['CI_AUCTION','CI_NEWAPI','CI_RNAPI','CI_SUP','CI_OP','CI_CENTER','CI_ENV']
+    evn_list = ['CI_AUCTION','CI_NEWAPI','CI_SHARE','CI_RNAPI','CI_SUP','CI_OP','CI_CENTER','CI_ENV']
     if not host:
         if evn:
             for this_evn in evn_list:
@@ -103,14 +103,12 @@ def get_api_amount(context, expect_api_num):
 # 预期结果在接口返回里全部匹配到
 @given(u'(?:.*[验证|检查]接口.*返回值.*)')
 def assert_data(context):
-    text = context.text.replace("\n", "").replace("\r", "").replace("\\","")
     try:
-        context.expect_params = simplejson.loads(text, encoding='utf-8')
+        context.expect_params = simplejson.loads(context.text, encoding='utf-8')
     except JSONDecodeError as e:
 
         print("\n WARN: expect_params is not json", e)
-        context.expect_params = eval(text)
-
+        context.expect_params = eval(context.text)
     print("\n context.expect_params is: ", context.expect_params)
     print("\n context.body is: ", context.body)
     check_json_data(context.expect_params, context.body)

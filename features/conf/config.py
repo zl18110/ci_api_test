@@ -60,6 +60,7 @@ CI_OP = {
     "CI_PROTOCOL": "https"
 }
 
+
 CI_SHARE = {
     "CI_HOST": "sharetest.jaadee.net",
     "CI_PROTOCOL": "https"

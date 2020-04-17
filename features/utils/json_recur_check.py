@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from decimal import *
 
-import datetime,time
+import datetime
 from hamcrest import *  # assert_that, instance_of
 import ast
 import simplejson
@@ -64,7 +64,7 @@ def check_data(edata, rdata, msg=""):
     try:
         edata = ast.literal_eval(edata)
         rdata = ast.literal_eval(rdata)
-    except Exception :
+    except Exception:
         pass
     if isinstance(edata, list):
         ret, msg = check_list(edata, rdata, msg)
