@@ -115,7 +115,7 @@ query_user_check_UidBindWx_url = "/a/api/usr/index.php/v1/User/checkUidBindWx"
 update_user_SignAndSex_url = "/a/api/usr/index.php/v2/Member/updateSignAndSex"
 update_user_birthday_url = "/a/api/usr/index.php/v2/member/saveUserBirth"
 update_user_level_display_url = "/a/api/usr/index.php/v2/Member/LevelDisplay"
-
+create_user_address_url = "/a/api/usr/index.php/v2/address/add"
 
 # 翡翠王朝--C端 系统相关
 login_url = "/a/api/usr/index.php/v2/login/user"

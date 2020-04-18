@@ -35,11 +35,3 @@ def after_scenario(context,setp):
     for res in sql_result:
         order_unbind_axn(res['orders_sn'])
 
-
-# 测试结束后释放所有虚拟号
-def after_all(context):
-    sql_result = get_axn_bind()
-    for res in sql_result:
-        flag = unbindX(res['phone_a'],res['phone_x'],res['subs_id'])
-        if flag:
-            releaseSecretNo(res['phone_a'],res['phone_x'])

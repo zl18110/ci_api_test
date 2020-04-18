@@ -111,13 +111,6 @@ def get_phoneX():
     return sql_result
 
 
-def get_axn_bind():
-    query_sql = u"select phone_a,phone_x,subs_id FROM jdcustomerstest.axn_bind ;"
-    sql_result, sql_amount = database.run_sql(query_sql)
-    print('未解释放手机号：', sql_result)
-    return sql_result
-
-
 def order_unbind_axn(orderSn):
     url = str("{protocol}://{host}") + eval('order_unbind_Axn_url')
     url = url.format(protocol=CI_ENV['CI_PROTOCOL'], host=CI_ENV['CI_HOST'])
@@ -139,55 +132,6 @@ def order_unbind_axn(orderSn):
         sys.exit(-1)
     else:
         print('已解绑手机虚拟号订单:', orderSn)
-
-
-def unbindX(phone_a,phone_x,subs_id):
-    url = str("{protocol}://{host}") + eval('unbind_Axn_url')
-    url = url.format(protocol=CI_ENV['CI_PROTOCOL'], host=CI_ENV['CI_HOST'])
-
-    print('order_unbind_Axn_url is:', url)
-    param = {
-            "phoneX": phone_x,
-            "subsId": subs_id
-        }
-
-    headers = {
-        'Content-Type': 'application/json',
-        'Connection': 'keep-alive'
-    }
-    res = requests.post(url, data=json.dumps(param), headers=headers, allow_redirects=False)
-    if res.status_code != 200:
-        print("Got error: " + res.text)
-        print("res.status_code: ", res.status_code)
-        print("res.headers: ", res.headers)
-        sys.exit(-1)
-    else:
-        print('已解绑手机号:', (phone_a,phone_x))
-        return True
-
-
-def releaseSecretNo(phone_a,phone_x):
-    url = str("{protocol}://{host}") + eval('release_SecretNo_url')
-    url = url.format(protocol=CI_ENV['CI_PROTOCOL'], host=CI_ENV['CI_HOST'])
-
-    print('order_unbind_Axn_url is:', url)
-    param = {
-        "phoneX": phone_x
-    }
-
-    headers = {
-        'Content-Type': 'application/json',
-        'Connection': 'keep-alive'
-    }
-    res = requests.post(url, data=json.dumps(param), headers=headers, allow_redirects=False)
-    if res.status_code != 200:
-        print("Got error: " + res.text)
-        print("res.status_code: ", res.status_code)
-        print("res.headers: ", res.headers)
-        sys.exit(-1)
-    else:
-        print('已释放手机号:', (phone_a, phone_x))
-        return True
 
 
 if __name__ == '__main__':
