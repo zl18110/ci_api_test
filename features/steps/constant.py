@@ -114,6 +114,8 @@ query_user_real_level_url = "/a/api/usr/index.php/v2/Member/realLevel"
 query_user_check_UidBindWx_url = "/a/api/usr/index.php/v1/User/checkUidBindWx"
 update_user_SignAndSex_url = "/a/api/usr/index.php/v2/Member/updateSignAndSex"
 update_user_birthday_url = "/a/api/usr/index.php/v2/member/saveUserBirth"
+update_user_level_display_url = "/a/api/usr/index.php/v2/Member/LevelDisplay"
+
 
 # 翡翠王朝--C端 系统相关
 login_url = "/a/api/usr/index.php/v2/login/user"
@@ -127,3 +129,5 @@ order_insure_done_url = "/api/orders/insuredone.html"
 order_insure_payment_url = "/api/Finance/insurePayment"
 # 订单解绑手机号虚拟号
 order_unbind_Axn_url = "/biz/ordersys/axn/orderUnBindAxn"
+unbind_Axn_url = "/biz/ordersys/axn/unbindX"
+release_SecretNo_url = "/biz/ordersys/axn/releaseSecretNo"
