@@ -1,9 +1,9 @@
 # Created by shenping at 2020/4/2
-Feature: 获取用户center信息接口测试用例
+Feature: 获取用户中心信息接口测试用例
 
 
-  Scenario: [0]获取用户Center Info
-    * 请求"query_user_center_info_url"接口，查询用户信息
+  Scenario: [0]获取用户中心信息
+    * 请求"query_user_center_info_url"接口，查询用户中心信息
     """
       {'link_url':'',
         'http_method': 'post',

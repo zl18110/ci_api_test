@@ -106,6 +106,9 @@ query_address_list_url = "/a/api/usr/index.php/v2/address/getList"
 query_user_goods_coupon_url = "/a/api/activity/v1/coupon/userCoupons"
 query_user_center_info_url = "/a/api/usr/index.php/v1/User/getUserCenterInfo"
 query_user_info_statistic_url = "/a/api/usr/index.php/v3/user/infoStatistic"
+query_user_rewards_type_url = "/v1/rewards/type"
+
+
 
 # 翡翠王朝--C端 系统相关
 login_url = "/a/api/usr/index.php/v2/login/user"
