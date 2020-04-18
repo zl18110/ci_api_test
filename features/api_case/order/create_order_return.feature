@@ -458,6 +458,8 @@ Feature: C端订单发起售后接口组合测试用例
       """
         {"orders_uid":"2638122","goods_id":"401"}
       """
+    * 等待"2"秒
+
     * 请求"order_insure_payment_url"后台接口，完成结算订单
     """
       {"link_url":"",
