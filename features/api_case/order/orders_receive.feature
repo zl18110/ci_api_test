@@ -153,7 +153,7 @@ Feature: C端确认收货-->结算完成接口组合测试用例
           "data": []
       }
     """
-    * 等待"1"秒
+    * 等待"5"秒
 
     * 请求"order_insure_done_url"后台接口，完成已签收订单
     """
@@ -176,7 +176,7 @@ Feature: C端确认收货-->结算完成接口组合测试用例
           "clientToken": context.clientToken
       }
     """
-    * 等待"2"秒
+    * 等待"5"秒
     * 数据表"ordertest.od_orders" 使用逻辑"and"按字段"id"排序,查询最新记录
       """
         {"orders_uid":"2638122","goods_id":"401"}

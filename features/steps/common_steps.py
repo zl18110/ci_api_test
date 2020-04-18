@@ -264,7 +264,6 @@ def send_request(context, api_url_bef):
     print("api_url is :", api_url)
     print('headers is :', headers)
     print('url_params is :', url_params)
-    print('\n\n\n\n')
     if http_method == 'get':
         context.response = requests.get(api_url, params=url_params, data=url_params, headers=headers,
                                         cookies=context.cookie,verify=False,allow_redirects=False)
