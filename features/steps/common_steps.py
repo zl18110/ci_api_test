@@ -90,16 +90,6 @@ def send_request(context, api_url_bef):
         context.body = body
 
 
-@given(u'验证接口返回的总条数为expect_api_num')
-def get_api_amount(context, expect_api_num):
-    if isinstance(context.body, list):
-        context.api_num = len(context.body)
-    else:
-        context.api_num = 1
-    print("context.api_num :", context.api_num)
-    assert_that(context.api_num, equal_to(int(expect_api_num)))
-
-
 # 预期结果在接口返回里全部匹配到
 @given(u'(?:.*[验证|检查]接口.*返回值.*)')
 def assert_data(context):

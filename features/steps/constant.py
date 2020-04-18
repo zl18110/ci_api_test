@@ -107,8 +107,13 @@ query_user_goods_coupon_url = "/a/api/activity/v1/coupon/userCoupons"
 query_user_center_info_url = "/a/api/usr/index.php/v1/User/getUserCenterInfo"
 query_user_info_statistic_url = "/a/api/usr/index.php/v3/user/infoStatistic"
 query_user_rewards_type_url = "/v1/rewards/type"
-
-
+query_user_rewards_spread_url = "/v1/rewards/spread"
+query_user_unread_message_url = "/a/api/msg/userMessage/unReadMsgCount"
+query_advertisement_byScene_url = "/a/api/usr/index.php/v2/Advertisement/adsByScene"
+query_user_real_level_url = "/a/api/usr/index.php/v2/Member/realLevel"
+query_user_check_UidBindWx_url = "/a/api/usr/index.php/v1/User/checkUidBindWx"
+update_user_SignAndSex_url = "/a/api/usr/index.php/v2/Member/updateSignAndSex"
+update_user_birthday_url = "/a/api/usr/index.php/v2/member/saveUserBirth"
 
 # 翡翠王朝--C端 系统相关
 login_url = "/a/api/usr/index.php/v2/login/user"
