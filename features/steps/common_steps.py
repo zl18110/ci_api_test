@@ -104,6 +104,20 @@ def assert_data(context):
     check_json_data(context.expect_params, context.body)
 
 
+# 预期key的value包含于接口返回结果如：{"data":"2836122"} data的值包含于{"data":"dadsadsa2638122dsadsada"}
+@given(u'(?:.*[验证|检查]接口.*body包含.*)')
+def assert_data_contain(context):
+    try:
+        context.expect_params = simplejson.loads(context.text, encoding='utf-8')
+    except JSONDecodeError as e:
+
+        print("\n WARN: expect_params is not json", e)
+        context.expect_params = eval(context.text)
+    print("\n context.expect_params is: ", context.expect_params)
+    print("\n context.body is: ", context.body)
+    check_json_contain(context.expect_params, context.body)
+
+
 @given(u'(?:.*失败.*[服务器|接口].*错误信息为"(?P<return_message>.*)")')
 def assert_return_message(context, return_message):
     print(return_message)
