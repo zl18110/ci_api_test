@@ -119,6 +119,7 @@ create_user_address_url = "/a/api/usr/index.php/v2/address/add"
 update_user_address_url = "/a/api/usr/index.php/v2/address/update"
 query_user_collect_list_url = "/index.php/v3/Collect/lists"
 query_user_favorites_list_url = "/index.php/v1/Community/FavoritesList"
+query_user_coin_url = "/v1/rewards/spread"
 
 
 # 翡翠王朝--C端 系统相关
