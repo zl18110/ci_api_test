@@ -117,6 +117,8 @@ update_user_birthday_url = "/a/api/usr/index.php/v2/member/saveUserBirth"
 update_user_level_display_url = "/a/api/usr/index.php/v2/Member/LevelDisplay"
 create_user_address_url = "/a/api/usr/index.php/v2/address/add"
 update_user_address_url = "/a/api/usr/index.php/v2/address/update"
+query_user_collect_list_url = "/index.php/v3/Collect/lists"
+query_user_favorites_list_url = "/index.php/v1/Community/FavoritesList"
 
 
 # 翡翠王朝--C端 系统相关
