@@ -22,21 +22,21 @@ Feature: 获取用户等级接口测试用例
           "cacheType": "none",
           "code": 0,
           "data": {
-              "score": (context.base_sql_result[0]['available_score'],
-              "vipLevel": (context.base_sql_result[0]['rlevel'],
-              "level": (context.base_sql_result[0]['level'],
-              "levelDisplay": (context.base_sql_result[0]['level_display'],
-              "totalScore": (context.base_sql_result[0]['total_score']
+              "score": (context.base_sql_result[0]['available_score']),
+              "vipLevel":(context.base_sql_result[0]['rlevel']),
+              "level": (context.base_sql_result[0]['level']),
+              "levelDisplay": (context.base_sql_result[0]['level_display']),
+              "totalScore": (context.base_sql_result[0]['total_score'])
           },
-          "displayAlert": false,
-          "displayTip": false,
+          "displayAlert": False,
+          "displayTip": False,
           "hashData": "",
           "info": {
-              "score": (context.base_sql_result[0]['available_score'],
-              "vipLevel": (context.base_sql_result[0]['rlevel'],
-              "level": (context.base_sql_result[0]['level'],
-              "levelDisplay": (context.base_sql_result[0]['level_display'],
-              "totalScore": (context.base_sql_result[0]['total_score']
+              "score": (context.base_sql_result[0]['available_score']),
+              "vipLevel":(context.base_sql_result[0]['rlevel']),
+              "level": (context.base_sql_result[0]['level']),
+              "levelDisplay": (context.base_sql_result[0]['level_display']),
+              "totalScore": (context.base_sql_result[0]['total_score'])
           },
           "message": "数据获取成功",
           "msg": "数据获取成功",
