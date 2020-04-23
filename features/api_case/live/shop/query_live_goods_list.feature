@@ -63,10 +63,10 @@ Feature: 获取直播间商品信息接口测试用例
             "anchorId": 0,
             "channelId": (context.body['data']['nowLiveInfo']['liveChannelId']),
             "liveId": (context.body['data']['nowLiveInfo']['id']),
-            "liveLogo": "https://res.jaadee.net/cuiyou/images/2019-12-23/1577080504098-09e7695be9231aca33d15bf0cff89b36.jpg",
+            "liveLogo": (context.body['data']['nowLiveInfo']['liveLogo']),
             "liveMemberId": (context.body['data']['liveMember']['id']),
-            "liveTitle": "CI_API自动化测试",
-            "liveType": (context.body['data']['nowLiveInfo']['liveType'])
+            "liveType": (context.body['data']['nowLiveInfo']['liveType']),
+            "liveTitle":"(context.body['data']['nowLiveInfo']['liveTitle'])"
          }
       }
     """
@@ -95,7 +95,7 @@ Feature: 获取直播间商品信息接口测试用例
 
     * 数据表"newapitest.common_live_list",使用逻辑"and",按字段"id"排序，查询最新记录
     """
-      {"mid":"3","buid":"3","live_title":"CI_API自动化测试","status":"3"}
+      {"mid":"3","buid":"3","status":"3"}
     """
 
     * 请求"query_live_goods_list_url"接口，获取直播间商品列表成功
