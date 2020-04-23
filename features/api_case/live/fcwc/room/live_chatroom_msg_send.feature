@@ -68,10 +68,10 @@ Feature: 直播间消息发送接口测试用例
             "anchorId": 0,
             "channelId": (context.body['data']['nowLiveInfo']['liveChannelId']),
             "liveId": (context.body['data']['nowLiveInfo']['id']),
-            "liveLogo": "https://res.jaadee.net/cuiyou/images/2019-12-23/1577080504098-09e7695be9231aca33d15bf0cff89b36.jpg",
+            "liveLogo": (context.body['data']['nowLiveInfo']['liveLogo']),
             "liveMemberId": (context.body['data']['liveMember']['id']),
-            "liveTitle": "CI_API自动化测试",
-            "liveType": (context.body['data']['nowLiveInfo']['liveType'])
+            "liveType": (context.body['data']['nowLiveInfo']['liveType']),
+            "liveTitle":"(context.body['data']['nowLiveInfo']['liveTitle'])"
          }
       }
     """
@@ -109,7 +109,7 @@ Feature: 直播间消息发送接口测试用例
     """
   * 数据表"newapitest.common_live_list",使用逻辑"and",按字段"id"排序，查询最新记录
     """
-      {"mid":"3","buid":"3","live_title":"CI_API自动化测试","status":"3"}
+      {"mid":"3","buid":"3","status":"3"}
     """
   * 请求"live_details_url"接口，直播详情页获取,加入直播房间成功
     """
@@ -146,7 +146,7 @@ Feature: 直播间消息发送接口测试用例
                   "keyword": (context.column_result['keyword']),
                   "likes": (context.column_result['likes']),
                   "liveChannelId": 58,
-                  "liveDesc": "CI_API自动化测试",
+                  "liveDesc": (context.column_result['live_desc']),
                   "liveMember": {
                       "accid": "",
                       "announcement": "11111",
@@ -175,7 +175,7 @@ Feature: 直播间消息发送接口测试用例
                   "liveMemberId": 203,
                   "liveMemberUid": 51,
                   "liveRoomId": (context.column_result['roomid']),
-                  "liveTitle": "CI_API自动化测试",
+                  "liveTitle": (context.column_result['live_title']),
                   "liveTotalPeople": 0,
                   "liveTotalRecord": 0,
                   "liveType": 3,
@@ -224,7 +224,7 @@ Feature: 直播间消息发送接口测试用例
                   }
               },
               "webWxShare": {
-                  "desc": "CI_API自动化测试",
+                  "desc": (context.column_result['live_desc']),
                   "liveMemberId": 203,
                   "logo": "https://res.jaadee.net/cuiyou/images/2019-12-23/1577080498659-f660925eea08a243de7e182ab86d6848.jpg_appshareLogo",
                   "name": "我在翡翠王朝看【杨哥22楼】直播，行家把关，源头直播。",
@@ -254,7 +254,7 @@ Feature: 直播间消息发送接口测试用例
                   "keyword": (context.column_result['keyword']),
                   "likes": (context.column_result['likes']),
                   "liveChannelId": 58,
-                  "liveDesc": "CI_API自动化测试",
+                  "liveDesc": (context.column_result['live_desc']),
                   "liveMember": {
                       "accid": "",
                       "announcement": "11111",
@@ -283,7 +283,7 @@ Feature: 直播间消息发送接口测试用例
                   "liveMemberId": 203,
                   "liveMemberUid": 51,
                   "liveRoomId": (context.column_result['roomid']),
-                  "liveTitle": "CI_API自动化测试",
+                  "liveTitle": (context.column_result['live_title']),
                   "liveTotalPeople": 0,
                   "liveTotalRecord": 0,
                   "liveType": 3,
@@ -332,7 +332,7 @@ Feature: 直播间消息发送接口测试用例
                   }
               },
               "webWxShare": {
-                  "desc": "CI_API自动化测试",
+                  "desc": (context.column_result['live_desc']),
                   "liveMemberId": 203,
                   "logo": "https://res.jaadee.net/cuiyou/images/2019-12-23/1577080498659-f660925eea08a243de7e182ab86d6848.jpg_appshareLogo",
                   "name": "我在翡翠王朝看【杨哥22楼】直播，行家把关，源头直播。",
