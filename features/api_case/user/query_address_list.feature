@@ -28,7 +28,6 @@ Feature: 查询用户收货地址列表接口测试用例
               "phone": "12888886303",
               "province": "福建省",
               "street": "",
-              "updateTime": 1582119485,
               "userId": 2638122,
               "zipcode": ""
           }],
@@ -47,7 +46,6 @@ Feature: 查询用户收货地址列表接口测试用例
               "phone": "12888886303",
               "province": "福建省",
               "street": "",
-              "updateTime": 1582119485,
               "userId": 2638122,
               "zipcode": ""
           }],
