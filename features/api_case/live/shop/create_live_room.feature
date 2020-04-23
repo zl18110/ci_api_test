@@ -63,10 +63,10 @@ Feature: 开启直播流程接口测试用例
             "anchorId": 0,
             "channelId": (context.body['data']['nowLiveInfo']['liveChannelId']),
             "liveId": (context.body['data']['nowLiveInfo']['id']),
-            "liveLogo": "https://res.jaadee.net/cuiyou/images/2019-12-23/1577080504098-09e7695be9231aca33d15bf0cff89b36.jpg",
+            "liveLogo": (context.body['data']['nowLiveInfo']['liveLogo']),
             "liveMemberId": (context.body['data']['liveMember']['id']),
-            "liveTitle": "CI_API自动化测试",
-            "liveType": (context.body['data']['nowLiveInfo']['liveType'])
+            "liveType": (context.body['data']['nowLiveInfo']['liveType']),
+            "liveTitle":"(context.body['data']['nowLiveInfo']['liveTitle'])"
          }
       }
     """
