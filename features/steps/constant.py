@@ -65,6 +65,12 @@ create_multiple_coupons_url = "/a/api/activity/v1/coupon/multipleCoupons"
 query_level_user_score_url = "/api/Level/userScore"
 query_level_total_score_url = "/api/Level/toatlScore"
 
+# 翡翠王朝--C端 品牌大厅相关
+query_hunt_treasure_basic_info_url = "/a/api/live/hunt/treasure/basicInfo"
+query_hunt_treasure_cycle_scroll_url = "/a/api/live/hunt/treasure/cycleScroll"
+create_hunt_treasure_save_url = "/a/api/live/hunt/treasure/saveOrUpdate"
+query_hunt_treasure_list_url = "/a/api/live/hunt/treasure/list"
+
 # B端 商户相关
 shop_login_url = "/v1/login/phoneLogin"
 shop_query_live_identities_url = "/v1/live/goodLiveIdentities"
