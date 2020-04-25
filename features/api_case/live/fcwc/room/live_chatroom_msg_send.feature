@@ -381,7 +381,7 @@ Feature: 直播间消息发送接口测试用例
     """
       [{
           'del_state': 0,
-          'avatar': '/appdir/ios/user/images/2019-10-09/userDefault.png',
+          'avatar': 'https://res.jaadee.net/appdir/ios/user/images/2019-10-09/userDefault.png',
           'content': '666',
           'content_normal': None,
           'create_user_id': 2638122,
