@@ -66,6 +66,7 @@ CI_SHARE = {
     "CI_PROTOCOL": "https"
 }
 
+
 DOCKERFILE_DIR = '/cidata/dev'
 RETRY = False
 MAX_RETRY = 0  # scenario级别的重试机制，最大重试次数n。总共执行了1+n次
