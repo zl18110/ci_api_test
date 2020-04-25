@@ -32,6 +32,8 @@ query_common_article_list_url = "/api/common/article/list/"
 query_search_bykeyword_url = "/api/auction/searchbykeyword"
 query_auction_my_url = "/api/auction/my"
 
+
+
 # 翡翠王朝--C端 品牌大厅相关
 query_index_goods_ceneter_url = "/index.php/v2/Goods/indexGetGoodsCenter.html"
 query_index_platinfo_url = "/v1/index/platInfo"
@@ -129,6 +131,8 @@ query_user_coin_url = "/v1/rewards/spread"
 query_user_rewards_log_url = "/v1/rewards/log"
 query_user_rewards_fans_url = "/v1/rewards/fans"
 query_user_record_list_url = "/a/api/usr/index.php/v2/Record/recordList"
+query_user_margin_url = "/api/auction/my/margin"
+query_service_url = "/a/api/live/v3/Service/fetchCustomerServices"
 
 
 # 翡翠王朝--C端 系统相关
