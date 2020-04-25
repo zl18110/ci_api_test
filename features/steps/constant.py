@@ -127,6 +127,8 @@ query_user_collect_list_url = "/index.php/v3/Collect/lists"
 query_user_favorites_list_url = "/index.php/v1/Community/FavoritesList"
 query_user_coin_url = "/v1/rewards/spread"
 query_user_rewards_log_url = "/v1/rewards/log"
+query_user_rewards_fans_url = "/v1/rewards/fans"
+query_user_record_list_url = "/a/api/usr/index.php/v2/Record/recordList"
 
 
 # 翡翠王朝--C端 系统相关
