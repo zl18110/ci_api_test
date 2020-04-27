@@ -144,7 +144,7 @@ Feature: 直播间订单支付接口测试用例
             "liveLogo": (context.body['data']['nowLiveInfo']['liveLogo']),
             "liveMemberId": (context.body['data']['liveMember']['id']),
             "liveType": (context.body['data']['nowLiveInfo']['liveType']),
-            "liveTitle":"(context.body['data']['nowLiveInfo']['liveTitle'])"
+            "liveTitle":(context.body['data']['nowLiveInfo']['liveTitle'])
          }
       }
     """
