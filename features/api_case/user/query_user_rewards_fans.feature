@@ -28,23 +28,18 @@ Feature: 获取用户粉丝接口测试用例
           "data": {
               "exclusive": 0,
               "ordinary": 1,
-              "sum": "302.44",
               "list": [{
                   "uid": 2638122,
                   "name": "\u7fe0\u53cb***6303",
-                  "avatar": "https:\/\/res.jaadee.net\/appdir\/ios\/user\/images\/2019-10-09\/userDefault.png",
+                  "avatar": "https://res.jaadee.net/appdir/ios/user/images/2019-10-09/userDefault.png",
                   "bindTime": "2020-03-23 11:00",
                   "isMember": 1,
-                  "num": 194,
-                  "sum": "302.44"
               }, {
                   "uid": 2638122,
                   "name": "\u7fe0\u53cb***6303",
-                  "avatar": "https:\/\/res.jaadee.net\/appdir\/ios\/user\/images\/2019-10-09\/userDefault.png",
+                  "avatar": "https://res.jaadee.net/appdir/ios/user/images/2019-10-09/userDefault.png",
                   "bindTime": "2020-02-24 17:41",
                   "isMember": 1,
-                  "num": 194,
-                  "sum": "302.44"
               }]
           }
       }

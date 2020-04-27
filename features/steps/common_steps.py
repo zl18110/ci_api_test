@@ -96,7 +96,6 @@ def assert_data(context):
     try:
         context.expect_params = simplejson.loads(context.text, encoding='utf-8')
     except JSONDecodeError as e:
-
         print("\n WARN: expect_params is not json", e)
         context.expect_params = eval(context.text)
     print("\n context.expect_params is: ", context.expect_params)

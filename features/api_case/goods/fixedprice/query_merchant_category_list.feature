@@ -244,25 +244,10 @@ Feature: 获取一口价商品分类列表接口测试用例
                       "edit_time": "2020-02-22 15:48:38",
                       "remarks": ""
                   }, {
-                      "id": 87,
-                      "cate": 2,
-                      "pid": 1,
-                      "category": "​设计师手作",
-                      "icon": "https:\/\/res.jaadee.net\/cuiyou\/images\/2020\/02\/20200213160254-92809.jpg",
-                      "merchant_rate": "0.800",
-                      "jade_rate": "0.100",
-                      "extension_rate": "0.100",
-                      "bond": 0,
-                      "status": 1,
-                      "orderBy": 40,
-                      "create_time": "2020-02-11 17:12:40",
-                      "edit_time": "2020-02-22 15:48:45",
-                      "remarks": ""
-                  }, {
                       "id": 88,
                       "cate": 2,
                       "pid": 1,
-                      "category": "​其他设计",
+                      "category": "​设计款",
                       "icon": "https:\/\/res.jaadee.net\/cuiyou\/images\/2020\/02\/20200213160206-85938.jpg",
                       "merchant_rate": "0.800",
                       "jade_rate": "0.100",
@@ -271,7 +256,7 @@ Feature: 获取一口价商品分类列表接口测试用例
                       "status": 1,
                       "orderBy": 30,
                       "create_time": "2020-02-11 17:13:02",
-                      "edit_time": "2020-02-22 15:48:52",
+                      "edit_time": "2020-04-25 16:56:31",
                       "remarks": ""
                   }, {
                       "id": 89,

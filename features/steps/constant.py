@@ -133,7 +133,7 @@ query_user_rewards_fans_url = "/v1/rewards/fans"
 query_user_record_list_url = "/a/api/usr/index.php/v2/Record/recordList"
 query_user_margin_url = "/api/auction/my/margin"
 query_service_url = "/a/api/live/v3/Service/fetchCustomerServices"
-
+query_user_message_list_url = "/a/api/msg/userMessage/list"
 
 # 翡翠王朝--C端 系统相关
 login_url = "/a/api/usr/index.php/v2/login/user"
