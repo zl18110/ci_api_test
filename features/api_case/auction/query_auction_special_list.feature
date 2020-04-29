@@ -15,7 +15,6 @@ Feature: 获取拍卖分类接口测试用例
     """
       {
           "data": {
-              "count": 6,
               "result": [{
                   "picture": "https://res.jaadee.com/auction/logo/20190809/6kin8dkexud1zqeu7x1jgq.jpg",
                   "title": "新人专享",
