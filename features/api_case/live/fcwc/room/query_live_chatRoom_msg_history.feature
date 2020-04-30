@@ -18,61 +18,8 @@ Feature: 获取直播间历史聊天消息接口测试用例
          'url_params':{
             "roomId": 169179009,
             "pageSize": 20,
-            "timetag": 1586482669307
+            "timetag": 1586427319158
          }
       }
     """
     * 接口返回码"200"
-    * 验证接口返回值
-    """
-      {
-          "cacheType": "",
-          "code": 0,
-          "data": [{
-              "avatar": "rn/userUpload/mine/setting/2638320/2020-03-23/1584941954-xzcnfn.jpg?x-oss-process=image/resize,m_mfit,h_750,w_750",
-              "content": "高规格",
-              "fromAccount": "0d7cd810261c601ae6f2988eb0890db0",
-              "fromClientType": "IOS",
-              "fromDeviceId": "",
-              "fromNick": "三哈",
-              "id": 89729,
-              "level": 0,
-              "liveMemberId": 203,
-              "msgGroup": "groupchat",
-              "msgSendSource": 0,
-              "msgSource": 0,
-              "msgTimestamp": 1586427319158,
-              "msgType": 0,
-              "msgidServer": "06e1cd26dc9447db915b07d833ed1021",
-              "roomId": 169179009,
-              "uid": 2638320,
-              "vipLevel": 0
-          }],
-          "displayAlert": false,
-          "displayTip": false,
-          "hashData": "",
-          "info": [{
-              "avatar": "rn/userUpload/mine/setting/2638320/2020-03-23/1584941954-xzcnfn.jpg?x-oss-process=image/resize,m_mfit,h_750,w_750",
-              "content": "高规格",
-              "fromAccount": "0d7cd810261c601ae6f2988eb0890db0",
-              "fromClientType": "IOS",
-              "fromDeviceId": "",
-              "fromNick": "三哈",
-              "id": 89729,
-              "level": 0,
-              "liveMemberId": 203,
-              "msgGroup": "groupchat",
-              "msgSendSource": 0,
-              "msgSource": 0,
-              "msgTimestamp": 1586427319158,
-              "msgType": 0,
-              "msgidServer": "06e1cd26dc9447db915b07d833ed1021",
-              "roomId": 169179009,
-              "uid": 2638320,
-              "vipLevel": 0
-          }],
-          "message": "查询成功",
-          "msg": "查询成功",
-          "status": 0
-      }
-    """
