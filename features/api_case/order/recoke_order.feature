@@ -120,7 +120,6 @@ Feature: 取消订单接口测试用例
       [{
           'pid': 0,
           'orders_uid': 2638122,
-          'orders_add_user': 90,
           'orders_star': 0,
           'app_show': 1,
           'is_delete': 0,
@@ -173,9 +172,6 @@ Feature: 取消订单接口测试用例
           'discount': 0.0,
           'goods_num': 1,
           'goods_source_id': 7,
-          'sale_group_id': 24,
-          'orders_add_user': 90,
-          'finance_group_id': 26,
           'channel_group_id': 0,
           'goods_refundable_time': 0,
           'goods_category_tag': '',

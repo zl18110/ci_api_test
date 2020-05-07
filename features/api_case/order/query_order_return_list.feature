@@ -202,7 +202,6 @@ Feature: 售后订单查询接口测试用例
                   "isDbzc": 0,
                   "isVip": 0,
                   "jobNumber": "",
-                  "ordersAddUser": 90,
                   "ordersRefundTime": "",
                   "ordersType": 16,
                   "ordersUid": 2638122,
@@ -225,7 +224,6 @@ Feature: 售后订单查询接口测试用例
                   "isPartRefund": 0,
                   "isRefund": 1,
                   "mid": 3,
-                  "ordersAddUser": 90,
                   "status": 3
               },
               "postSaleType": "退货退款",
@@ -270,7 +268,6 @@ Feature: 售后订单查询接口测试用例
                   "isDbzc": 0,
                   "isVip": 0,
                   "jobNumber": "",
-                  "ordersAddUser": 90,
                   "ordersRefundTime": "",
                   "ordersType": 16,
                   "ordersUid": 2638122,
@@ -293,7 +290,6 @@ Feature: 售后订单查询接口测试用例
                   "isPartRefund": 0,
                   "isRefund": 1,
                   "mid": 3,
-                  "ordersAddUser": 90,
                   "status": 3
               },
               "postSaleType": "退货退款",
