@@ -261,7 +261,6 @@ Feature: 撤销售后申请订单接口测试用例
             'status': 6,
             'money': Decimal('100.00'),
             'prof': '',
-            'add_user': 90,
             'receive_user': 0,
             'verify_uid': 0,
             'refund_uid': 0,
