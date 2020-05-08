@@ -253,7 +253,6 @@ Feature: 取消订单接口测试用例
       """
         [{
             'goods_sn': 'YK00000401',
-            'server_id': 90,
             'deliver_goods_uid': 0,
             'check_goods_uid': 0,
             'financial_uid': 0,
