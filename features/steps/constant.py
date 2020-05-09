@@ -19,7 +19,7 @@ query_community_article_list_url = "/v1/Community/ArticleList"
 query_community_contentInfoByID_url = "/index.php/v1/Community/ContentInfoById"
 query_community_topic_list_url = "/index.php/v1/Community/TopicList"
 query_community_user_tag_list_url = "/index.php/v1/Community/UserTagList"
-
+create_update_user_tag_url = "/index.php/v1/Community/UserTag"
 
 # 翡翠王朝--C端 在线鉴定相关
 query_jianbao_live_list_url = "/api/jianbao/live/list"

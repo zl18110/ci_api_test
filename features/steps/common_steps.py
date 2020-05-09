@@ -163,6 +163,7 @@ def then_impl_2(context, logic, table):
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
 
 
+# 针对有id字段的表结构
 @given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*查询最新记录字段"(?P<column_name>.*)".*)')
 def select_column(context, logic, table, column_name):
     context.sql_params = eval(context.text)
@@ -174,6 +175,7 @@ def select_column(context, logic, table, column_name):
     print('column_result is ', context.column_result)
 
 
+# 表结构无ID字段
 @given(u'(?:.*数据表"(?P<table>.*)".*使用逻辑"(?P<logic>.*)".*按字段"(?P<column_name>.*)"排序.*查询最新记录.*)')
 def select_column(context, logic, table,column_name):
     context.sql_params = eval(context.text)
@@ -183,11 +185,6 @@ def select_column(context, logic, table,column_name):
     context.sql_result, context.sql_amount = database.run_sql(query_sql)
     context.column_result = context.sql_result[0]
     print('column_result is ', context.column_result)
-
-
-@given(u'(?:.*根据.*参数查询数据库.*"(?P<table>.*)".*)')
-def then_impl(context, table):
-    then_impl_2(context, "and", table)
 
 
 @given(u'(?:.*[验证|检查]数据库.*条数.*"(?P<given_num>\d+)")')
