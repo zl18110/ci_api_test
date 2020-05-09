@@ -132,7 +132,7 @@ Feature: 查询商品详情接口测试用例
               "images": ["https://res.jaadee.net/merchantApi/ykj/2020-04-16/1587007598392-06a17bda2eca567a3a1748adba64f4b0.jpeg", "https://res.jaadee.net/merchantApi/ykj/2020-04-16/1587007598432-5196b7dd3a132f66469ea59f9d2b25a1.jpeg"],
               "video": [],
               "content": "自动化测试规格商品",
-              "earn_money": "2.47",
+              "earn_money": "2.48",
               "display": (context.base_sql_result[0]['display']),
               "max_num": (context.base_sql_result[0]['max_num']),
               "saleStatus": (context.base_sql_result[0]['sale_status']),
