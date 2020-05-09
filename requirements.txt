@@ -1,0 +1,5 @@
+PyMySQL==0.7.11
+simplejson==3.17.0
+requests==2.23.0
+behave==1.2.6
+PyHamcrest==2.0.2
