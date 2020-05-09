@@ -111,7 +111,6 @@ Feature: 查询商品详情接口测试用例
               "cover": "https://res.jaadee.net/merchantApi/ykj/2020-04-16/1587007598392-06a17bda2eca567a3a1748adba64f4b0.jpeg",
               "market_price": "69.30",
               "shop_price": "33.00",
-              "click_num": (context.base_sql_result[0]['click_num'])-1,
               "collect_num": (context.base_sql_result[0]['collect_num']),
               "is_video": (context.base_sql_result[0]['is_video']),
               "stock": (context.base_sql_result[0]['stock']),
