@@ -104,7 +104,7 @@ Feature: 获取用户标签接口测试用例
                   "userId": 2638122,
                   "userTagId": 3
               }],
-              "gender": 0
+              "gender": 1
           },
           "data": {
               "list": [{
@@ -142,7 +142,7 @@ Feature: 获取用户标签接口测试用例
                   "userId": 2638122,
                   "userTagId": 3
               }],
-              "gender": 0
+              "gender": 1
           }
       }
     """
